@@ -2,5 +2,11 @@
  * Built by Endavans
  * © https://beeq.design - Apache 2 License.
  */
-import{B as o,d as s}from"./p-52cd0d05.js";const t=o;const c=s;export{t as BqTag,c as defineCustomElement};
+import { B as BqTag$1, d as defineCustomElement$1 } from './bq-tag2.js';
+
+const BqTag = BqTag$1;
+const defineCustomElement = defineCustomElement$1;
+
+export { BqTag, defineCustomElement };
+
 //# sourceMappingURL=bq-tag.js.map

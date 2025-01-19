@@ -2,5 +2,11 @@
  * Built by Endavans
  * © https://beeq.design - Apache 2 License.
  */
-import{B as o,d as s}from"./p-a079385a.js";const a=o;const t=s;export{a as BqTooltip,t as defineCustomElement};
+import { B as BqTooltip$1, d as defineCustomElement$1 } from './bq-tooltip2.js';
+
+const BqTooltip = BqTooltip$1;
+const defineCustomElement = defineCustomElement$1;
+
+export { BqTooltip, defineCustomElement };
+
 //# sourceMappingURL=bq-tooltip.js.map

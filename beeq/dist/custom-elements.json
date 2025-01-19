@@ -650,81 +650,177 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/bq-accordion-group.js",
+      "path": "components/bq-avatar.js",
       "declarations": [
         {
           "kind": "class",
-          "description": "The accordion group component is a container for multiple accordion elements.\nIt allows to manage the appearance and size of all accordions at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion-group appearance=\"filled\" size=\"medium\">\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n</bq-accordion-group>\n```\n\n</figure>",
-          "name": "BqAccordionGroup",
+          "description": "The Avatar component is a simple and customizable element that displays an image or initials in a circular or square shape.\nThis component is useful for displaying user profile pictures or any other image that represents a person or an entity.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-avatar\nalt-text=\"John Doe profile picture\"\nimage=\"/image/url/photo-1524593689594.jpeg\"\nlabel=\"John Doe profile picture\"\nshape=\"circle\"\nsize=\"medium\"\n>\n<bq-badge slot=\"badge\" text-color=\"#fff\">9</bq-badge>\n</bq-avatar>\n```\n\n</figure>",
+          "name": "BqAvatar",
           "cssProperties": [
             {
-              "description": "Accordion group distance between elements",
-              "name": "--bq-accordion-group--gap"
+              "description": "Avatar background color",
+              "name": "--bq-avatar--background"
+            },
+            {
+              "description": "Avatar border color",
+              "name": "--bq-avatar--border-color"
+            },
+            {
+              "description": "Avatar border style",
+              "name": "--bq-avatar--border-style"
+            },
+            {
+              "description": "Avatar border width",
+              "name": "--bq-avatar--border-width"
+            },
+            {
+              "description": "Avatar border radius for circle & any size",
+              "name": "--bq-avatar--border-radius-circle"
+            },
+            {
+              "description": "Avatar border radius for square & size xsmall",
+              "name": "--bq-avatar--border-radius-squareXs"
+            },
+            {
+              "description": "Avatar border radius for square & size small",
+              "name": "--bq-avatar--border-radius-squareS"
+            },
+            {
+              "description": "Avatar border radius for square & size medium/large",
+              "name": "--bq-avatar--border-radius-squareM"
+            },
+            {
+              "description": "Avatar xsmall size",
+              "name": "--bq-avatar--size-xsmall"
+            },
+            {
+              "description": "Avatar small size",
+              "name": "--bq-avatar--size-small"
+            },
+            {
+              "description": "Avatar medium size",
+              "name": "--bq-avatar--size-medium"
+            },
+            {
+              "description": "Avatar large size",
+              "name": "--bq-avatar--size-large"
+            },
+            {
+              "description": "Badge top position shape square",
+              "name": "--bq-avatar--badge-top-square"
+            },
+            {
+              "description": "Badge left position shape square",
+              "name": "--bq-avatar--badge-left-square"
+            },
+            {
+              "description": "Badge top position shape circle",
+              "name": "--bq-avatar--badge-top-circle"
+            },
+            {
+              "description": "Badge left position shape circle",
+              "name": "--bq-avatar--badge-left-circle"
             }
           ],
           "cssParts": [
             {
-              "description": "The component's base wrapper.",
+              "description": "The component's internal wrapper.",
               "name": "base"
+            },
+            {
+              "description": "The `<image>` tag element that load the image source.",
+              "name": "img"
+            },
+            {
+              "description": "The `<span>` tag element that rendered the `Initials` text string.",
+              "name": "text"
+            },
+            {
+              "description": "The container that wraps the badge slot element.",
+              "name": "badge"
             }
           ],
           "slots": [
             {
-              "description": "The default slot where the bq-accordion elements are placed.",
-              "name": ""
+              "description": "The badge slot is used to add a badge to the avatar. The badge is a small circle or square that can be used to display a number or a status.",
+              "name": "badge"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "el",
+              "name": "trimmedInitials",
               "type": {
-                "text": "HTMLBqAccordionGroupElement"
+                "text": "string"
               }
             },
             {
               "kind": "field",
-              "name": "appearance",
+              "name": "el",
               "type": {
-                "text": "TAccordionAppearance"
-              },
-              "default": "'filled'",
-              "description": "The appearance style of accordion to be applied to all accordions"
+                "text": "HTMLBqAvatarElement"
+              }
             },
             {
               "kind": "field",
-              "name": "expandAll",
+              "name": "hasError",
               "type": {
                 "text": "boolean"
-              },
-              "description": "If true all accordions are expanded"
+              }
             },
             {
               "kind": "field",
-              "name": "noAnimation",
+              "name": "altText",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "Animation is set through JS when the browser does not support CSS calc-size()\nIf true, the accordion animation, will be disabled. No animation will be applied."
+              "description": "Alternate text for the avatar image if the image cannot be displayed"
             },
             {
               "kind": "field",
-              "name": "multiple",
+              "name": "image",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "If true multiple accordions can be expanded at the same time"
+              "description": "The image source to load on the avatar (this can be also a base64 encoded image)"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "A text to use for describing the avatar on assistive devices"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "description": "The text to display on avatar"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "TAvatarShape"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar"
             },
             {
               "kind": "field",
               "name": "size",
               "type": {
-                "text": "TAccordionSize"
+                "text": "TAvatarSize"
               },
               "default": "'medium'",
-              "description": "The size of accordion to be applied to all accordions"
+              "description": "The size of the avatar"
+            },
+            {
+              "kind": "method",
+              "name": "handleImagePropChange"
             },
             {
               "kind": "method",
@@ -732,24 +828,22 @@
             },
             {
               "kind": "method",
-              "name": "onBqClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent<HTMLBqAccordionElement>"
-                  }
-                }
-              ]
+              "name": "onInitialsChange"
             },
             {
               "kind": "field",
-              "name": "bqAccordionElements",
-              "type": {
-                "text": "HTMLBqAccordionElement[]"
-              },
-              "privacy": "private",
-              "readonly": true
+              "name": "onImageError",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "trimInitialsBasedOnSize",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "getIndex",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -759,85 +853,108 @@
           "attributes": [
             {
               "type": {
-                "text": "\"filled\" | \"ghost\""
+                "text": "string"
               },
-              "description": "The appearance style of accordion to be applied to all accordions",
-              "name": "appearance",
-              "default": "\"filled\""
+              "description": "Alternate text for the avatar image if the image cannot be displayed.",
+              "name": "alt-text"
             },
             {
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "If true all accordions are expanded",
-              "name": "expandAll",
-              "default": "false"
+              "description": "The image source to load on the avatar (this can be also a base64 encoded image).",
+              "name": "image"
             },
             {
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the accordion animation, will be disabled. No animation will be applied.",
-              "name": "no-animation",
-              "default": "false"
+              "description": "A text to use for describing the avatar on assistive devices.",
+              "name": "label"
             },
             {
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "description": "If true multiple accordions can be expanded at the same time",
-              "name": "multiple",
-              "default": "false"
+              "description": "The text to display on avatar.",
+              "name": "initials"
             },
             {
               "type": {
-                "text": "\"small\" | \"medium\""
+                "text": "\"circle\" | \"square\""
               },
-              "description": "The size of accordion to be applied to all accordions",
-              "name": "size",
-              "default": "\"medium\""
+              "description": "The shape of the avatar.",
+              "name": "shape"
             },
             {
-              "name": "appearance",
-              "fieldName": "appearance",
               "type": {
-                "text": "TAccordionAppearance"
+                "text": "\"xsmall\" | \"small\" | \"medium\" | \"large\""
+              },
+              "description": "The size of the avatar.",
+              "name": "size"
+            },
+            {
+              "name": "alt-text",
+              "fieldName": "altText",
+              "type": {
+                "text": "string"
               }
             },
             {
-              "name": "expand-all",
-              "fieldName": "expandAll",
+              "name": "image",
+              "fieldName": "image",
               "type": {
-                "text": "boolean"
+                "text": "string"
               }
             },
             {
-              "name": "no-animation",
-              "fieldName": "noAnimation",
+              "name": "label",
+              "fieldName": "label",
               "type": {
-                "text": "boolean"
+                "text": "string"
               }
             },
             {
-              "name": "multiple",
-              "fieldName": "multiple",
+              "name": "initials",
+              "fieldName": "initials",
               "type": {
-                "text": "boolean"
+                "text": "string"
+              }
+            },
+            {
+              "name": "shape",
+              "fieldName": "shape",
+              "type": {
+                "text": "TAvatarShape"
               }
             },
             {
               "name": "size",
               "fieldName": "size",
               "type": {
-                "text": "TAccordionSize"
+                "text": "TAvatarSize"
               }
             }
           ],
-          "tagName": "bq-accordion-group",
-          "csspart": {
-            "name": "base",
-            "description": "The component's base wrapper."
-          },
+          "tagName": "bq-avatar",
+          "csspart": [
+            {
+              "name": "base",
+              "description": "The component's internal wrapper."
+            },
+            {
+              "name": "img",
+              "description": "The `<image>` tag element that load the image source."
+            },
+            {
+              "name": "text",
+              "description": "The `<span>` tag element that rendered the `Initials` text string."
+            },
+            {
+              "name": "badge",
+              "description": "The container that wraps the badge slot element."
+            }
+          ],
           "events": [],
           "customElement": true
         }
@@ -845,18 +962,18 @@
       "exports": [
         {
           "kind": "js",
-          "name": "BqAccordionGroup",
+          "name": "BqAvatar",
           "declaration": {
-            "name": "BqAccordionGroup",
-            "module": "components/bq-accordion-group.js"
+            "name": "BqAvatar",
+            "module": "components/bq-avatar.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "bq-accordion-group",
+          "name": "bq-avatar",
           "declaration": {
-            "name": "BqAccordionGroup",
-            "module": "components/bq-accordion-group.js"
+            "name": "BqAvatar",
+            "module": "components/bq-avatar.js"
           }
         }
       ]
@@ -1468,177 +1585,81 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/bq-avatar.js",
+      "path": "components/bq-accordion-group.js",
       "declarations": [
         {
           "kind": "class",
-          "description": "The Avatar component is a simple and customizable element that displays an image or initials in a circular or square shape.\nThis component is useful for displaying user profile pictures or any other image that represents a person or an entity.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-avatar\nalt-text=\"John Doe profile picture\"\nimage=\"/image/url/photo-1524593689594.jpeg\"\nlabel=\"John Doe profile picture\"\nshape=\"circle\"\nsize=\"medium\"\n>\n<bq-badge slot=\"badge\" text-color=\"#fff\">9</bq-badge>\n</bq-avatar>\n```\n\n</figure>",
-          "name": "BqAvatar",
+          "description": "The accordion group component is a container for multiple accordion elements.\nIt allows to manage the appearance and size of all accordions at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion-group appearance=\"filled\" size=\"medium\">\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n</bq-accordion-group>\n```\n\n</figure>",
+          "name": "BqAccordionGroup",
           "cssProperties": [
             {
-              "description": "Avatar background color",
-              "name": "--bq-avatar--background"
-            },
-            {
-              "description": "Avatar border color",
-              "name": "--bq-avatar--border-color"
-            },
-            {
-              "description": "Avatar border style",
-              "name": "--bq-avatar--border-style"
-            },
-            {
-              "description": "Avatar border width",
-              "name": "--bq-avatar--border-width"
-            },
-            {
-              "description": "Avatar border radius for circle & any size",
-              "name": "--bq-avatar--border-radius-circle"
-            },
-            {
-              "description": "Avatar border radius for square & size xsmall",
-              "name": "--bq-avatar--border-radius-squareXs"
-            },
-            {
-              "description": "Avatar border radius for square & size small",
-              "name": "--bq-avatar--border-radius-squareS"
-            },
-            {
-              "description": "Avatar border radius for square & size medium/large",
-              "name": "--bq-avatar--border-radius-squareM"
-            },
-            {
-              "description": "Avatar xsmall size",
-              "name": "--bq-avatar--size-xsmall"
-            },
-            {
-              "description": "Avatar small size",
-              "name": "--bq-avatar--size-small"
-            },
-            {
-              "description": "Avatar medium size",
-              "name": "--bq-avatar--size-medium"
-            },
-            {
-              "description": "Avatar large size",
-              "name": "--bq-avatar--size-large"
-            },
-            {
-              "description": "Badge top position shape square",
-              "name": "--bq-avatar--badge-top-square"
-            },
-            {
-              "description": "Badge left position shape square",
-              "name": "--bq-avatar--badge-left-square"
-            },
-            {
-              "description": "Badge top position shape circle",
-              "name": "--bq-avatar--badge-top-circle"
-            },
-            {
-              "description": "Badge left position shape circle",
-              "name": "--bq-avatar--badge-left-circle"
+              "description": "Accordion group distance between elements",
+              "name": "--bq-accordion-group--gap"
             }
           ],
           "cssParts": [
             {
-              "description": "The component's internal wrapper.",
+              "description": "The component's base wrapper.",
               "name": "base"
-            },
-            {
-              "description": "The `<image>` tag element that load the image source.",
-              "name": "img"
-            },
-            {
-              "description": "The `<span>` tag element that rendered the `Initials` text string.",
-              "name": "text"
-            },
-            {
-              "description": "The container that wraps the badge slot element.",
-              "name": "badge"
             }
           ],
           "slots": [
             {
-              "description": "The badge slot is used to add a badge to the avatar. The badge is a small circle or square that can be used to display a number or a status.",
-              "name": "badge"
+              "description": "The default slot where the bq-accordion elements are placed.",
+              "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "trimmedInitials",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
               "name": "el",
               "type": {
-                "text": "HTMLBqAvatarElement"
+                "text": "HTMLBqAccordionGroupElement"
               }
             },
             {
               "kind": "field",
-              "name": "hasError",
+              "name": "appearance",
+              "type": {
+                "text": "TAccordionAppearance"
+              },
+              "default": "'filled'",
+              "description": "The appearance style of accordion to be applied to all accordions"
+            },
+            {
+              "kind": "field",
+              "name": "expandAll",
               "type": {
                 "text": "boolean"
-              }
+              },
+              "description": "If true all accordions are expanded"
             },
             {
               "kind": "field",
-              "name": "altText",
+              "name": "noAnimation",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "description": "Alternate text for the avatar image if the image cannot be displayed"
+              "default": "false",
+              "description": "Animation is set through JS when the browser does not support CSS calc-size()\nIf true, the accordion animation, will be disabled. No animation will be applied."
             },
             {
               "kind": "field",
-              "name": "image",
+              "name": "multiple",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "description": "The image source to load on the avatar (this can be also a base64 encoded image)"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "description": "A text to use for describing the avatar on assistive devices"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "description": "The text to display on avatar"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "TAvatarShape"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar"
+              "default": "false",
+              "description": "If true multiple accordions can be expanded at the same time"
             },
             {
               "kind": "field",
               "name": "size",
               "type": {
-                "text": "TAvatarSize"
+                "text": "TAccordionSize"
               },
               "default": "'medium'",
-              "description": "The size of the avatar"
-            },
-            {
-              "kind": "method",
-              "name": "handleImagePropChange"
+              "description": "The size of accordion to be applied to all accordions"
             },
             {
               "kind": "method",
@@ -1646,22 +1667,24 @@
             },
             {
               "kind": "method",
-              "name": "onInitialsChange"
+              "name": "onBqClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent<HTMLBqAccordionElement>"
+                  }
+                }
+              ]
             },
             {
               "kind": "field",
-              "name": "onImageError",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "trimInitialsBasedOnSize",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "getIndex",
-              "privacy": "private"
+              "name": "bqAccordionElements",
+              "type": {
+                "text": "HTMLBqAccordionElement[]"
+              },
+              "privacy": "private",
+              "readonly": true
             },
             {
               "kind": "method",
@@ -1671,108 +1694,85 @@
           "attributes": [
             {
               "type": {
-                "text": "string"
+                "text": "\"filled\" | \"ghost\""
               },
-              "description": "Alternate text for the avatar image if the image cannot be displayed.",
-              "name": "alt-text"
+              "description": "The appearance style of accordion to be applied to all accordions",
+              "name": "appearance",
+              "default": "\"filled\""
             },
             {
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "description": "The image source to load on the avatar (this can be also a base64 encoded image).",
-              "name": "image"
+              "description": "If true all accordions are expanded",
+              "name": "expandAll",
+              "default": "false"
             },
             {
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "description": "A text to use for describing the avatar on assistive devices.",
-              "name": "label"
+              "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the accordion animation, will be disabled. No animation will be applied.",
+              "name": "no-animation",
+              "default": "false"
             },
             {
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "description": "The text to display on avatar.",
-              "name": "initials"
+              "description": "If true multiple accordions can be expanded at the same time",
+              "name": "multiple",
+              "default": "false"
             },
             {
               "type": {
-                "text": "\"circle\" | \"square\""
+                "text": "\"small\" | \"medium\""
               },
-              "description": "The shape of the avatar.",
-              "name": "shape"
+              "description": "The size of accordion to be applied to all accordions",
+              "name": "size",
+              "default": "\"medium\""
             },
             {
+              "name": "appearance",
+              "fieldName": "appearance",
               "type": {
-                "text": "\"xsmall\" | \"small\" | \"medium\" | \"large\""
-              },
-              "description": "The size of the avatar.",
-              "name": "size"
-            },
-            {
-              "name": "alt-text",
-              "fieldName": "altText",
-              "type": {
-                "text": "string"
+                "text": "TAccordionAppearance"
               }
             },
             {
-              "name": "image",
-              "fieldName": "image",
+              "name": "expand-all",
+              "fieldName": "expandAll",
               "type": {
-                "text": "string"
+                "text": "boolean"
               }
             },
             {
-              "name": "label",
-              "fieldName": "label",
+              "name": "no-animation",
+              "fieldName": "noAnimation",
               "type": {
-                "text": "string"
+                "text": "boolean"
               }
             },
             {
-              "name": "initials",
-              "fieldName": "initials",
+              "name": "multiple",
+              "fieldName": "multiple",
               "type": {
-                "text": "string"
-              }
-            },
-            {
-              "name": "shape",
-              "fieldName": "shape",
-              "type": {
-                "text": "TAvatarShape"
+                "text": "boolean"
               }
             },
             {
               "name": "size",
               "fieldName": "size",
               "type": {
-                "text": "TAvatarSize"
+                "text": "TAccordionSize"
               }
             }
           ],
-          "tagName": "bq-avatar",
-          "csspart": [
-            {
-              "name": "base",
-              "description": "The component's internal wrapper."
-            },
-            {
-              "name": "img",
-              "description": "The `<image>` tag element that load the image source."
-            },
-            {
-              "name": "text",
-              "description": "The `<span>` tag element that rendered the `Initials` text string."
-            },
-            {
-              "name": "badge",
-              "description": "The container that wraps the badge slot element."
-            }
-          ],
+          "tagName": "bq-accordion-group",
+          "csspart": {
+            "name": "base",
+            "description": "The component's base wrapper."
+          },
           "events": [],
           "customElement": true
         }
@@ -1780,18 +1780,18 @@
       "exports": [
         {
           "kind": "js",
-          "name": "BqAvatar",
+          "name": "BqAccordionGroup",
           "declaration": {
-            "name": "BqAvatar",
-            "module": "components/bq-avatar.js"
+            "name": "BqAccordionGroup",
+            "module": "components/bq-accordion-group.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "bq-avatar",
+          "name": "bq-accordion-group",
           "declaration": {
-            "name": "BqAvatar",
-            "module": "components/bq-avatar.js"
+            "name": "BqAccordionGroup",
+            "module": "components/bq-accordion-group.js"
           }
         }
       ]

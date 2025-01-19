@@ -2,5 +2,11 @@
  * Built by Endavans
  * © https://beeq.design - Apache 2 License.
  */
-import{B as o,d as s}from"./p-9bc31c4e.js";const c=o;const t=s;export{c as BqDivider,t as defineCustomElement};
+import { B as BqDivider$1, d as defineCustomElement$1 } from './bq-divider2.js';
+
+const BqDivider = BqDivider$1;
+const defineCustomElement = defineCustomElement$1;
+
+export { BqDivider, defineCustomElement };
+
 //# sourceMappingURL=bq-divider.js.map

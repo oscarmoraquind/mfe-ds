@@ -40,33 +40,43 @@
       "references": []
     },
     {
-      "name": "bq-accordion-group",
-      "description": "The accordion group component is a container for multiple accordion elements.\nIt allows to manage the appearance and size of all accordions at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion-group appearance=\"filled\" size=\"medium\">\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n</bq-accordion-group>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot where the bq-accordion elements are placed.\n\n### **CSS Properties:**\n - **--bq-accordion-group--gap** - Accordion group distance between elements _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "name": "bq-avatar",
+      "description": "The Avatar component is a simple and customizable element that displays an image or initials in a circular or square shape.\nThis component is useful for displaying user profile pictures or any other image that represents a person or an entity.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-avatar\nalt-text=\"John Doe profile picture\"\nimage=\"/image/url/photo-1524593689594.jpeg\"\nlabel=\"John Doe profile picture\"\nshape=\"circle\"\nsize=\"medium\"\n>\n<bq-badge slot=\"badge\" text-color=\"#fff\">9</bq-badge>\n</bq-avatar>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **badge** - The badge slot is used to add a badge to the avatar. The badge is a small circle or square that can be used to display a number or a status.\n\n### **CSS Properties:**\n - **--bq-avatar--background** - Avatar background color _(default: undefined)_\n- **--bq-avatar--border-color** - Avatar border color _(default: undefined)_\n- **--bq-avatar--border-style** - Avatar border style _(default: undefined)_\n- **--bq-avatar--border-width** - Avatar border width _(default: undefined)_\n- **--bq-avatar--border-radius-circle** - Avatar border radius for circle & any size _(default: undefined)_\n- **--bq-avatar--border-radius-squareXs** - Avatar border radius for square & size xsmall _(default: undefined)_\n- **--bq-avatar--border-radius-squareS** - Avatar border radius for square & size small _(default: undefined)_\n- **--bq-avatar--border-radius-squareM** - Avatar border radius for square & size medium/large _(default: undefined)_\n- **--bq-avatar--size-xsmall** - Avatar xsmall size _(default: undefined)_\n- **--bq-avatar--size-small** - Avatar small size _(default: undefined)_\n- **--bq-avatar--size-medium** - Avatar medium size _(default: undefined)_\n- **--bq-avatar--size-large** - Avatar large size _(default: undefined)_\n- **--bq-avatar--badge-top-square** - Badge top position shape square _(default: undefined)_\n- **--bq-avatar--badge-left-square** - Badge left position shape square _(default: undefined)_\n- **--bq-avatar--badge-top-circle** - Badge top position shape circle _(default: undefined)_\n- **--bq-avatar--badge-left-circle** - Badge left position shape circle _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **img** - The `<image>` tag element that load the image source.\n- **text** - The `<span>` tag element that rendered the `Initials` text string.\n- **badge** - The container that wraps the badge slot element.",
       "attributes": [
         {
-          "name": "appearance",
-          "description": "The appearance style of accordion to be applied to all accordions",
-          "values": [{ "name": "filled" }, { "name": "ghost" }]
-        },
-        {
-          "name": "expandAll",
-          "description": "If true all accordions are expanded",
+          "name": "alt-text",
+          "description": "Alternate text for the avatar image if the image cannot be displayed.",
           "values": []
         },
         {
-          "name": "no-animation",
-          "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the accordion animation, will be disabled. No animation will be applied.",
+          "name": "image",
+          "description": "The image source to load on the avatar (this can be also a base64 encoded image).",
           "values": []
         },
         {
-          "name": "multiple",
-          "description": "If true multiple accordions can be expanded at the same time",
+          "name": "label",
+          "description": "A text to use for describing the avatar on assistive devices.",
           "values": []
+        },
+        {
+          "name": "initials",
+          "description": "The text to display on avatar.",
+          "values": []
+        },
+        {
+          "name": "shape",
+          "description": "The shape of the avatar.",
+          "values": [{ "name": "circle" }, { "name": "square" }]
         },
         {
           "name": "size",
-          "description": "The size of accordion to be applied to all accordions",
-          "values": [{ "name": "small" }, { "name": "medium" }]
+          "description": "The size of the avatar.",
+          "values": [
+            { "name": "xsmall" },
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
         }
       ],
       "references": []
@@ -133,43 +143,33 @@
       "references": []
     },
     {
-      "name": "bq-avatar",
-      "description": "The Avatar component is a simple and customizable element that displays an image or initials in a circular or square shape.\nThis component is useful for displaying user profile pictures or any other image that represents a person or an entity.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-avatar\nalt-text=\"John Doe profile picture\"\nimage=\"/image/url/photo-1524593689594.jpeg\"\nlabel=\"John Doe profile picture\"\nshape=\"circle\"\nsize=\"medium\"\n>\n<bq-badge slot=\"badge\" text-color=\"#fff\">9</bq-badge>\n</bq-avatar>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **badge** - The badge slot is used to add a badge to the avatar. The badge is a small circle or square that can be used to display a number or a status.\n\n### **CSS Properties:**\n - **--bq-avatar--background** - Avatar background color _(default: undefined)_\n- **--bq-avatar--border-color** - Avatar border color _(default: undefined)_\n- **--bq-avatar--border-style** - Avatar border style _(default: undefined)_\n- **--bq-avatar--border-width** - Avatar border width _(default: undefined)_\n- **--bq-avatar--border-radius-circle** - Avatar border radius for circle & any size _(default: undefined)_\n- **--bq-avatar--border-radius-squareXs** - Avatar border radius for square & size xsmall _(default: undefined)_\n- **--bq-avatar--border-radius-squareS** - Avatar border radius for square & size small _(default: undefined)_\n- **--bq-avatar--border-radius-squareM** - Avatar border radius for square & size medium/large _(default: undefined)_\n- **--bq-avatar--size-xsmall** - Avatar xsmall size _(default: undefined)_\n- **--bq-avatar--size-small** - Avatar small size _(default: undefined)_\n- **--bq-avatar--size-medium** - Avatar medium size _(default: undefined)_\n- **--bq-avatar--size-large** - Avatar large size _(default: undefined)_\n- **--bq-avatar--badge-top-square** - Badge top position shape square _(default: undefined)_\n- **--bq-avatar--badge-left-square** - Badge left position shape square _(default: undefined)_\n- **--bq-avatar--badge-top-circle** - Badge top position shape circle _(default: undefined)_\n- **--bq-avatar--badge-left-circle** - Badge left position shape circle _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **img** - The `<image>` tag element that load the image source.\n- **text** - The `<span>` tag element that rendered the `Initials` text string.\n- **badge** - The container that wraps the badge slot element.",
+      "name": "bq-accordion-group",
+      "description": "The accordion group component is a container for multiple accordion elements.\nIt allows to manage the appearance and size of all accordions at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion-group appearance=\"filled\" size=\"medium\">\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n</bq-accordion-group>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot where the bq-accordion elements are placed.\n\n### **CSS Properties:**\n - **--bq-accordion-group--gap** - Accordion group distance between elements _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
         {
-          "name": "alt-text",
-          "description": "Alternate text for the avatar image if the image cannot be displayed.",
+          "name": "appearance",
+          "description": "The appearance style of accordion to be applied to all accordions",
+          "values": [{ "name": "filled" }, { "name": "ghost" }]
+        },
+        {
+          "name": "expandAll",
+          "description": "If true all accordions are expanded",
           "values": []
         },
         {
-          "name": "image",
-          "description": "The image source to load on the avatar (this can be also a base64 encoded image).",
+          "name": "no-animation",
+          "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the accordion animation, will be disabled. No animation will be applied.",
           "values": []
         },
         {
-          "name": "label",
-          "description": "A text to use for describing the avatar on assistive devices.",
+          "name": "multiple",
+          "description": "If true multiple accordions can be expanded at the same time",
           "values": []
-        },
-        {
-          "name": "initials",
-          "description": "The text to display on avatar.",
-          "values": []
-        },
-        {
-          "name": "shape",
-          "description": "The shape of the avatar.",
-          "values": [{ "name": "circle" }, { "name": "square" }]
         },
         {
           "name": "size",
-          "description": "The size of the avatar.",
-          "values": [
-            { "name": "xsmall" },
-            { "name": "small" },
-            { "name": "medium" },
-            { "name": "large" }
-          ]
+          "description": "The size of accordion to be applied to all accordions",
+          "values": [{ "name": "small" }, { "name": "medium" }]
         }
       ],
       "references": []

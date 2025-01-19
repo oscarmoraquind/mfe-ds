@@ -2,5 +2,11 @@
  * Built by Endavans
  * © https://beeq.design - Apache 2 License.
  */
-import{B as o,d as s}from"./p-f26c157f.js";const t=o;const c=s;export{t as BqDropdown,c as defineCustomElement};
+import { B as BqDropdown$1, d as defineCustomElement$1 } from './bq-dropdown2.js';
+
+const BqDropdown = BqDropdown$1;
+const defineCustomElement = defineCustomElement$1;
+
+export { BqDropdown, defineCustomElement };
+
 //# sourceMappingURL=bq-dropdown.js.map
