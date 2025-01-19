@@ -1,0 +1,1 @@
+const l=(a,n)=>{let e=a.length;const o=new Array(n),t=new Array(e);if(n>e)throw new RangeError("getRandom: more elements taken than available");for(;n--;){const r=Date.now()%e;o[n]=a[r in t?t[r]:r],t[r]=--e in t?t[e]:e}return o};export{l as g};

@@ -1,0 +1,40 @@
+{
+  "name": "@beeq/angular",
+  "version": "1.8.1",
+  "license": "Apache-2.0",
+  "description": "Angular specific wrapper for BEEQ Design System components",
+  "main": "dist/esm2015/index.js",
+  "module": "fesm2022/beeq-angular.mjs",
+  "types": "index.d.ts",
+  "dependencies": {
+    "@beeq/core": "^1.8.1",
+    "tslib": "^2.6.3"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Endava/BEEQ"
+  },
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/beeq-angular.mjs",
+      "esm": "./esm2022/beeq-angular.mjs",
+      "default": "./fesm2022/beeq-angular.mjs"
+    },
+    "./standalone": {
+      "types": "./standalone/index.d.ts",
+      "esm2022": "./esm2022/standalone/beeq-angular-standalone.mjs",
+      "esm": "./esm2022/standalone/beeq-angular-standalone.mjs",
+      "default": "./fesm2022/beeq-angular-standalone.mjs"
+    }
+  },
+  "sideEffects": false
+}

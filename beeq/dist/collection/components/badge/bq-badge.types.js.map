@@ -1,0 +1,1 @@
+{"version":3,"file":"bq-badge.types.js","sourceRoot":"","sources":["../../../../../../src/components/badge/bq-badge.types.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,UAAU,GAAG,CAAC,OAAO,EAAE,QAAQ,CAAU,CAAC","sourcesContent":["export const BADGE_SIZE = ['small', 'medium'] as const;\nexport type TBadgeSize = (typeof BADGE_SIZE)[number];\n"]}

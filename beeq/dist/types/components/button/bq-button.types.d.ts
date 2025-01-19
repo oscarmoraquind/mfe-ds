@@ -1,0 +1,10 @@
+export declare const BUTTON_SIZE: readonly ["small", "medium", "large"];
+export type TButtonSize = (typeof BUTTON_SIZE)[number];
+export declare const BUTTON_TYPE: readonly ["button", "submit", "reset"];
+export type TButtonType = (typeof BUTTON_TYPE)[number];
+export declare const BUTTON_APPEARANCE: readonly ["primary", "secondary", "link", "text"];
+export type TButtonAppearance = (typeof BUTTON_APPEARANCE)[number];
+export declare const BUTTON_VARIANT: readonly ["standard", "ghost", "danger"];
+export type TButtonVariant = (typeof BUTTON_VARIANT)[number];
+export declare const BUTTON_BORDER_RADIUS: readonly ["none", "xs2", "xs", "s", "m", "l", "full"];
+export type TButtonBorderRadius = (typeof BUTTON_BORDER_RADIUS)[number];

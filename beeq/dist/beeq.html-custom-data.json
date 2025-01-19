@@ -1,0 +1,2104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-html-languageservice/main/docs/customData.schema.json",
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "bq-accordion",
+      "description": "The Accordion is a UI component that allows users to toggle between showing and hiding content sections. It provides a collapsible functionality, where only one section can be expanded at a time, while the others remain collapsed.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion appearance=\"filled\" size=\"medium\">\n<bq-avatar size=\"xsmall\" image=\"/image/url/img.png\" slot=\"prefix\"></bq-avatar>\n<h3 slot=\"header\">Header</h3>\n<div>Lorem ipsum dolor...</div>\n</bq-accordion>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqOpen** - Handler to be called when the accordion is opened\n- **bqAfterOpen** - Handler to be called after the accordion is opened\n- **bqClose** - Handler to be called when the accordion is closed\n- **bqAfterClose** - Handler to be called after the accordion is closed\n- **bqFocus** - Handler to be called when the accordion gets focus\n- **bqClick** - Handler to be called when the accordion is clicked\n- **bqBlur** - Handler to be called when the accordion loses focus\n- **bqBlur** - Handler to be called when the accordion loses focus\n- **bqFocus** - Handler to be called when the accordion gets focus\n- **bqOpen** - Handler to be called when the accordion is opened\n- **bqAfterOpen** - Handler to be called after the accordion is opened\n- **bqClose** - Handler to be called when the accordion is closed\n- **bqAfterClose** - Handler to be called after the accordion is closed\n- **bqClick** - Handler to be called when the accordion is clicked\n\n### **Slots:**\n - _default_ - The accordion panel content\n- **collapse** - The accordion collapse icon\n- **expand** - The accordion expand icon\n- **header** - The accordion header content\n- **prefix** - The accordion prefix content (icon or avatar)\n- **suffix** - The accordion suffix content (icon or avatar)\n\n### **CSS Properties:**\n - **--bq-accordion--small-padding-y** - Accordion small vertical padding _(default: undefined)_\n- **--bq-accordion--small-padding-start** - Accordion small start padding _(default: undefined)_\n- **--bq-accordion--small-padding-end** - Accordion small end padding _(default: undefined)_\n- **--bq-accordion--small-padding-gap** - Accordion small gap distance between suffix, title and prefix _(default: undefined)_\n- **--bq-accordion--small-radius** - Accordion small border radius _(default: undefined)_\n- **--bq-accordion--medium-padding-y** - Accordion medium vertical padding _(default: undefined)_\n- **--bq-accordion--medium-padding-start** - Accordion medium start padding _(default: undefined)_\n- **--bq-accordion--medium-padding-end** - Accordion medium end padding _(default: undefined)_\n- **--bq-accordion--medium-padding-gap** - Accordion medium gap distance between suffix, title and prefix _(default: undefined)_\n- **--bq-accordion--medium-radius** - Accordion medium border radius _(default: undefined)_\n- **--bq-accordion--collapsed-border-color** - Accordion collapsed border color _(default: undefined)_\n- **--bq-accordion--collapsed-border-style** - Accordion collapsed border style _(default: undefined)_\n- **--bq-accordion--collapsed-border-width** - Accordion collapsed border width _(default: undefined)_\n- **--bq-accordion--expanded-border-color** - Accordion expanded border color _(default: undefined)_\n- **--bq-accordion--expanded-border-style** - Accordion expanded border style _(default: undefined)_\n- **--bq-accordion--expanded-border-width** - Accordion expanded border width _(default: undefined)_\n- **--bq-accordion--filled-collapsed-background** - Accordion filled collapsed header background _(default: undefined)_\n- **--bq-accordion--filled-collapsed-text-color** - Accordion filled collapsed header text color _(default: undefined)_\n- **--bq-accordion--filled-expanded-background** - Accordion filled expanded header background _(default: undefined)_\n- **--bq-accordion--filled-expanded-collapsed-hover** - Accordion filled expanded header color on hover _(default: undefined)_\n- **--bq-accordion--filled-expanded-text-color** - Accordion filled expanded header text color _(default: undefined)_\n- **--bq-accordion--ghost-collapsed-background** - Accordion ghost collapsed header background _(default: undefined)_\n- **--bq-accordion--ghost-collapsed-text-color** - Accordion ghost collapsed header text color _(default: undefined)_\n- **--bq-accordion--ghost-expanded-background** - Accordion ghost expanded header background _(default: undefined)_\n- **--bq-accordion--ghost-expanded-collapsed-hover** - Accordion ghost expanded header color on hover _(default: undefined)_\n- **--bq-accordion--ghost-expanded-text-color** - Accordion ghost expanded header text color _(default: undefined)_\n- **--bq-accordion--panel-filled-border-color** - Accordion filled panel border color _(default: undefined)_\n- **--bq-accordion--panel-filled-border-style** - Accordion filled panel border style _(default: undefined)_\n- **--bq-accordion--panel-filled-border-width** - Accordion filled panel border width _(default: undefined)_\n- **--bq-accordion--panel-small-filled-padding-y** - Accordion small filled panel vertical padding _(default: undefined)_\n- **--bq-accordion--panel-small-filled-padding-start** - Accordion small filled panel start padding _(default: undefined)_\n- **--bq-accordion--panel-small-filled-padding-end** - Accordion small filled panel end padding _(default: undefined)_\n- **--bq-accordion--panel-medium-filled-padding-y** - Accordion medium filled panel vertical padding _(default: undefined)_\n- **--bq-accordion--panel-medium-filled-padding-start** - Accordion medium filled panel start padding _(default: undefined)_\n- **--bq-accordion--panel-medium-filled-padding-end** - Accordion medium filled panel end padding _(default: undefined)_\n- **--bq-accordion--panel-ghost-border-color** - Accordion ghost panel border color _(default: undefined)_\n- **--bq-accordion--panel-ghost-border-style** - Accordion ghost panel border style _(default: undefined)_\n- **--bq-accordion--panel-ghost-border-width** - Accordion ghost panel border width _(default: undefined)_\n- **--bq-accordion--panel-small-ghost-padding-y** - Accordion small ghost panel vertical padding _(default: undefined)_\n- **--bq-accordion--panel-small-ghost-padding-start** - Accordion small ghost panel start padding _(default: undefined)_\n- **--bq-accordion--panel-small-ghost-padding-end** - Accordion small ghost panel end padding _(default: undefined)_\n- **--bq-accordion--panel-medium-ghost-padding-y** - Accordion medium ghost panel vertical padding _(default: undefined)_\n- **--bq-accordion--panel-medium-ghost-padding-start** - Accordion medium ghost panel start padding _(default: undefined)_\n- **--bq-accordion--panel-medium-ghost-padding-end** - Accordion medium ghost panel end padding _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The `<details>` that holds the accordion content\n- **header** - The `<summary>` that holds the accordion header content\n- **panel** - The `<div>` that holds the accordion panel content\n- **prefix** - The `<div>` that holds the accordion prefix content\n- **suffix** - The `<div>` that holds the accordion suffix content\n- **text** - The `<div>` that holds the accordion header text content",
+      "attributes": [
+        {
+          "name": "appearance",
+          "description": "The appearance style of the Accordion",
+          "values": [{ "name": "filled" }, { "name": "ghost" }]
+        },
+        {
+          "name": "disabled",
+          "description": "If true, the Accordion is disabled",
+          "values": []
+        },
+        {
+          "name": "expanded",
+          "description": "If true, the Accordion is expanded",
+          "values": []
+        },
+        {
+          "name": "no-animation",
+          "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the Accordion animation, will be disabled. No animation will be applied.",
+          "values": []
+        },
+        {
+          "name": "rotate",
+          "description": "If true, the Accordion expand icon is rotate 180deg when expanded",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the the Accordion",
+          "values": [{ "name": "small" }, { "name": "medium" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-accordion-group",
+      "description": "The accordion group component is a container for multiple accordion elements.\nIt allows to manage the appearance and size of all accordions at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-accordion-group appearance=\"filled\" size=\"medium\">\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n<bq-accordion> ... </bq-accordion>\n</bq-accordion-group>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot where the bq-accordion elements are placed.\n\n### **CSS Properties:**\n - **--bq-accordion-group--gap** - Accordion group distance between elements _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "appearance",
+          "description": "The appearance style of accordion to be applied to all accordions",
+          "values": [{ "name": "filled" }, { "name": "ghost" }]
+        },
+        {
+          "name": "expandAll",
+          "description": "If true all accordions are expanded",
+          "values": []
+        },
+        {
+          "name": "no-animation",
+          "description": "Animation is set through JS when the browser does not support CSS calc-size() If true, the accordion animation, will be disabled. No animation will be applied.",
+          "values": []
+        },
+        {
+          "name": "multiple",
+          "description": "If true multiple accordions can be expanded at the same time",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of accordion to be applied to all accordions",
+          "values": [{ "name": "small" }, { "name": "medium" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-alert",
+      "description": "The Alert is a user interface component used to convey important information to the user in a clear and concise manner.\nIt can be used to notify users of success, failure, warning, or any other type of information that needs to be brought to their attention.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-alert>\n<bq-icon name=\"star\" slot=\"icon\"></bq-icon>\nTitle\n<span slot=\"body\">\nDescription\n<a class=\"bq-link\" href=\"https://example.com\">Link</a>\n</span>\n<div slot=\"footer\">\n<bq-button appearance=\"primary\" size=\"small\">Button</bq-button>\n<bq-button appearance=\"link\" size=\"small\">Button</bq-button>\n</div>\n</bq-alert>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqHide** - Callback handler to be called when the alert is hidden\n- **bqShow** - Callback handler to be called when the alert is shown\n- **bqAfterShow** - Callback handler to be called after the alert has been shown\n- **bqAfterHide** - Callback handler to be called after the alert has been hidden\n- **bqHide** - Callback handler to be called when the alert is hidden\n- **bqShow** - Callback handler to be called when the alert is shown\n- **bqAfterShow** - Callback handler to be called after the alert has been shown\n- **bqAfterHide** - Callback handler to be called after the alert has been hidden\n\n### **Methods:**\n - **hide(): _Promise<void>_** - Method to be called to hide the alert component\n- **show(): _Promise<void>_** - Method to be called to show the alert component\n\n### **Slots:**\n - _default_ - The alert title content (no slot name required)\n- **body** - The alert description content\n- **footer** - The alert footer content\n- **icon** - The predefined icon based on the alert type (info, success, warning, error, default)\n- **btn-close** - The close button of the alert\n\n### **CSS Properties:**\n - **--bq-alert--background** - The alert background color _(default: undefined)_\n- **--bq-alert--border-radius** - The alert border radius _(default: undefined)_\n- **--bq-alert--content-footer-gap** - The alert content and footer gap _(default: undefined)_\n- **--bq-alert--title-body-gap** - The alert title and body gap _(default: undefined)_\n- **--bq-alert--border-color** - The alert border color _(default: undefined)_\n- **--bq-alert--border-style** - The alert border style _(default: undefined)_\n- **--bq-alert--border-width** - The alert border width _(default: undefined)_\n- **--bq-alert--background-info** - The alert background color for info type _(default: undefined)_\n- **--bq-alert--background-success** - The alert background color for success type _(default: undefined)_\n- **--bq-alert--background-warning** - The alert background color for warning type _(default: undefined)_\n- **--bq-alert--background-error** - The alert background color for error type _(default: undefined)_\n- **--bq-alert--border-info** - The alert border color for info type _(default: undefined)_\n- **--bq-alert--border-success** - The alert border color for success type _(default: undefined)_\n- **--bq-alert--border-warning** - The alert border color for warning type _(default: undefined)_\n- **--bq-alert--border-error** - The alert border color for error type _(default: undefined)_\n- **--bq-alert--icon-color-info** - The alert icon color for info type _(default: undefined)_\n- **--bq-alert--icon-color-success** - The alert icon color for success type _(default: undefined)_\n- **--bq-alert--icon-color-warning** - The alert icon color for warning type _(default: undefined)_\n- **--bq-alert--icon-color-error** - The alert icon color for error type _(default: undefined)_\n- **--bq-alert--padding** - The alert padding _(default: undefined)_\n- **--bq-alert--min-width** - The alert min width _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The `<div>` container of the predefined bq-icon component\n- **body** - The container `<div>` that wraps the alert description content\n- **btn-close** - The `bq-button` used to close the alert\n- **content** - The container `<div>` that wraps all the alert content (title, description, footer)\n- **footer** - The container `<div>` that wraps the alert footer content\n- **icon** - The `<bq-icon>` element used to render a predefined icon based on the alert type (info, success, warning, error, default)\n- **icon-outline** - The container `<div>` that wraps the icon element\n- **main** - The container `<div>` that wraps the alert main content (title, description)\n- **svg** - The `<svg>` element of the predefined bq-icon component\n- **title** - The container `<div>` that wraps the alert title content\n- **wrapper** - The wrapper container `<div>` of the element inside the shadow DOM",
+      "attributes": [
+        {
+          "name": "auto-dismiss",
+          "description": "If true, the alert will automatically hide after the specified amount of time",
+          "values": []
+        },
+        {
+          "name": "border",
+          "description": "The corner radius of the alert component",
+          "values": [
+            { "name": "none" },
+            { "name": "xs2" },
+            { "name": "xs" },
+            { "name": "s" },
+            { "name": "m" },
+            { "name": "l" },
+            { "name": "full" }
+          ]
+        },
+        {
+          "name": "disable-close",
+          "description": "If true, the close button at the top right of the alert won't be shown",
+          "values": []
+        },
+        {
+          "name": "hide-icon",
+          "description": "If true, the alert icon won't be shown",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If true, the alert will be shown",
+          "values": []
+        },
+        {
+          "name": "time",
+          "description": "The length of time, in milliseconds, after which the alert will close itself. Only valid if `autoDismiss=\"true\"`",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "Type of Alert",
+          "values": [
+            { "name": "info" },
+            { "name": "success" },
+            { "name": "warning" },
+            { "name": "error" },
+            { "name": "default" }
+          ]
+        },
+        {
+          "name": "sticky",
+          "description": "If true, the alert component will remain fixed at the top of the page, occupying the full viewport",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-avatar",
+      "description": "The Avatar component is a simple and customizable element that displays an image or initials in a circular or square shape.\nThis component is useful for displaying user profile pictures or any other image that represents a person or an entity.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-avatar\nalt-text=\"John Doe profile picture\"\nimage=\"/image/url/photo-1524593689594.jpeg\"\nlabel=\"John Doe profile picture\"\nshape=\"circle\"\nsize=\"medium\"\n>\n<bq-badge slot=\"badge\" text-color=\"#fff\">9</bq-badge>\n</bq-avatar>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **badge** - The badge slot is used to add a badge to the avatar. The badge is a small circle or square that can be used to display a number or a status.\n\n### **CSS Properties:**\n - **--bq-avatar--background** - Avatar background color _(default: undefined)_\n- **--bq-avatar--border-color** - Avatar border color _(default: undefined)_\n- **--bq-avatar--border-style** - Avatar border style _(default: undefined)_\n- **--bq-avatar--border-width** - Avatar border width _(default: undefined)_\n- **--bq-avatar--border-radius-circle** - Avatar border radius for circle & any size _(default: undefined)_\n- **--bq-avatar--border-radius-squareXs** - Avatar border radius for square & size xsmall _(default: undefined)_\n- **--bq-avatar--border-radius-squareS** - Avatar border radius for square & size small _(default: undefined)_\n- **--bq-avatar--border-radius-squareM** - Avatar border radius for square & size medium/large _(default: undefined)_\n- **--bq-avatar--size-xsmall** - Avatar xsmall size _(default: undefined)_\n- **--bq-avatar--size-small** - Avatar small size _(default: undefined)_\n- **--bq-avatar--size-medium** - Avatar medium size _(default: undefined)_\n- **--bq-avatar--size-large** - Avatar large size _(default: undefined)_\n- **--bq-avatar--badge-top-square** - Badge top position shape square _(default: undefined)_\n- **--bq-avatar--badge-left-square** - Badge left position shape square _(default: undefined)_\n- **--bq-avatar--badge-top-circle** - Badge top position shape circle _(default: undefined)_\n- **--bq-avatar--badge-left-circle** - Badge left position shape circle _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **img** - The `<image>` tag element that load the image source.\n- **text** - The `<span>` tag element that rendered the `Initials` text string.\n- **badge** - The container that wraps the badge slot element.",
+      "attributes": [
+        {
+          "name": "alt-text",
+          "description": "Alternate text for the avatar image if the image cannot be displayed.",
+          "values": []
+        },
+        {
+          "name": "image",
+          "description": "The image source to load on the avatar (this can be also a base64 encoded image).",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "A text to use for describing the avatar on assistive devices.",
+          "values": []
+        },
+        {
+          "name": "initials",
+          "description": "The text to display on avatar.",
+          "values": []
+        },
+        {
+          "name": "shape",
+          "description": "The shape of the avatar.",
+          "values": [{ "name": "circle" }, { "name": "square" }]
+        },
+        {
+          "name": "size",
+          "description": "The size of the avatar.",
+          "values": [
+            { "name": "xsmall" },
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-badge",
+      "description": "The Badge component is a visual indicator that can be added to various elements within a user interface.\nIt is typically used to highlight important or relevant information, such as alerts, notifications, or statuses.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-badge background-color=\"ui--success\" text-color=\"text--inverse\" size=\"small\">9</bq-badge>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot is used to add content to the badge. The content can be a number or a text.\n\n### **CSS Properties:**\n - **--bq-badge--background-color** - The badge background color _(default: undefined)_\n- **--bq-badge--box-shadow** - The badge box shadow _(default: undefined)_\n- **--bq-badge--border-color** - The badge border color _(default: undefined)_\n- **--bq-badge--border-radius** - The badge border radius _(default: undefined)_\n- **--bq-badge--border-style** - The badge border style _(default: undefined)_\n- **--bq-badge--border-width** - The badge border width _(default: undefined)_\n- **--bq-badge--size-small** - The badge small size _(default: undefined)_\n- **--bq-badge--size-medium** - The badge medium size _(default: undefined)_\n- **--bq-badge--size-large** - The badge large size _(default: undefined)_\n- **--bq-badge--text-color** - The badge text color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper that holds the count.\n- **number** - The component's internal wrapper that holds the slot.",
+      "attributes": [
+        {
+          "name": "background-color",
+          "description": "Badge background color. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "text-color",
+          "description": "Badge number color. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the badge. Relevant if badge has no content.",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-breadcrumb",
+      "description": "The Breadcrumb is used to wraps a series of breadcrumb items to indicate the current page's location within a navigational hierarchy.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-breadcrumb label=\"Breadcrumb\">\n<bq-breadcrumb-item>Home</bq-breadcrumb-item>\n<bq-breadcrumb-item>Men's clothing</bq-breadcrumb-item>\n<bq-breadcrumb-item>Shirt</bq-breadcrumb-item>\n<bq-breadcrumb-item>Casual shirts</bq-breadcrumb-item>\n</bq-breadcrumb>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot is used to add `bq-breadcrumb-item` items to the breadcrumb.\n- **separator** - The slot to add a separator between breadcrumb items. Default separator is `/`.\n\n### **CSS Parts:**\n - **navigation** - The `nav` tag that loads the breadcrumb items\n- **separator** - The container that wraps the separator element",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "The `aria-label` attribute to describe the type of navigation",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-breadcrumb-item",
+      "description": "The Breadcrumb Item helps users understand their current location within a website or application's hierarchical structure.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-breadcrumb-item label=\"Home page\">\n<bq-icon name=\"house-line\" size=\"16\"></bq-icon>\nHome\n</bq-breadcrumb-item>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqFocus** - Handler to be called when item is focused\n- **bqClick** - Handler to be called when item is clicked\n- **bqBlur** - Handler to be called when item loses focus\n- **bqBlur** - Handler to be called when item loses focus\n- **bqFocus** - Handler to be called when item is focused\n- **bqClick** - Handler to be called when item is clicked\n\n### **Slots:**\n - _default_ - The default slot is used to add content to the breadcrumb item.\n\n### **CSS Properties:**\n - **--bq-breadcrumb-item--background** - Background color of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--box-shadow** - Box shadow of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--border-color** - Border color of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--border-style** - Border style of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--border-width** - Border width of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--border-radius** - Border radius of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--line-height** - Line height of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--text-color** - Text color of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--text-color-current** - Text color of the current breadcrumb item (active) _(default: undefined)_\n- **--bq-breadcrumb-item--text-size** - Text size of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--text-size-separator** - Text size of the breadcrumb item separator _(default: undefined)_\n- **--bq-breadcrumb-item--padding-start** - Padding start of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--padding-end** - Padding end of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--paddingY** - Padding top and bottom of the breadcrumb item _(default: undefined)_\n- **--bq-breadcrumb-item--padding-start-separator** - Padding start of the breadcrumb item separator _(default: undefined)_\n- **--bq-breadcrumb-item--padding-end-separator** - Padding end of the breadcrumb item separator _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component wrapper container\n- **content** - The `span` tag that wraps the content item\n- **item** - The breadcrumb item wrapper (`button` or `a`)\n- **separator** - The `span` tag that wraps the separator element",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "If set, the breadcrumb item will be rendered as an `<a>` with this `href`, otherwise, a `<button>` will be rendered.",
+          "values": []
+        },
+        {
+          "name": "target",
+          "description": "Where to display the link in the browser context. Relevant only if `href` is set.",
+          "values": []
+        },
+        {
+          "name": "rel",
+          "description": "Where to display the link in the browser context. Relevant only if `href` is set.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-button",
+      "description": "Buttons are designed for users to take action on a page or a screen.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-button appearance=\"primary\" border=\"m\" size=\"medium\">\n<bq-icon name=\"arrow-circle-left\" slot=\"prefix\"></bq-icon>\nGo back\n</bq-button>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when the button loses focus\n- **bqFocus** - Handler to be called when button gets focus\n- **bqClick** - Handler to be called when the button is clicked\n- **bqBlur** - Handler to be called when the button loses focus\n- **bqFocus** - Handler to be called when the button is clicked\n- **bqClick** - Handler to be called when button gets focus\n\n### **Slots:**\n - **prefix** - The prefix content to be displayed before the button label\n- _default_ - The button label content\n- **suffix** - The suffix content to be displayed after the button label\n\n### **CSS Properties:**\n - **--bq-button--border-color** - Button border color _(default: undefined)_\n- **--bq-button--border-radius** - Button border radius _(default: undefined)_\n- **--bq-button--border-style** - Button border style _(default: undefined)_\n- **--bq-button--border-width** - Button border width _(default: undefined)_\n- **--bq-button--small-height** - Button small height _(default: undefined)_\n- **--bq-button--small-paddingX** - Button small padding block (top and bottom) _(default: undefined)_\n- **--bq-button--small-paddingY** - Button small padding inline (left and right) _(default: undefined)_\n- **--bq-button--small-font-size** - Button small font size _(default: undefined)_\n- **--bq-button--medium-height** - Button medium height _(default: undefined)_\n- **--bq-button--medium-paddingX** - Button medium padding block (top and bottom) _(default: undefined)_\n- **--bq-button--medium-paddingY** - Button medium padding inline (left and right) _(default: undefined)_\n- **--bq-button--medium-font-size** - Button medium font size _(default: undefined)_\n- **--bq-button--large-height** - Button large height _(default: undefined)_\n- **--bq-button--large-paddingX** - Button large padding block (top and bottom) _(default: undefined)_\n- **--bq-button--large-paddingY** - Button large padding inline (left and right) _(default: undefined)_\n- **--bq-button--large-font-size** - Button large font size _(default: undefined)_\n\n### **CSS Parts:**\n - **button** - The `<a>` or `<button>` HTML element used under the hood.\n- **prefix** - The `<span>` tag element that acts as prefix container.\n- **label** - The `<span>` tag element that renders the text of the button.\n- **suffix** - The `<span>` tag element that acts as suffix container.",
+      "attributes": [
+        {
+          "name": "appearance",
+          "description": "The appearance style to apply to the button",
+          "values": [
+            { "name": "primary" },
+            { "name": "secondary" },
+            { "name": "link" },
+            { "name": "text" }
+          ]
+        },
+        {
+          "name": "block",
+          "description": "If `true`, it will make the button fit to its parent width.",
+          "values": []
+        },
+        {
+          "name": "border",
+          "description": "The corner radius of the button",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the button will be disabled (no interaction allowed)",
+          "values": []
+        },
+        {
+          "name": "download",
+          "description": "Tells the browser to treat the linked URL as a download. Only used when `href` is set.",
+          "values": []
+        },
+        {
+          "name": "href",
+          "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`",
+          "values": []
+        },
+        {
+          "name": "justify-content",
+          "description": "It determinate how the content should be aligned",
+          "values": [
+            { "name": "left" },
+            { "name": "center" },
+            { "name": "right" }
+          ]
+        },
+        {
+          "name": "loading",
+          "description": "If `true` it will display the button in a loading state",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the button",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "Where to display the linked URL, as the name for a browsing context (a `tab`, `window`, or `<iframe>`)",
+          "values": [
+            { "name": "_blank" },
+            { "name": "_parent" },
+            { "name": "_self" },
+            { "name": "_top" }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "The default behavior of the button",
+          "values": [
+            { "name": "button" },
+            { "name": "submit" },
+            { "name": "reset" }
+          ]
+        },
+        {
+          "name": "variant",
+          "description": "The variant of button to apply on top of the appearance (applicable only to `appearance=\"primary\"`)",
+          "values": [
+            { "name": "standard" },
+            { "name": "ghost" },
+            { "name": "danger" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-card",
+      "description": "The Card component serves as a versatile container designed for flexible content presentation within user interfaces.\nIts structure accommodates various styles, allowing users to customize and adapt it according to their design preferences.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-card type=\"default\" border=\"m\">\n<div class=\"p-m\">\n<h3 class=\"text-xl font-bold\">Card Title</h3>\n<p class=\"text-m\">Card content goes here</p>\n</div>\n</bq-card>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The content of the card component\n\n### **CSS Properties:**\n - **--bq-card--borderColor** - Card border color _(default: undefined)_\n- **--bq-card--borderRadius** - Card border radius _(default: undefined)_\n- **--bq-card--borderStyle** - Card border style _(default: undefined)_\n- **--bq-card--borderWidth** - Card border width _(default: undefined)_\n- **--bq-card--padding** - Card padding _(default: undefined)_\n- **--bq-card--paddingMinimal** - Minimal card padding _(default: undefined)_\n- **--bq-card--background** - Card background color _(default: undefined)_\n\n### **CSS Parts:**\n - **wrapper** - The wrapper container `<div>` of the element inside the shadow DOM",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "Type of card component",
+          "values": [{ "name": "default" }, { "name": "minimal" }]
+        },
+        {
+          "name": "border",
+          "description": "The corner radius of the card component",
+          "values": [
+            { "name": "none" },
+            { "name": "xs2" },
+            { "name": "xs" },
+            { "name": "s" },
+            { "name": "m" },
+            { "name": "l" },
+            { "name": "full" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-checkbox",
+      "description": "The checkbox is a UI component that allows users to select one or more options from a list of choices.\nIt is commonly used in forms, surveys, and settings pages.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-checkbox name=\"bq-checkbox\" value=\"checkbox-value\" background-on-hover>\nCheckbox label\n</bq-checkbox>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqChange** - Handler to be called when the checkbox state changes\n- **bqFocus** - Handler to be called when the checkbox gets focus\n- **bqBlur** - Handler to be called when the checkbox loses focus\n- **bqChange** - Handler to be called when the checkbox state changes\n- **bqFocus** - Handler to be called when the checkbox gets focus\n- **bqBlur** - Handler to be called when the checkbox loses focus\n\n### **Methods:**\n - **vClick()** - Simulate a click event on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.click()`.\n- **vFocus()** - Sets focus on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.focus()`.\n- **vBlur()** - Remove focus from the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.blur()`.\n\n### **Slots:**\n - _default_ - The content of the checkbox component\n\n### **CSS Properties:**\n - **--bq-checkbox--size** - Checkbox size _(default: undefined)_\n- **--bq-checkbox--border-radius** - Checkbox border radius _(default: undefined)_\n- **--bq-checkbox--border-width** - Checkbox border width _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper of the checkbox component.\n- **control** - The container `<div>` element that holds the custom checkbox.\n- **input** - The native HTML `<input type=\"checkbox\">` used under the hood.\n- **checkbox** - The `<span>` element that renders the custom checked/indeterminate state.\n- **label** - The `<span>` element that holds the text content.",
+      "attributes": [
+        {
+          "name": "background-on-hover",
+          "description": "If true checkbox displays background on hover",
+          "values": []
+        },
+        {
+          "name": "form-id",
+          "description": "The form ID that the checkbox is associated with",
+          "values": []
+        },
+        {
+          "name": "form-validation-message",
+          "description": "The native form validation message",
+          "values": []
+        },
+        {
+          "name": "checked",
+          "description": "If true checkbox is checked",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If true checkbox is disabled",
+          "values": []
+        },
+        {
+          "name": "indeterminate",
+          "description": "A state that is neither checked nor unchecked",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "Name of the HTML input form control. Submitted with the form as part of a name/value pair",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "If `true`, it will indicate that the user must specify a value for the checkbox before the owning form can be submitted",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A string representing the value of the checkbox. Primarily used to differentiate a list of related checkboxes that have the same name",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-col",
+      "description": "The component description.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-col>Stencil</bq-col>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **eventName** - The event description.\n\n### **Slots:**\n - _default_ - The default slot content.\n\n### **CSS Properties:**\n - **--bq-col--margin** - The margin of the component. _(default: undefined)_\n\n### **CSS Parts:**\n - **partName** - The CSS shadow DOM part description.",
+      "attributes": [
+        {
+          "name": "attribute-name",
+          "description": "The attribute description, use always kebab-case.",
+          "values": []
+        },
+        { "name": "size", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-date-picker",
+      "description": "The Date Picker is a intuitive UI element component allows users to select dates from a visual calendar interface, providing an intuitive way to input date information.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-date-picker\nfirst-day-of-week=\"1\"\nlocale=\"en-GB\"\nmonths-per-view=\"single\"\nmonths=\"2\"\nname=\"bq-date-picker\"\nplaceholder=\"Enter your date\"\nplacement=\"bottom-end\"\nshow-outside-days=\"false\"\ntype=\"range\"\nvalidation-status=\"none\"\nvalue=\"2024-05-25\"\n>\n<label class=\"flex flex-grow items-center\" slot=\"label\">\nDate picker label\n</label>\n</bq-date-picker>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Callback handler emitted when the input loses focus.\n- **bqChange** - Callback handler emitted when the input value has changed and the input loses focus.\n- **bqClear** - Callback handler emitted when the input value has been cleared.\n- **bqFocus** - Callback handler emitted when the input has received focus.\n- **bqBlur** - Callback handler emitted when the input loses focus\n- **bqChange** - Callback handler emitted when the input value has changed and the input loses focus.\nThis handler is called whenever the user finishes typing or pasting text into the input field and then clicks outside of the input field.\n- **bqClear** - Callback handler emitted when the input value has been cleared\n- **bqFocus** - Callback handler emitted when the input has received focus\n\n### **Methods:**\n - **clear(): _Promise<void>_** - Clears the selected value.\n\n### **CSS Properties:**\n - **--bq-date-picker--background-color** - Date picker background color. _(default: undefined)_\n- **--bq-date-picker--border-color** - Date picker border color. _(default: undefined)_\n- **--bq-date-picker--border-color-disabled** - Date picker border color when disabled. _(default: undefined)_\n- **--bq-date-picker--border-color-focus** - Date picker border color on focus. _(default: undefined)_\n- **--bq-date-picker--border-radius** - Date picker border radius. _(default: undefined)_\n- **--bq-date-picker--border-style** - Date picker border style. _(default: undefined)_\n- **--bq-date-picker--border-width** - Date picker border width. _(default: undefined)_\n- **--bq-date-picker--currentDate-border-color** - Date picker border color for current date. _(default: undefined)_\n- **--bq-date-picker--currentDate-border-width** - Date picker border width for current date. _(default: undefined)_\n- **--bq-date-picker--day-size** - Date picker button day size. _(default: undefined)_\n- **--bq-date-picker--gap** - Gap between Date picker content and prefix/suffix. _(default: undefined)_\n- **--bq-date-picker--icon-size** - Icon size to use in prefix/suffix and clear button. _(default: undefined)_\n- **--bq-date-picker--label-margin-bottom** - Date picker label margin bottom. _(default: undefined)_\n- **--bq-date-picker--label-text-color** - Date picker label text color. _(default: undefined)_\n- **--bq-date-picker--label-text-size** - Date picker label text size. _(default: undefined)_\n- **--bq-date-picker--padding-end** - Date picker padding end. _(default: undefined)_\n- **--bq-date-picker--padding-start** - Date picker padding start. _(default: undefined)_\n- **--bq-date-picker--paddingY** - Date picker padding top and bottom. _(default: undefined)_\n- **--bq-date-picker--range-background-color** - Background color for the selected date range in the date picker. _(default: undefined)_\n- **--bq-date-picker--range-inner-background-color** - Background color for the selected dates inside the date range in the date picker. _(default: undefined)_\n- **--bq-date-picker--text-color** - Date picker text color. _(default: undefined)_\n- **--bq-date-picker--text-placeholder-color** - Date picker placeholder text color. _(default: undefined)_\n- **--bq-date-picker--text-size** - Date picker text size. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **button** - The native HTML button used under the hood in the clear button.\n- **calendar__button** - Any button used in the calendar-month component.\n- **calendar__button** - Any button within the calendar-range component.\n- **calendar__container** - The calendar-range container for the entire component.\n- **calendar__day** - The buttons corresponding to each day in the calendar-month grid.\n- **calendar__disabled** - A button that is disabled due to min/max on the calendar-range component.\n- **calendar__disallowed** - Any day that has been disallowed via isDateDisallowed.\n- **calendar__head** - The calendar-month table's header row.\n- **calendar__header** - The calendar-range container for the heading and buttons.\n- **calendar__heading** - The calendar-month heading container that labels the month.\n- **calendar__heading** - The calendar-range heading containing the month and year.\n- **calendar__next** - The next page button on the calendar-range component.\n- **calendar__outside** - Any days which are outside the current month.\n- **calendar__previous** - The previous page button on the calendar-range component.\n- **calendar__range-end** - The day at the end of a date range.\n- **calendar__range-inner** - Any days between the start and end of a date range.\n- **calendar__range-start** - The day at the start of a date range.\n- **calendar__selected** - Any days which are selected.\n- **calendar__table** - The calendar-month <table> element.\n- **calendar__td** - The calendar-month table's body cells.\n- **calendar__th** - The calendar-month table's header cells.\n- **calendar__today** - The Today's day.\n- **calendar__tr** - Any row within the table on the calendar-month component.\n- **calendar__week** - The calendar-month table's body rows.\n- **clear-btn** - The clear button.\n- **control** - The input control wrapper.\n- **input** - The native HTML input element used under the hood.\n- **label** - The label slot container.\n- **panel** - The date picker panel container\n- **prefix** - The prefix slot container.\n- **suffix** - The suffix slot container.",
+      "attributes": [
+        {
+          "name": "autofocus",
+          "description": "If `true`, the Date picker input will be focused on component render.",
+          "values": []
+        },
+        {
+          "name": "clear-button-label",
+          "description": "The clear button aria label.",
+          "values": []
+        },
+        {
+          "name": "disable-clear",
+          "description": "If `true`, the clear button won't be displayed.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Indicates whether the Date picker input is disabled or not.",
+          "values": []
+        },
+        {
+          "name": "distance",
+          "description": "Represents the distance (gutter or margin) between the Date picker panel and the input element.",
+          "values": []
+        },
+        {
+          "name": "first-day-of-week",
+          "description": "The first day of the week, where Sunday is 0, Monday is 1, etc.",
+          "values": [
+            { "name": "0" },
+            { "name": "1" },
+            { "name": "2" },
+            { "name": "3" },
+            { "name": "4" },
+            { "name": "5" },
+            { "name": "6" }
+          ]
+        },
+        {
+          "name": "format-options",
+          "description": "The options to use when formatting the displayed value. Details: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options",
+          "values": [{ "name": "Intl.DateTimeFormatOptions" }]
+        },
+        {
+          "name": "form",
+          "description": "The ID of the form that the Date picker input belongs to.",
+          "values": []
+        },
+        {
+          "name": "form-validation-message",
+          "description": "The native form validation message (mandatory if `required` is set).",
+          "values": []
+        },
+        {
+          "name": "is-date-disallowed",
+          "description": "A function that takes a date and returns true if the date should not be selectable.",
+          "values": [{ "name": "function" }]
+        },
+        {
+          "name": "locale",
+          "description": "The locale for formatting dates. If not set, will use the browser's locale. Details: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument",
+          "values": [{ "name": "Intl.LocalesArgument" }]
+        },
+        {
+          "name": "max",
+          "description": "The latest date that can be selected.",
+          "values": []
+        },
+        {
+          "name": "min",
+          "description": "The earliest date that can be selected.",
+          "values": []
+        },
+        {
+          "name": "months",
+          "description": "Number of months to show when range is `true`.",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "The Date picker input name.",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If `true`, the Date picker panel will be visible.",
+          "values": []
+        },
+        {
+          "name": "panel-height",
+          "description": "When set, it will override the height of the Date picker panel.",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "Position of the Date picker panel.",
+          "values": [
+            { "name": "top" },
+            { "name": "right" },
+            { "name": "bottom" },
+            { "name": "left" },
+            { "name": "top-start" },
+            { "name": "top-end" },
+            { "name": "right-start" },
+            { "name": "right-end" },
+            { "name": "bottom-start" },
+            { "name": "bottom-end" },
+            { "name": "left-start" },
+            { "name": "left-end" }
+          ]
+        },
+        {
+          "name": "required",
+          "description": "Indicates whether or not the Date picker input is required to be filled out before submitting the form.",
+          "values": []
+        },
+        {
+          "name": "skidding",
+          "description": "Represents the skidding between the Date picker panel and the input element.",
+          "values": []
+        },
+        {
+          "name": "show-outside-days",
+          "description": "Whether to show days outside the month.",
+          "values": []
+        },
+        {
+          "name": "strategy",
+          "description": "Defines the strategy to position the Date picker panel.",
+          "values": []
+        },
+        {
+          "name": "tentative",
+          "description": "The date that is tentatively selected, e.g. the start of a range selection.",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "It defines how the calendar will behave, allowing single date selection, range selection, or multiple date selection.",
+          "values": [
+            { "name": "single" },
+            { "name": "multi" },
+            { "name": "range" }
+          ]
+        },
+        {
+          "name": "validation-status",
+          "description": "The validation status of the Select input.",
+          "values": [
+            { "name": "error" },
+            { "name": "none" },
+            { "name": "success" },
+            { "name": "warning" }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The select input value represents the currently selected date or range and can be used to reset the field to a previous value.",
+          "values": []
+        },
+        {
+          "name": "months-per-view",
+          "values": [{ "name": "single" }, { "name": "months" }]
+        },
+        { "name": "placeholder", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-dialog",
+      "description": "The Dialog component is used to display additional content or prompt a user for action.\nIt provides a way to display additional information, options, or controls in a separate, non-obstructive interface element.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-dialog footer-appearance=\"standard\" border=\"m\" size=\"medium\">\n<h5 class=\"bold flex items-center gap-s\" slot=\"title\">\n<bq-icon name=\"info\" size=\"30\" color=\"text--accent\" role=\"img\" title=\"Info\"></bq-icon>\nTitle\n</h5>\n<p>\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's\nstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a\ntype specimen book.\n</p>\n<div class=\"flex gap-xs\" slot=\"footer\">\n<bq-button appearance=\"link\">Button</bq-button>\n<bq-button variant=\"ghost\">Button</bq-button>\n<bq-button variant=\"standard\" slot=\"footer\">Button</bq-button>\n</div>\n</bq-dialog>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqCancel** - Callback handler emitted when the dialog has been canceled or dismissed.\n- **bqClose** - Callback handler emitted when the dialog will close.\n- **bqOpen** - Callback handler emitted when the dialog will open.\n- **bqAfterOpen** - Callback handler emitted when the dialog finish opening.\n- **bqAfterClose** - Callback handler emitted when the dialog finish closing.\n- **bqCancel** - Callback handler emitted when the dialog has been canceled or dismissed\n- **bqClose** - Callback handler emitted when the dialog will close\n- **bqOpen** - Callback handler emitted when the dialog will open\n- **bqAfterOpen** - Callback handler emitted when the dialog finish opening\n- **bqAfterClose** - Callback handler emitted when the dialog finish closing\n\n### **Methods:**\n - **show()** - Open the dialog\n- **hide()** - Closes the dialog\n- **cancel()** - Dismiss or cancel the dialog\n\n### **Slots:**\n - **title** - The title content of the dialog.\n- _default_ - The body content of the dialog.\n- **footer** - The footer content of the dialog.\n- **button-close** - The close button content of the dialog.\n\n### **CSS Properties:**\n - **--bq-dialog--background** - Dialog background color _(default: undefined)_\n- **--bq-dialog--background-backdrop** - Dialog backdrop background color _(default: undefined)_\n- **--bq-dialog--box-shadow** - Dialog box shadow _(default: undefined)_\n- **--bq-dialog--border-color** - Dialog border color _(default: undefined)_\n- **--bq-dialog--border-style** - Dialog border style _(default: undefined)_\n- **--bq-dialog--border-width** - Dialog border width _(default: undefined)_\n- **--bq-dialog--border-radius** - Dialog border radius _(default: undefined)_\n- **--bq-dialog--padding** - Dialog padding _(default: undefined)_\n- **--bq-dialog--content-footer-gap** - Dialog gap distance between content and footer elements _(default: undefined)_\n- **--bq-dialog--title-body-gap** - Dialog gap distance between title and body elements _(default: undefined)_\n- **--bq-dialog--width-small** - Dialog small width _(default: undefined)_\n- **--bq-dialog--width-medium** - Dialog medium width _(default: undefined)_\n- **--bq-dialog--width-large** - Dialog large width _(default: undefined)_\n- **--bq-dialog-z-index** - Dialog z-index applied when opened _(default: undefined)_\n\n### **CSS Parts:**\n - **body** - The `<main>` that holds the dialog body content.\n- **button-close** - The button that closes the dialog on click.\n- **content** - The `<div>` container that holds the dialog title and body content.\n- **dialog** - The `<dialog>` wrapper container inside the shadow DOM.\n- **footer** - The `<footer>` that holds footer content.\n- **header** - The `<header>` that holds the icon, title, description and close button.\n- **title** - The `<div>` that holds the title content.",
+      "attributes": [
+        {
+          "name": "border",
+          "description": "Border radius of the dialog component.",
+          "values": [
+            { "name": "none" },
+            { "name": "xs2" },
+            { "name": "xs" },
+            { "name": "s" },
+            { "name": "m" },
+            { "name": "l" },
+            { "name": "full" }
+          ]
+        },
+        {
+          "name": "disable-backdrop",
+          "description": "If true, the backdrop overlay won't be shown when the dialog opens.",
+          "values": []
+        },
+        {
+          "name": "disable-close-esc-keydown",
+          "description": "If true, the dialog will not close when the [Esc] key is pressed.",
+          "values": []
+        },
+        {
+          "name": "disable-close-click-outside",
+          "description": "If true, the dialog will not close when clicking on the backdrop overlay.",
+          "values": []
+        },
+        {
+          "name": "footer-appearance",
+          "description": "The appearance of the footer.",
+          "values": [{ "name": "standard" }, { "name": "highlight" }]
+        },
+        {
+          "name": "hide-close-button",
+          "description": "If true, it hides the close button.",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If true, the dialog will be shown as open.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the dialog.",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-divider",
+      "description": "The Divider component is used to visually separate content in a layout.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-divider orientation=\"horizontal\" stroke-color=\"stroke--primary\" title-alignment=\"middle\">\n<span slot=\"title\">Divider Title</span>\n</bq-divider>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The title content of the divider.\n\n### **CSS Properties:**\n - **--bq-divider--color** - Divider color _(default: undefined)_\n- **--bq-divider--title-marginX** - Divider space between title and delimiters _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **dash-start** - The component's internal svg wrapper for the start line of the divider's stroke.\n- **dash-end** - The component's internal svg wrapper for the end line of the divider's stroke.\n- **dash-start-line** - The component's internal line component of the divider's stroke.\n- **dash-end-line** - The component's internal line component of the divider's stroke.",
+      "attributes": [
+        {
+          "name": "dashed",
+          "description": "If true, the divider has a dashed pattern.",
+          "values": []
+        },
+        {
+          "name": "orientation",
+          "description": "The default orientation of the divider.",
+          "values": [{ "name": "horizontal" }, { "name": "vertical" }]
+        },
+        {
+          "name": "stroke-color",
+          "description": "Set the stroke color of the divider. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "title-alignment",
+          "description": "Set the alignment of the title on the main axis of the divider (horizontal / vertical).",
+          "values": [
+            { "name": "start" },
+            { "name": "middle" },
+            { "name": "end" }
+          ]
+        },
+        {
+          "name": "stroke-dash-width",
+          "description": "Set the width of each dash of the divider's stroke. This is applicable when the stroke is dashed.",
+          "values": []
+        },
+        {
+          "name": "stroke-dash-gap",
+          "description": "Set the gap of the divider's stroke. This is applicable when the stroke is dashed.",
+          "values": []
+        },
+        {
+          "name": "stroke-thickness",
+          "description": "Set the thickness of the divider's stroke. Value expressed in px.",
+          "values": []
+        },
+        {
+          "name": "stroke-basis",
+          "description": "Set the min width of the divider's stroke when text is not centered. Value expressed in px.",
+          "values": []
+        },
+        {
+          "name": "stroke-linecap",
+          "description": "Set the line of the divider's stroke. This is applicable when the stroke is dashed.",
+          "values": [
+            { "name": "square" },
+            { "name": "round" },
+            { "name": "butt" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-drawer",
+      "description": "The Drawer component provides a sliding panel interface commonly used for navigation or presenting additional content without taking up significant screen space.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-drawer position=\"end\">\n<div class=\"flex gap-xs\" slot=\"title\">Title</div>\n<div class=\"...\">\nContent\n</div>\n<div class=\"flex flex-1 justify-center gap-xs\" slot=\"footer\">\n<bq-button appearance=\"primary\" block=\"\" size=\"small\">Button</bq-button>\n<bq-button appearance=\"link\" block=\"\" size=\"small\">Button</bq-button>\n</div>\n</bq-drawer>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqClose** - Callback handler to be called when the drawer is closed.\n- **bqOpen** - Callback handler to be called when the drawer is opened.\n- **bqAfterOpen** - Callback handler to be called after the drawer has been opened.\n- **bqAfterClose** - Callback handler to be called after the drawer has been closed.\n- **bqClose** - Callback handler to be called when the drawer is closed\n- **bqOpen** - Callback handler to be called when the drawer is opened\n- **bqAfterOpen** - Callback handler to be called after the drawer has been opened\n- **bqAfterClose** - Callback handler to be called after the drawer has been closed\n\n### **Methods:**\n - **handlePlacementChange()** - !TO BE REMOVED: Delete this `@Watch()` once the deprecated `placement` property is removed\nWe need to maintain retro-compatibility with the deprecated `placement` property\n- **hide(): _Promise<void>_** - Method to be called to hide the drawer component\n- **show(): _Promise<void>_** - Method to be called to show the drawer component\n\n### **Slots:**\n - **title** - The title content of the drawer.\n- _default_ - The body content of the drawer.\n- **footer** - The footer content of the drawer.\n- **button-close** - The close button content of the drawer.\n- **footer-divider** - The footer divider content of the drawer.\n\n### **CSS Properties:**\n - **--bq-drawer--backgroundBackdrop** - Background color of the backdrop _(default: undefined)_\n- **--bq-drawer--gap** - Gap between the drawer and the viewport _(default: undefined)_\n- **--bq-drawer--width** - Width of the drawer _(default: undefined)_\n- **--bq-drawer--paddingX** - Padding left and right of the drawer _(default: undefined)_\n- **--bq-drawer--paddingY** - Padding top and bottom of the drawer _(default: undefined)_\n- **--bq-drawer--zIndex** - Z-index of the drawer component _(default: undefined)_\n\n### **CSS Parts:**\n - **backdrop** - The `<div>` that holds the backdrop overlay.\n- **button-close** - The BqButton that closes the drawer.\n- **button-close__btn** - The native button used under the hood that closes the drawer.\n- **button-close__label** - The text inside the native button that closes the drawer.\n- **panel** - The `<div>` that holds the drawer entire content.\n- **header** - The `<header>` that holds the icon, title, and close button.\n- **title** - The `<div>` that holds the title content.\n- **body** - The `<main>` that holds the drawer body content.\n- **footer** - The `<footer>` that holds footer content.",
+      "attributes": [
+        {
+          "name": "enable-backdrop",
+          "description": "If true, the backdrop overlay will be shown when the drawer opens.",
+          "values": []
+        },
+        {
+          "name": "close-on-click-outside",
+          "description": "If true, the drawer will not close when clicking outside the panel.",
+          "values": []
+        },
+        {
+          "name": "close-on-esc",
+          "description": "If true, the drawer will not close when the [Esc] key is pressed.",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If true, the drawer component will be shown.",
+          "values": []
+        },
+        {
+          "name": "position",
+          "description": "Defines the position of the drawer.",
+          "values": [{ "name": "start" }, { "name": "end" }]
+        },
+        { "name": "placement", "values": [{ "name": "TDrawerPlacement" }] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-dropdown",
+      "description": "The Dropdown Component is commonly used when presenting a list of selectable options that are too numerous to fit comfortably on the screen.\nThey provide an efficient way to save space and present a long list of options in a compact and organized manner.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-dropdown placement=\"bottom-start\">\n<bq-button slot=\"trigger\">Dropdown</bq-button>\n<bq-option-list>\n<bq-option value=\"users\">...</bq-option>\n<bq-option value=\"user\">...</bq-option>\n<bq-option value=\"dashboard\">...</bq-option>\n<bq-option value=\"settings\">...</bq-option>\n<bq-option value=\"logout\">...</bq-option>\n</bq-option-list>\n</bq-dropdown>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqOpen** - Callback handler to be called when the dropdown panel is opened or closed.\n- **bqOpen** - Callback handler to be called when the dropdown panel is opened or closed.\n\n### **Methods:**\n - **onClickOutside(event: _MouseEvent_)** - Listens for the 'click' event on the document object\nand closes the dropdown panel if the click is outside the component.\n- **onEscape(event: _KeyboardEvent_)** - Listens for the 'keyup' event on the window object\nand closes the dropdown panel if the 'Escape' key or 'Tab' key outside the component is pressed.\n\n### **Slots:**\n - **trigger** - The trigger element that opens the dropdown panel.\n- _default_ - The content of the dropdown panel.\n\n### **CSS Properties:**\n - **--bq-panel--background** - Panel background color _(default: undefined)_\n- **--bq-panel--border-color** - Panel border color _(default: undefined)_\n- **--bq-panel--border-radius** - Panel border radius _(default: undefined)_\n- **--bq-panel--border-style** - Panel border style _(default: undefined)_\n- **--bq-panel--border-width** - Panel border width _(default: undefined)_\n- **--bq-panel--box-shadow** - Panel box shadow _(default: undefined)_\n- **--bq-panel--padding** - Panel padding _(default: undefined)_\n- **--bq-panel--height** - Panel height _(default: undefined)_\n- **--bq-panel--width** - Panel width _(default: undefined)_\n- **--bq-panel-z-index** - Panel z-index applied when opened _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **dropdown** - The `<bq-panel>` element used under the hood to display the dropdown panel.\n- **panel** - The `<div>` element used to display and style the panel inside the `<bq-panel>` element.\n- **trigger** - The `<div>` element that hosts the trigger element.",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "If true, the dropdown panel will be visible and won't be shown.",
+          "values": []
+        },
+        {
+          "name": "distance",
+          "description": "Represents the distance (gutter or margin) between the panel and the trigger element.",
+          "values": []
+        },
+        {
+          "name": "keep-open-on-select",
+          "description": "If true, the panel will remain open after a selection is made.",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "Position of the panel.",
+          "values": [
+            { "name": "top" },
+            { "name": "bottom" },
+            { "name": "left" },
+            { "name": "right" },
+            { "name": "top-start" },
+            { "name": "top-end" },
+            { "name": "bottom-start" },
+            { "name": "bottom-end" },
+            { "name": "left-start" },
+            { "name": "left-end" },
+            { "name": "right-start" },
+            { "name": "right-end" }
+          ]
+        },
+        {
+          "name": "open",
+          "description": "If true, the panel will be visible.",
+          "values": []
+        },
+        {
+          "name": "panel-height",
+          "description": "When set, it will override the height of the dropdown panel.",
+          "values": []
+        },
+        {
+          "name": "same-width",
+          "description": "Whether the panel should have the same width as the trigger element.",
+          "values": []
+        },
+        {
+          "name": "skidding",
+          "description": "Represents the skidding between the panel and the trigger element.",
+          "values": []
+        },
+        {
+          "name": "strategy",
+          "description": "Defines the strategy to position the panel.",
+          "values": [{ "name": "fixed" }, { "name": "absolute" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-empty-state",
+      "description": "An Empty State is a UI component displayed when there is no data or content available, often used in dynamic or inactive application states.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-empty-state size=\"medium\">Title</bq-empty-state>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **thumbnail** - The element that wraps the thumbnail element\n- **body** - The content to be displayed after the thumbnail section\n- **footer** - The content to be displayed after the body section as footer\n\n### **CSS Parts:**\n - **body** - The container `<div>` that wraps the alert description content\n- **footer** - The container `<div>` that wraps the alert footer content\n- **icon** - The `<bq-icon>` element used to render a predefined icon size based on the empty state size (small, medium, large)\n- **thumbnail** - The container `<div>` that wraps the thumbnail element\n- **title** - The container `<div>` that wraps the empty state title content\n- **wrapper** - The wrapper container `<div>` of the element inside the shadow DOM",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "The size of the empty state component",
+          "values": [
+            { "name": "large" },
+            { "name": "medium" },
+            { "name": "small" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-grid",
+      "description": "The bq-grid component provides a responsive grid layout system.\n\n## Examples\n\n<figure class=\"example\"><figcaption>Usage</figcaption>\n\n```html\n<bq-grid fixed no-padding>Content</bq-grid>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - Content to display inside the grid.\n\n### **CSS Properties:**\n - **--bq-grid--margin** - Margin for the grid container. _(default: undefined)_",
+      "attributes": [
+        { "name": "fixed", "values": [] },
+        { "name": "no-padding", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-icon",
+      "description": "The Icon component is an image that provides a visual representation of an object, action, or concept displayed on the screen.\nIt is a small graphical element that is used to enhance the user interface and improve user experience.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-icon color=\"text--brand\" name=\"bell-ringing\" size=\"24\"></bq-icon>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **svgLoaded** - Callback handler to be called when the SVG has loaded.\n- **svgLoaded** - Callback handler to be called when the SVG has loaded\n\n### **Methods:**\n - **handleWeightChange()** - !TO BE REMOVED: Delete this `@Watch()` once the deprecated `weight` property is removed\nWe need to maintain retro-compatibility until the next major release\n\n### **CSS Properties:**\n - **--bq-icon--color** - The stroke color of the SVG. _(default: undefined)_\n- **--bq-icon--size** - The size of the SVG. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper that holds the icon SVG content.\n- **svg** - The `<svg>` tag element inside the component.",
+      "attributes": [
+        {
+          "name": "color",
+          "description": "Set the stroke color of the SVG. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "Label for the icon, used for accessibility.",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "Icon name to load. Please check all available icons [here](https://phosphoricons.com/).",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "Set the size of the SVG.",
+          "values": []
+        },
+        {
+          "name": "src",
+          "description": "Set the source of the SVG. If the source is set, the name property will be ignored.",
+          "values": []
+        },
+        { "name": "weight", "values": [{ "name": "TIconWeight" }] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-input",
+      "description": "The Input component is a fundamental user interface element that allows users to input data by typing it into a text field.\nIt is commonly used in web and mobile applications for various purposes, such as collecting user information, search inputs, and login forms.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-input name=\"username\" label=\"Username\" placeholder=\"Enter your username\"></bq-input>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Callback handler emitted when the input loses focus.\n- **bqChange** - Callback handler emitted when the input value has changed and the input loses focus.\n- **bqClear** - Callback handler emitted when the input value has been cleared.\n- **bqFocus** - Callback handler emitted when the input has received focus.\n- **bqInput** - Callback handler emitted when the input value changes.\n- **bqBlur** - Callback handler emitted when the input loses focus\n- **bqChange** - Callback handler emitted when the input value has changed and the input loses focus.\nThis handler is called whenever the user finishes typing or pasting text into the input field and then clicks outside of the input field.\n- **bqClear** - Callback handler emitted when the input value has been cleared\n- **bqFocus** - Callback handler emitted when the input has received focus\n- **bqInput** - Callback handler emitted when the input value changes.\nThis handler is called whenever the user types or pastes text into the input field.\n\n### **Slots:**\n - **label** - The label slot container.\n- **prefix** - The prefix slot container.\n- **suffix** - The suffix slot container.\n- **helper-text** - The helper text slot container.\n- **clear-icon** - The clear icon slot container.\n\n### **CSS Properties:**\n - **--bq-input--background-color** - Input background color _(default: undefined)_\n- **--bq-input--border-color** - Input border color _(default: undefined)_\n- **--bq-input--border-color-focus** - Input border color on focus _(default: undefined)_\n- **--bq-input--border-radius** - Input border radius _(default: undefined)_\n- **--bq-input--border-width** - Input border width _(default: undefined)_\n- **--bq-input--border-style** - Input border style _(default: undefined)_\n- **--bq-input--gap** - Gap between input content and prefix/suffix _(default: undefined)_\n- **--bq-input--helper-margin-top** - Helper text margin top _(default: undefined)_\n- **--bq-input--helper-text-color** - Helper text color _(default: undefined)_\n- **--bq-input--helper-text-size** - Helper text size _(default: undefined)_\n- **--bq-input--icon-size** - Icon size to use in prefix/suffix and clear button _(default: undefined)_\n- **--bq-input--label-margin-bottom** - Input label margin bottom _(default: undefined)_\n- **--bq-input--label-text-color** - Input label text color _(default: undefined)_\n- **--bq-input--label-text-size** - Input label text size _(default: undefined)_\n- **--bq-input--padding-start** - Input padding start _(default: undefined)_\n- **--bq-input--padding-end** - Input padding end _(default: undefined)_\n- **--bq-input--paddingY** - Input padding top and bottom _(default: undefined)_\n- **--bq-input--text-color** - Input text color _(default: undefined)_\n- **--bq-input--text-size** - Input text size _(default: undefined)_\n- **--bq-input--text-placeholder-color** - Input placeholder text color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **button** - The native HTML button used under the hood in the clear button.\n- **clear-btn** - The clear button.\n- **control** - The input control wrapper.\n- **helper-text** - The helper text slot container.\n- **label** - The label slot container.\n- **input** - The native HTML input element used under the hood.\n- **prefix** - The prefix slot container.\n- **suffix** - The suffix slot container.",
+      "attributes": [
+        {
+          "name": "autocapitalize",
+          "description": "Controls whether or not the input field should be capitalized and how.",
+          "values": []
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies whether or not the input field should have autocomplete enabled.",
+          "values": []
+        },
+        {
+          "name": "autocorrect",
+          "description": "Controls whether or not the input field should have autocorrect enabled.",
+          "values": []
+        },
+        {
+          "name": "autofocus",
+          "description": "If true, the input will be focused on component render.",
+          "values": []
+        },
+        {
+          "name": "clear-button-label",
+          "description": "The clear button aria label.",
+          "values": []
+        },
+        {
+          "name": "debounce-time",
+          "description": "The amount of time, in milliseconds, to wait before emitting the `bqInput` event after the input value changes.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Indicates whether the input is disabled or not.",
+          "values": []
+        },
+        {
+          "name": "disable-clear",
+          "description": "If true, the clear button won't be displayed.",
+          "values": []
+        },
+        {
+          "name": "form",
+          "description": "The ID of the form that the input field belongs to.",
+          "values": []
+        },
+        {
+          "name": "form-validation-message",
+          "description": "The native form validation message (mandatory if `required` is set).",
+          "values": []
+        },
+        {
+          "name": "inputmode",
+          "description": "The inputmode attribute specifies what kind of input mechanism would be most helpful for users entering content into the input field.",
+          "values": []
+        },
+        {
+          "name": "max",
+          "description": "The maximum value that the input field can accept.",
+          "values": []
+        },
+        {
+          "name": "maxlength",
+          "description": "The maximum number of characters that the input field can accept.",
+          "values": []
+        },
+        {
+          "name": "min",
+          "description": "The minimum value that the input field can accept.",
+          "values": []
+        },
+        {
+          "name": "minlength",
+          "description": "The minimum number of characters that the input field can accept.",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "The input field name.",
+          "values": []
+        },
+        {
+          "name": "pattern",
+          "description": "Specifies a regular expression the form control's value should match.",
+          "values": []
+        },
+        {
+          "name": "placeholder",
+          "description": "The input placeholder text value.",
+          "values": []
+        },
+        {
+          "name": "readonly",
+          "description": "If true, the input field cannot be modified.",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "Indicates whether or not the input field is required to be filled out before submitting the form.",
+          "values": []
+        },
+        {
+          "name": "step",
+          "description": "A number that specifies the granularity that the value must adhere to.",
+          "values": [{ "name": "any" }]
+        },
+        {
+          "name": "type",
+          "description": "The type attribute specifies the type of input field to display.",
+          "values": []
+        },
+        {
+          "name": "validation-status",
+          "description": "The validation status of the input.",
+          "values": [
+            { "name": "none" },
+            { "name": "error" },
+            { "name": "warning" },
+            { "name": "success" }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The input value, it can be used to reset the input to a previous value.",
+          "values": [{ "name": "string[]" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-logo",
+      "description": "\n---\n\n\n### **Methods:**\n - **handlePropsChange()** - (Opcional) Si deseas recomputar la lógica cada vez que cambien las props:",
+      "attributes": [
+        { "name": "size", "values": [{ "name": "TLogoSize" }] },
+        { "name": "type", "values": [{ "name": "TLogoType" }] },
+        { "name": "variant", "values": [{ "name": "TLogoVariant" }] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-notification",
+      "description": "The Notification component is a user interface element used to provide information or alerts to users in a non-intrusive manner.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-notification border=\"s\" time=\"3000\" type=\"info\">\nTitle\n<span slot=\"body\">\nThis is some description text text\n<a class=\"bq-link\" href=\"https://example.com\">Link</a>\n</span>\n<div class=\"flex gap-xs\" slot=\"footer\">\n<bq-button appearance=\"primary\" size=\"small\">Button</bq-button>\n<bq-button appearance=\"link\" size=\"small\">Button</bq-button>\n</div>\n</bq-notification>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqAfterClose** - Callback handler to be called after the notification has been closed\n- **bqAfterOpen** - Callback handler to be called after the notification has been opened\n- **bqHide** - Callback handler to be called when the notification is hidden\n- **bqShow** - Callback handler to be called when the notification is shown\n- **bqHide** - Callback handler to be called when the notification is hidden\n- **bqShow** - Callback handler to be called when the notification is shown\n- **bqAfterOpen** - Callback handler to be called after the notification has been opened\n- **bqAfterClose** - Callback handler to be called after the notification has been closed\n\n### **Methods:**\n - **hide(): _Promise<void>_** - Method to be called to hide the notification component\n- **show(): _Promise<void>_** - Method to be called to show the notification component\n- **toast()** - This method can be used to display notifications in a fixed-position element that allows for stacking multiple notifications vertically\n\n### **Slots:**\n - _default_ - The notification title content\n- **body** - The notification description content\n- **footer** - The notification footer content\n- **icon** - The icon to be displayed in the notification\n- **btn-close** - The close button of the notification\n\n### **CSS Properties:**\n - **--bq-notification--background** - The notification background color _(default: undefined)_\n- **--bq-notification--box-shadow** - The notification box shadow _(default: undefined)_\n- **--bq-notification--border-color** - The notification border color _(default: undefined)_\n- **--bq-notification--border-radius** - The notification border radius _(default: undefined)_\n- **--bq-notification--border-style** - The notification border style _(default: undefined)_\n- **--bq-notification--border-width** - The notification border width _(default: undefined)_\n- **--bq-notification--content-footer-gap** - The notification content and footer gap _(default: undefined)_\n- **--bq-notification--title-body-gap** - The notification title and body gap _(default: undefined)_\n- **--bq-notification--icon-color-error** - The notification icon color for error type _(default: undefined)_\n- **--bq-notification--icon-color-info** - The notification icon color for info type _(default: undefined)_\n- **--bq-notification--icon-color-neutral** - The notification icon color for neutral type _(default: undefined)_\n- **--bq-notification--icon-color-success** - The notification icon color for success type _(default: undefined)_\n- **--bq-notification--icon-color-warning** - The notification icon color for warning type _(default: undefined)_\n- **--bq-notification--padding** - The notification padding _(default: undefined)_\n- **--bq-notification--min-width** - The notification min width _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The `<div>` container of the predefined bq-icon component.\n- **body** - The container `<div>` that wraps the notification description content\n- **btn-close** - The `bq-button` used to close the notification\n- **content** - The container `<div>` that wraps all the notification content (title, description, footer)\n- **footer** - The container `<div>` that wraps the notification footer content\n- **icon** - The `<bq-icon>` element used to render a predefined icon based on the notification type\n- **icon-outline** - The container `<div>` that wraps the icon element\n- **main** - The container `<div>` that wraps the notification main content (title, description)\n- **svg** - The `<svg>` element of the predefined bq-icon component.\n- **title** - The container `<div>` that wraps the notification title content\n- **wrapper** - The wrapper container `<div>` of the element inside the shadow DOM",
+      "attributes": [
+        {
+          "name": "auto-dismiss",
+          "description": "If true, the notification will automatically hide after the specified amount of time",
+          "values": []
+        },
+        {
+          "name": "border",
+          "description": "The corder radius of the notification component",
+          "values": []
+        },
+        {
+          "name": "disable-close",
+          "description": "If true, the close button at the top right of the notification won't be shown",
+          "values": []
+        },
+        {
+          "name": "hide-icon",
+          "description": "If true, the notification icon won't be shown",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If true, the notification will be shown",
+          "values": []
+        },
+        {
+          "name": "time",
+          "description": "The length of time, in milliseconds, after which the notification will close itself. Only valid if `auto-dismiss=\"true\"`",
+          "values": []
+        },
+        { "name": "type", "description": "Type of Notification", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-option",
+      "description": "An option refers to a specific choice that appears in a list of selectable items that can be opened or closed by the user.\nIt can be an element of the navigation system that allows users to select different sections or pages within an application or it can be used within a dropdown list.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-option value=\"user\">\n<span>User profile</span>\n<bq-icon slot=\"suffix\" name=\"user\"></bq-icon>\n</bq-option>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when item loses focus.\n- **bqFocus** - Handler to be called when item is focused.\n- **bqClick** - Handler to be called when item is clicked.\n- **bqEnter** - Handler to be called on enter key press.\n- **bqBlur** - Handler to be called when item loses focus\n- **bqFocus** - Handler to be called when item is focused\n- **bqClick** - Handler to be called when item is clicked\n- **bqEnter** - Handler to be called on enter key press\n\n### **Slots:**\n - **prefix** - The prefix content to be displayed before the label.\n- _default_ - The label content to be displayed.\n\n### **CSS Properties:**\n - **--bq-option--background** - background color _(default: undefined)_\n- **--bq-option--font-size** - font size _(default: undefined)_\n- **--bq-option--border-color** - border color _(default: undefined)_\n- **--bq-option--border-style** - border style _(default: undefined)_\n- **--bq-option--border-width** - border width _(default: undefined)_\n- **--bq-option--border-radius** - border radius _(default: undefined)_\n- **--bq-option--box-shadow** - box shadow _(default: undefined)_\n- **--bq-option--gap-start** - gap space between prefix and label _(default: undefined)_\n- **--bq-option--gap-end** - gap space between label and suffix _(default: undefined)_\n- **--bq-option--paddingY** - padding Y axis _(default: undefined)_\n- **--bq-option--padding-start** - option label padding start _(default: undefined)_\n- **--bq-option--padding-end** - option label padding end _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **label** - The `span` element in which the label text is displayed.\n- **prefix** - The `span` element in which the prefix is displayed (generally `bq-icon`).\n- **suffix** - The `span` element in which the suffix is displayed (generally `bq-icon`).",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "If true, the option is disabled.",
+          "values": []
+        },
+        {
+          "name": "hidden",
+          "description": "If true, the option is hidden.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A string representing the value of the option. Can be used to identify the item.",
+          "values": []
+        },
+        {
+          "name": "selected",
+          "description": "If true, the option is selected and active.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-option-group",
+      "description": "The option group component is a container for multiple option elements.\nIt allows to manage the appearance and size of all options at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-option-group class=\"hydrated\">\n<span slot=\"header-label\">Sport</span>\n<bq-option value=\"football\">Football</bq-option>\n<bq-option value=\"basketball\">Basketball</bq-option>\n<bq-option value=\"tennis\">Tennis</bq-option>\n</bq-option-group>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **header-label** - The label of the option group\n- **header-prefix** - The prefix of the label\n- **header-suffix** - The suffix of the label\n- _default_ - The option items\n\n### **CSS Properties:**\n - **--bq-option-group--background** - option group background color _(default: undefined)_\n- **--bq-option-group--font-size** - option group font size _(default: undefined)_\n- **--bq-option-group--line-height** - option group line height _(default: undefined)_\n- **--bq-option-group--label-padding-start** - option group header padding start _(default: undefined)_\n- **--bq-option-group--label-padding-end** - option group header padding start _(default: undefined)_\n- **--bq-option-group--label-paddingY** - option group header padding Y axis _(default: undefined)_\n- **--bq-option-group--label-text-padding-start** - option group text within label padding start _(default: undefined)_\n- **--bq-option-group--label-text-padding-end** - option group text within label padding start _(default: undefined)_\n- **--bq-option-group--container-padding-start** - option group container padding start _(default: undefined)_\n\n### **CSS Parts:**\n - **label** - The `legend` tag element which acts as a container for the label\n- **prefix** - The prefix of the label\n- **label** - The text of the label\n- **suffix** - The suffix of the label\n- **group** - The `div` element which holds the option items",
+      "attributes": [],
+      "references": []
+    },
+    {
+      "name": "bq-option-list",
+      "description": "The option list component is a container for multiple option elements.\nIt allows to manage the appearance and size of all options at once.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-option-list>\n<bq-option value=\"football\">Football</bq-option>\n<bq-option value=\"basketball\">Basketball</bq-option>\n<bq-option value=\"tennis\">Tennis</bq-option>\n</bq-option-list>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqSelect** - Handler to be called when `bq-option` is selected (on click/enter press).\n\n### **Slots:**\n - _default_ - The option items\n\n### **CSS Properties:**\n - **--bq-option-group--gapY-list** - Option group gap between items Y axis _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.",
+      "attributes": [
+        {
+          "name": "aria-label",
+          "description": "Aria label for the list.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-page-title",
+      "description": "The Page Title component is a versatile and essential element used to display the main title of a page or section within an application.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-page-title>\n<bq-button appearance=\"link\" slot=\"back\">\n<bq-icon\ncolor=\"text--primary\"\nname=\"arrow-left\"\nweight=\"bold\"\nrole=\"img\"\ntitle=\"Navigate back to the previous page\"\n></bq-icon>\n</bq-button>\nTitle\n<div slot=\"sub-title\">Sub-title</div>\n</bq-page-title>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **back** - The back navigation button.\n- _default_ - The main title content.\n- **sub-title** - The sub-title content.\n- **suffix** - The suffix content.\n\n### **CSS Properties:**\n - **--paddingY** - Padding top and bottom of the page title wrapper _(default: undefined)_\n- **--subtitle-borderBlockEnd** - Page title border end color _(default: undefined)_\n- **--subtitle-fontWeight** - Page title font weight for subtitle _(default: undefined)_\n- **--subtitle-textColor** - Page title color for sub-title _(default: undefined)_\n- **--subtitle-textSize** - Page title text size for subtitle _(default: undefined)_\n- **--title-fontWeight** - Page title font weight for title _(default: undefined)_\n- **--title-lineHeight** - Page title text line height _(default: undefined)_\n- **--title-textColor** - Page title color for title _(default: undefined)_\n- **--title-textSize** - Page title text size for title _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The inner container `<div>`of element that contains the base page title component.\n- **content** - Defines the main container of the page title component, which includes the title and subtitle elements.\n- **title-suffix** - Defines the container that holds the title and any suffix content.\n- **back** - The container `<div>` page title element that acts as back slot container.\n- **title** - The `<h1>` element serves as a container for the page title content, to improve accessibility.\n- **suffix** - The `<div>` page title element that acts as suffix slot container.\n- **sub-title** - The `<div>` page title element that acts as sub-title slot container.",
+      "attributes": [],
+      "references": []
+    },
+    {
+      "name": "bq-panel",
+      "description": "The Panel component is a versatile and essential element used to wrap and display content in a floating panel.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-panel open>\n<div>Panel content</div>\n</bq-panel>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The content of the panel.\n\n### **CSS Parts:**\n - **panel** - The `<div>` element used to display and style the panel",
+      "attributes": [
+        {
+          "name": "distance",
+          "description": "Represents the distance (gutter or margin) between the panel and the trigger element.",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "Position of the panel.",
+          "values": [
+            { "name": "top" },
+            { "name": "bottom" },
+            { "name": "left" },
+            { "name": "right" },
+            { "name": "top-start" },
+            { "name": "top-end" },
+            { "name": "bottom-start" },
+            { "name": "bottom-end" },
+            { "name": "left-start" },
+            { "name": "left-end" },
+            { "name": "right-start" },
+            { "name": "right-end" }
+          ]
+        },
+        {
+          "name": "open",
+          "description": "If true, the panel will be visible.",
+          "values": []
+        },
+        {
+          "name": "same-width",
+          "description": "Whether the panel should have the same width as the trigger element.",
+          "values": []
+        },
+        {
+          "name": "skidding",
+          "description": "Represents the skidding between the panel and the trigger element.",
+          "values": []
+        },
+        {
+          "name": "strategy",
+          "description": "Defines the strategy to position the panel.",
+          "values": [{ "name": "fixed" }, { "name": "absolute" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-progress",
+      "description": "The progress bar is a user interface component that visually represents the completion status of a task or process.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-progress value=\"50\"></bq-progress>\n```\n\n</figure>\n---\n\n\n### **CSS Properties:**\n - **--bq-progress-bar--height** - The progress bars height _(default: undefined)_\n- **--bq-progress-bar--indeterminateWidth** - The progress bar width when its indeterminate _(default: undefined)_\n- **--bq-progress-bar--indicatorColor** - The progress bar color (inside the track area) _(default: undefined)_\n- **--bq-progress-bar--trackColor** - The progress bar track area (the grey one) _(default: undefined)_\n\n### **CSS Parts:**\n - **wrapper** - The component wrapper container inside the shadow DOM\n- **progress** - The `<div>` container that holds the native progress element\n- **progress-bar** - The native html for progress element\n- **label** - The `<div>` container that holds the label value (in percentage)\n- **indeterminate** - The `<div>` container that holds the indeterminate progress bar\n- **base** - The base container for the tooltip component inside the shadow DOM when hovering over the progress bar\n- **trigger** - The container holding the element that triggers the tooltip display when hovering over the progress bar\n- **panel** - The container holding the content of the tooltip when hovering over the progress bar",
+      "attributes": [
+        {
+          "name": "border-shape",
+          "description": "It will set the border style of the progress bar",
+          "values": [{ "name": "rounded" }, { "name": "rounded-full" }]
+        },
+        {
+          "name": "enable-tooltip",
+          "description": "If `true`, a tooltip will be shown displaying the progress value",
+          "values": []
+        },
+        {
+          "name": "indeterminate",
+          "description": "If `true` the indeterminate state of progress bar is enabled",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "If `true`, a label text showing the value (in percentage) will be shown",
+          "values": []
+        },
+        {
+          "name": "thickness",
+          "description": "Progress bar thickness",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "Progress type",
+          "values": [{ "name": "default" }, { "name": "error" }]
+        },
+        {
+          "name": "value",
+          "description": "A number representing the current value of the progress bar",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-radio",
+      "description": "The radio button is a user interface element that allows users to select a single option.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-radio value=\"option1\">Radio option 1</bq-radio>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when the radio loses focus\n- **bqClick** - Handler to be called when the radio state changes\n- **bqFocus** - Handler to be called when the radio gets focused\n- **bqKeyDown** - The handler is to be called when the radio key is pressed\n- **bqClick** - Handler to be called when the radio state changes\n- **bqFocus** - Handler to be called when the radio gets focus\n- **bqBlur** - Handler to be called when the radio loses focus\n- **bqKeyDown** - Handler to be called when the radio key is pressed\n\n### **Methods:**\n - **vClick()** - Simulate a click event on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.click()`.\n- **vFocus()** - Sets focus on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.focus()`.\n- **vBlur()** - Remove focus from the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.blur()`.\n- **getNativeInput()** - Returns the native `<input>` HTML element used under the hood.\n\n### **Slots:**\n - _default_ - The bq-radio item\n\n### **CSS Properties:**\n - **--bq-radio--size** - Radio size _(default: undefined)_\n- **--bq-radio--border-width** - Radio border width _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper of the radio component.\n- **input** - The native HTML `<input type=\"radio\">` used under the hood.\n- **radio** - The component's internal wrapper of the radio component.\n- **label** - The `<span>` element that holds the text content.",
+      "attributes": [
+        {
+          "name": "background-on-hover",
+          "description": "If `true`, the radio displays background on hover",
+          "values": []
+        },
+        {
+          "name": "checked",
+          "description": "If `true` radio input is checked",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true` radio input is disabled",
+          "values": []
+        },
+        {
+          "name": "form-id",
+          "description": "The form ID that the radio input is associated with",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "Name of the HTML input form control. Submitted with the form as part of a name/value pair",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "If `true`, it will indicate that the user must specify a value for the radio before the owning form can be submitted",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A string representing the value of the radio",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-radio-group",
+      "description": "The radio group is a user interface component that groups radio buttons to enable a single selection within the group.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-radio-group fieldset value=\"option1\">\n<span slot=\"label\">radio group</span>\n<bq-radio value=\"option1\">Radio option 1</bq-radio>\n<bq-radio value=\"option2\">Radio option 2</bq-radio>\n<bq-radio value=\"option3\">Radio option 3</bq-radio>\n</bq-radio-group>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqChange** - Handler to be called when the radio state changes\n- **bqChange** - Handler to be called when the radio state changes\n\n### **Slots:**\n - _default_ - The bq-radio items to group\n- **label** - The label content of radio group\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper of the radio components.\n- **label** - The `<legend>` element that holds the text content.\n- **group** - The `<div>` element that holds the radio inputs.",
+      "attributes": [
+        {
+          "name": "background-on-hover",
+          "description": "If `true`, the radio displays background on hover",
+          "values": []
+        },
+        {
+          "name": "debounce-time",
+          "description": "A number representing the delay time (in milliseconds) that bqChange event handler gets triggered once the value change",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true` radio inputs are disabled",
+          "values": []
+        },
+        {
+          "name": "fieldset",
+          "description": "If `true` displays fieldset",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "Name of the HTML input form control. Submitted with the form as part of a name/value pair",
+          "values": []
+        },
+        {
+          "name": "orientation",
+          "description": "The display orientation of the radio inputs",
+          "values": [{ "name": "horizontal" }, { "name": "vertical" }]
+        },
+        {
+          "name": "required",
+          "description": "If `true`, the radio group is required",
+          "values": []
+        },
+        {
+          "name": "required-validation-message",
+          "description": "The native form validation message when the radio group is required",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "The display orientation of the radio inputs",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-row",
+      "description": "The component description.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-row>Stencil</bq-row>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **eventName** - The event description.\n\n### **Slots:**\n - _default_ - The default slot content.\n\n### **CSS Properties:**\n - **--bq-row--margin** - The margin of the component. _(default: undefined)_\n\n### **CSS Parts:**\n - **partName** - The CSS shadow DOM part description.",
+      "attributes": [
+        {
+          "name": "attribute-name",
+          "description": "The attribute description, use always kebab-case.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-select",
+      "description": "The select input component lets users choose from a predefined list, commonly used in forms for easy data selection.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-select placeholder=\"Placeholder\">\n<label slot=\"label\">Select label</label>\n<span slot=\"helper-text\">\n<bq-icon name=\"star\"></bq-icon>\nHelper text\n</span>\n\n<bq-option value=\"1\">Option 1</bq-option>\n<bq-option value=\"2\">Option 2</bq-option>\n<bq-option value=\"3\">Option 3</bq-option>\n</bq-select>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - The callback handler is emitted when the Select input loses focus.\n- **bqClear** - The callback handler is emitted when the selected value has been cleared.\n- **bqFocus** - A callback handler is emitted when the Select input has received focus.\n- **bqSelect** - The callback handler is emitted when the selected value has changed.\n- **bqBlur** - Callback handler emitted when the Select input loses focus\n- **bqClear** - Callback handler emitted when the selected value has been cleared\n- **bqFocus** - Callback handler emitted when the Select input has received focus\n- **bqSelect** - Callback handler emitted when the selected value has changed\n\n### **Methods:**\n - **clear(): _Promise<void>_** - Clears the selected value.\n\n### **Slots:**\n - **label** - The label slot container.\n- **prefix** - The prefix slot container.\n- **tags** - The tags slot container.\n- **clear-icon** - The clear icon slot container.\n- **suffix** - The suffix slot container.\n- **helper-text** - The helper text slot container.\n\n### **CSS Properties:**\n - **--bq-select--background-color** - Select background color _(default: undefined)_\n- **--bq-select--border-color** - Select border color _(default: undefined)_\n- **--bq-select--border-color-focus** - Select border color on focus _(default: undefined)_\n- **--bq-select--border-color-disabled** - Select border color when disabled _(default: undefined)_\n- **--bq-select--border-radius** - Select border radius _(default: undefined)_\n- **--bq-select--border-width** - Select border width _(default: undefined)_\n- **--bq-select--border-style** - Select border style _(default: undefined)_\n- **--bq-select--gap** - Gap between Select content and prefix/suffix _(default: undefined)_\n- **--bq-select--helper-margin-top** - Helper text margin top _(default: undefined)_\n- **--bq-select--helper-text-color** - Helper text color _(default: undefined)_\n- **--bq-select--helper-text-size** - Helper text size _(default: undefined)_\n- **--bq-select--icon-size** - Icon size to use in prefix/suffix and clear button _(default: undefined)_\n- **--bq-select--label-margin-bottom** - Select label margin bottom _(default: undefined)_\n- **--bq-select--label-text-color** - Select label text color _(default: undefined)_\n- **--bq-select--label-text-size** - Select label text size _(default: undefined)_\n- **--bq-select--padding-start** - Select padding start _(default: undefined)_\n- **--bq-select--padding-end** - Select padding end _(default: undefined)_\n- **--bq-select--paddingY** - Select padding top and bottom _(default: undefined)_\n- **--bq-select--text-color** - Select text color _(default: undefined)_\n- **--bq-select--text-size** - Select text size _(default: undefined)_\n- **--bq-select--text-placeholder-color** - Select placeholder text color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **button** - The native HTML button used under the hood in the clear button.\n- **clear-btn** - The clear button.\n- **control** - The input control wrapper.\n- **input-outline** - The input outline wrapper that holds the tags container and the native HTML input used under the hood.\n- **helper-text** - The helper text slot container.\n- **input** - The native HTML input element used under the hood.\n- **label** - The label slot container.\n- **panel** - The select panel container\n- **prefix** - The prefix slot container.\n- **suffix** - The suffix slot container.\n- **tags** - The tags container of the BqTags for multiple selection.\n- **tag** - The tag container of the BqTag for multiple selection.\n- **tag__base** - The base wrapper of the BqTag for multiple selection.\n- **tag__prefix** - The prefix slot container of the BqTag for multiple selection.\n- **tag__text** - The text slot container of the BqTag for multiple selection.\n- **tag__btn-close** - The close button of the BqTag for multiple selection.\n- **option-list** - The option list container.",
+      "attributes": [
+        {
+          "name": "autofocus",
+          "description": "If `true`, the Select input will be focused on component render.",
+          "values": []
+        },
+        {
+          "name": "clear-button-label",
+          "description": "The clear button aria label.",
+          "values": []
+        },
+        {
+          "name": "debounce-time",
+          "description": "The amount of time, in milliseconds, to wait before emitting the `bqInput` event after the input value changes.",
+          "values": []
+        },
+        {
+          "name": "disable-clear",
+          "description": "If `true`, the clear button won't be displayed.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Indicates whether the Select input is disabled and cannot be interacted with.",
+          "values": []
+        },
+        {
+          "name": "distance",
+          "description": "Represents the distance (gutter or margin) between the Select panel and the input element.",
+          "values": []
+        },
+        {
+          "name": "form",
+          "description": "The ID of the form that Select input field belongs to.",
+          "values": []
+        },
+        {
+          "name": "keep-open-on-select",
+          "description": "If `true`, the Select panel will remain open after a selection is made.",
+          "values": []
+        },
+        {
+          "name": "max-tags-visible",
+          "description": "The maximum number of tags to display when multiple selection is enabled.",
+          "values": []
+        },
+        {
+          "name": "multiple",
+          "description": "If `true`, the Select input will allow multiple selections.",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "The Select input name.",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If `true`, the Select panel will be visible.",
+          "values": []
+        },
+        {
+          "name": "panel-height",
+          "description": "When set, it will override the height of the Select panel.",
+          "values": []
+        },
+        {
+          "name": "placeholder",
+          "description": "The Select input placeholder text value.",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "Position of the Select panel.",
+          "values": [
+            { "name": "bottom" },
+            { "name": "bottom-end" },
+            { "name": "bottom-start" },
+            { "name": "left" },
+            { "name": "left-end" },
+            { "name": "left-start" },
+            { "name": "right" },
+            { "name": "right-end" },
+            { "name": "right-start" },
+            { "name": "top" },
+            { "name": "top-end" },
+            { "name": "top-start" }
+          ]
+        },
+        {
+          "name": "readonly",
+          "description": "If `true`, the Select input cannot be modified.",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "Indicates whether or not the Select input is required to be filled out before submitting the form.",
+          "values": []
+        },
+        {
+          "name": "same-width",
+          "description": "Whether the panel should have the Select same width as the input element.",
+          "values": []
+        },
+        {
+          "name": "skidding",
+          "description": "Represents the skidding between the Select panel and the input element.",
+          "values": []
+        },
+        {
+          "name": "strategy",
+          "description": "Defines the strategy to position the Select panel.",
+          "values": [{ "name": "absolute" }, { "name": "fixed" }]
+        },
+        {
+          "name": "validation-status",
+          "description": "The validation status of the Select input.",
+          "values": [
+            { "name": "error" },
+            { "name": "success" },
+            { "name": "warning" },
+            { "name": "none" }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The select input value can be used to reset the field to a previous value.",
+          "values": [
+            { "name": "number" },
+            { "name": "string" },
+            { "name": "string[]" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-side-menu",
+      "description": "The default side menu serves as a versatile container for organizing and displaying navigation elements,\n with default side menu items providing a clean and straightforward way to represent individual menu options.\n Together, they form the foundation for building structured and intuitive side menu layouts.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-side-menu>\n<div slot=\"logo\">\n<h1>Your Logo</h1>\n</div>\n<bq-side-menu-item active>\n<bq-icon name=\"home\" slot=\"prefix\"></bq-icon>\nHome\n</bq-side-menu-item>\n<bq-side-menu-item>\n<bq-icon name=\"settings\" slot=\"prefix\"></bq-icon>\nSettings\n</bq-side-menu-item>\n<bq-side-menu-item disabled>\n<bq-icon name=\"help\" slot=\"prefix\"></bq-icon>\nHelp\n</bq-side-menu-item>\n</bq-side-menu>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqCollapse** - Callback handler to be called when the Side menu changes its width from expanded to collapse and vice versa.\n- **bqSelect** - Callback handler to be called when the active/selected menu item changes.\n- **bqCollapse** - Callback handler to be called when the Side menu changes its width from expanded to collapse and vice versa\n- **bqSelect** - Callback handler to be called when the active/selected menu item changes\n\n### **Methods:**\n - **toggleCollapse()** - Toggle the collapse state of the side menu\n\n### **Slots:**\n - **logo** - The section for displaying the logo or brand in the side menu.\n- **The** - main section that holds all menu items.\n- **footer** - The section for adding footer content to the side menu.\n\n### **CSS Properties:**\n - **--bq-side-menu--bg-color** - Side menu background color _(default: undefined)_\n- **--bq-side-menu--brand-color** - Side menu logo color _(default: undefined)_\n- **--bq-side-menu--border-color** - Side menu border color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - HTML `<aside>` root container\n- **footer** - HTML `<div>` element that holds the footer\n- **logo** - HTML `<div>` element that holds the logo\n- **nav** - HTML `<nav>` element that holds the navigation items",
+      "attributes": [
+        {
+          "name": "appearance",
+          "description": "It sets a predefined appearance of the side menu.",
+          "values": [
+            { "name": "brand" },
+            { "name": "default" },
+            { "name": "inverse" }
+          ]
+        },
+        {
+          "name": "collapse",
+          "description": "If `true`, the container will reduce its width.",
+          "values": []
+        },
+        {
+          "description": "size - It sets the size of the navigation menu items.",
+          "values": [{ "name": "medium" }, { "name": "small" }]
+        },
+        { "name": "size", "values": [{ "name": "TSideMenuSize" }] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-side-menu-item",
+      "description": "Represents the default side menu item for standard navigation elements, providing a clean and straightforward way to display menu options.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-side-menu-item>\n<bq-icon name=\"star-four\" slot=\"prefix\"></bq-icon>\nMenu item\n<bq-badge slot=\"suffix\">5</bq-badge>\n</bq-side-menu-item>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when the button loses focus.\n- **bqClick** - Handler to be called when the button gets focused.\n- **bqFocus** - Handler to be called when the button is clicked.\n- **bqBlur** - Handler to be called when the button loses focus\n- **bqFocus** - Handler to be called when the button is clicked\n- **bqClick** - Handler to be called when button gets focus\n\n### **Slots:**\n - **prefix** - The prefix part of menu item.\n- _default_ - The content of the menu item.\n- **suffix** - The suffix part of menu item.\n\n### **CSS Properties:**\n - **--bq-side-menu-item--bg-default** - Side menu item default background color _(default: undefined)_\n- **--bq-side-menu-item--bg-hover** - Side menu item hover background color _(default: undefined)_\n- **--bq-side-menu-item--bg-active** - Side menu item active background color _(default: undefined)_\n- **--bq-side-menu-item--text-default** - Side menu item default text color _(default: undefined)_\n- **--bq-side-menu-item--text-hover** - Side menu item hover text color _(default: undefined)_\n- **--bq-side-menu-item--text-active** - Side menu item active text color _(default: undefined)_\n- **--bq-side-menu-item--text-disabled** - Side menu item disable text color _(default: undefined)_\n- **--bq-side-menu-item--paddingX** - Side menu item vertical padding _(default: undefined)_\n- **--bq-side-menu-item--paddingY** - Side menu item horizontal padding _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component wrapper container inside the shadow DOM\n- **label** - The label slot\n- **prefix** - The prefix slot\n- **suffix** - The suffix slot\n- **panel** - The `<div>` container that holds the tooltip content (when the side menu is collapsed)\n- **trigger** - The `<div>` container that holds the element which displays tooltip on hover (when the side menu is collapsed)",
+      "attributes": [
+        {
+          "name": "active",
+          "description": "If `true`, the menu item will be shown as active/selected.",
+          "values": []
+        },
+        {
+          "name": "collapse",
+          "description": "If `true`, the item label and suffix will be hidden and the with will be reduced according to its parent.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the menu item will be disabled (no interaction allowed).",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-slider",
+      "description": "Sliders provide a visual representation of adjustable content, enabling users to change values by dragging a handle along a horizontal track.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-slider max=\"100\" value=\"30\"></bq-slider>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when the slider loses focus.\n- **bqChange** - Handler to be called when changing the value on range inputs.\n- **bqFocus** - Handler to be called when the slider gets focused.\n- **bqChange** - Handler to be called when change the value on range inputs\n- **bqBlur** - Handler to be called when the slider loses focus\n- **bqFocus** - Handler to be called when the slider gets focused\n\n### **CSS Properties:**\n - **--bq-slider--size** - The height of the slider track/progress area _(default: undefined)_\n- **--bq-slider--border-radius** - Slider border radius _(default: undefined)_\n- **--bq-slider--thumb-size** - Slider hover thumb size _(default: undefined)_\n- **--bq-slider--progress-color** - Slider progress background color _(default: undefined)_\n- **--bq-slider--trackarea-color** - Slider track background color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **container** - The container of the slider.\n- **track-area** - The track area of the slider.\n- **progress-area** - The progress area of the slider.\n- **input-min** - The input element for the value when the slider type is `single` or the minimum value when the slider type is `range`.\n- **input-max** - The input element for the maximum value.\n- **label-start** - The label for the value when the slider type is `single` or the minimum value when the slider type is `range`.\n- **label-end** - The label for maximum value when the slider type is `range`.",
+      "attributes": [
+        {
+          "name": "debounce-time",
+          "description": "The amount of time, in milliseconds, to wait to trigger the bqChange event after each value change.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true` the slider is disabled.",
+          "values": []
+        },
+        {
+          "name": "enable-tooltip",
+          "description": "If `true`, a tooltip will be shown displaying the progress value.",
+          "values": []
+        },
+        {
+          "name": "enable-value-indicator",
+          "description": "If `true` it will show the value label on the side of the slider track area.",
+          "values": []
+        },
+        {
+          "name": "gap",
+          "description": "A number representing the amount to remain between the minimum and maximum values (only for range type).",
+          "values": []
+        },
+        {
+          "name": "max",
+          "description": "A number representing the max value of the slider.",
+          "values": []
+        },
+        {
+          "name": "min",
+          "description": "A number representing the min value of the slider.",
+          "values": []
+        },
+        {
+          "name": "step",
+          "description": "A number represents the step of the slider. ⚠️ Please notice that the value (or list of values if the slider type is range) will be rounded to the nearest multiple of step.",
+          "values": []
+        },
+        {
+          "name": "tooltip-always-visible",
+          "description": "If `true`, a tooltip will always display the progress value. It relies on enableTooltip and if enableTooltip is false, tooltipAlwaysVisible cannot be true.",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "It defines the type of slider to display.",
+          "values": [{ "name": "range" }, { "name": "single" }]
+        },
+        {
+          "name": "value",
+          "description": "The value of the slider. If the slider type is single, the value is a number. If the slider type is range, the value is an array of two numbers (the first number represents the min value and the second number represents the max value).",
+          "values": [
+            { "name": "[number, number]" },
+            { "name": "number" },
+            { "name": "string" }
+          ]
+        },
+        { "name": "name", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-spinner",
+      "description": "Spinners are designed for users to display data loading.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-spinner size=\"medium\" text-position=\"bellow\">\n<span>Loading...</span>\n</bq-spinner>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **icon** - The icon slot container.\n- _default_ - The content of the spinner component.\n\n### **CSS Properties:**\n - **--bq-spinner--color** - Spinner color _(default: undefined)_\n- **--bq-spinner--size-large** - Spinner large size _(default: undefined)_\n- **--bq-spinner--size-medium** - Spinner medium size _(default: undefined)_\n- **--bq-spinner--size-small** - Spinner small size _(default: undefined)_\n- **--bq-spinner--large-text-fontSize** - Spinner large text font size _(default: undefined)_\n- **--bq-spinner--medium-text-fontSize** - Spinner medium text font size _(default: undefined)_\n- **--bq-spinner--small-text-fontSize** - Spinner small text font size _(default: undefined)_\n- **--bq-spinner--text-lineHeight** - Spinner text line height _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The div wrapper container used under the hood.\n- **icon** - The `<svg>` icon element used to spin/animate.\n- **custom-icon** - The `<span>` tag element that holds the custom icon element passed.\n- **text** - The `<span>` tag element that renders the label text inside the component.",
+      "attributes": [
+        {
+          "name": "animation",
+          "description": "If `false`, the animation on the icon element will be stopped.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "It defines the size of the icon element displayed.",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        },
+        {
+          "name": "text-position",
+          "description": "It defines the position of the label text.",
+          "values": [
+            { "name": "above" },
+            { "name": "below" },
+            { "name": "left" },
+            { "name": "right" },
+            { "name": "none" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-status",
+      "description": "The Status Component is a UI element that represents the current state or condition of an item, task, or process.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-status type=\"alert\">Alert status</bq-status>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - **The** - content of the status component.\n\n### **CSS Properties:**\n - **--bq-status-circ** - Status circle size. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper of the status component.\n- **circle** - The colored circle that marks the status type.\n- **text** - The `<div>` container that holds the text label of the status component.",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "It defines the type of status to display.",
+          "values": [
+            { "name": "alert" },
+            { "name": "danger" },
+            { "name": "info" },
+            { "name": "neutral" },
+            { "name": "success" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-step-item",
+      "description": "The Step Item Component is a UI element used to display a single step or stage in a process or task.\nIt should be used inside the Steps component.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-step-item status=\"completed\">\n<bq-icon slot=\"prefix\" name=\"check-circle\"></bq-icon>\n<span>Title</span>\n<span slot=\"description\">Description</span>\n</bq-step-item>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqClick** - Callback handler emitted when the step item is clicked\n- **bqClick** - Callback handler emitted when the step item is clicked\n\n### **Slots:**\n - _default_ - The step item content\n- **prefix** - The step item prefix\n- **description** - The step item description\n\n### **CSS Properties:**\n - **--bq-step-item--prefix-color** - Color of the prefix icon _(default: undefined)_\n- **--bq-step-item--prefix-color-current** - Color of the prefix icon when current _(default: undefined)_\n- **--bq-step-item--prefix-color-completed** - Color of the prefix icon when completed _(default: undefined)_\n- **--bq-step-item--prefix-color-error** - Color of the prefix icon when error _(default: undefined)_\n- **--bq-step-item--prefix-num-size** - Size of the prefix number _(default: undefined)_\n- **--bq-step-item--prefix-num-bg-color** - Background color of the prefix number _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **title** - The component's title.\n- **description** - The component's description.",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "It defines prefix size",
+          "values": [{ "name": "small" }, { "name": "medium" }]
+        },
+        {
+          "name": "status",
+          "description": "It defines step item appearance based on its status",
+          "values": [
+            { "name": "completed" },
+            { "name": "current" },
+            { "name": "error" },
+            { "name": "default" },
+            { "name": "disabled" }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "It defines the step item type used",
+          "values": [
+            { "name": "numeric" },
+            { "name": "icon" },
+            { "name": "dot" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-steps",
+      "description": "The Steps Component is a UI element used to display a series of steps or stages in a process or task.\nIt is used to guide users through a process or task and to indicate their progress.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-steps divider-color=\"stroke--primary\" type=\"dot\" size=\"medium\">\n<bq-step-item status=\"completed\"> ... </bq-step-item>\n<bq-step-item status=\"error\"> ... </bq-step-item>\n<bq-step-item status=\"current\"> ... </bq-step-item>\n<bq-step-item status=\"default\"> ... </bq-step-item>\n</bq-steps>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The step items\n\n### **CSS Properties:**\n - **--bq-steps--divider-color** - Divider color _(default: undefined)_\n- **--bq-steps--gap** - Gap between steps _(default: undefined)_\n\n### **CSS Parts:**\n - **container** - The container wrapper of the Steps component\n- **divider-base** - The base wrapper of the divider component\n- **divider-dash-start** - The dash start wrapper of the divider component\n- **divider-dash-end** - The dash end wrapper of the divider component",
+      "attributes": [
+        {
+          "name": "divider-color",
+          "description": "The color of the line that connects the steps. It should be a valid declarative color token.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the steps",
+          "values": [{ "name": "medium" }, { "name": "small" }]
+        },
+        {
+          "name": "type",
+          "description": "The type of prefix element to use on the step items",
+          "values": [
+            { "name": "numeric" },
+            { "name": "icon" },
+            { "name": "dot" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-switch",
+      "description": "Toggle switches are digital on/off switches.\nThey should provide immediate results, giving users the freedom to control their preferences as needed.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-switch inner-label=\"default\" justify-content=\"start\" name=\"bq-switch\" value=\"Switch value\">\nToggle me!\n</bq-switch>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqChange** - Handler to be called when the switch state changes\n- **bqFocus** - Handler to be called when the switch gets focus\n- **bqBlur** - Handler to be called when the switch loses focus\n- **bqChange** - Handler to be called when the switch state changes\n- **bqFocus** - Handler to be called when the switch gets focus\n- **bqBlur** - Handler to be called when the switch loses focus\n\n### **Methods:**\n - **vClick()** - Simulate a click event on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.click()`.\n- **vFocus()** - Sets focus on the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.focus()`.\n- **vBlur()** - Remove focus from the native `<input>` HTML element used under the hood.\nUse this method instead of the global `element.blur()`.\n\n### **Slots:**\n - _default_ - The switch label text\n\n### **CSS Properties:**\n - **--bq-switch--height** - Switch height _(default: undefined)_\n- **--bq-switch--justify-content** - Switch justify content _(default: undefined)_\n- **--bq-switch--width** - Switch width _(default: undefined)_\n- **--bq-switch--dot-size** - Switch dot size _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - HTML `<label>` root container\n- **control** - HTML `<div>` element for the custom control\n- **dot** - HTML `<div>` element that acts as changing dot\n- **icon-off** - HTMLBqIcon `<pk-icon>` element used as the `OFF` mark inner label\n- **icon-on** - HTMLBqIcon `<pk-icon>` element used as the `ON` mark inner label\n- **label** - HTML `<span>` element that holds the label text",
+      "attributes": [
+        {
+          "name": "background-on-hover",
+          "description": "If `true`, a background will be displayed on hover",
+          "values": []
+        },
+        {
+          "name": "checked",
+          "description": "It indicates whether if the switch is `ON` by default (when the page loads)",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the switch control will be disabled and no interaction will be allowed",
+          "values": []
+        },
+        {
+          "name": "form-validation-message",
+          "description": "The native form validation message",
+          "values": []
+        },
+        {
+          "name": "full-width",
+          "description": "If `true`, the component will take the full width space available on the parent container",
+          "values": []
+        },
+        {
+          "name": "inner-label",
+          "description": "It indicates how to to display the on/off marks inside the control, with icons or none (default)",
+          "values": [{ "name": "default" }, { "name": "icon" }]
+        },
+        {
+          "name": "justify-content",
+          "description": "It defines how to distribute the space between and around the control and the label text",
+          "values": [
+            { "name": "start" },
+            { "name": "end" },
+            { "name": "center" },
+            { "name": "space-between" },
+            { "name": "space-around" },
+            { "name": "space-evenly" }
+          ]
+        },
+        {
+          "name": "name",
+          "description": "Name of the form control. Submitted with the form as part of a name/value pair",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "If `true`, it will indicate that the user must switch `ON` the element before the owning form can be submitted",
+          "values": []
+        },
+        {
+          "name": "reverse-order",
+          "description": "If `true`, the order of the control and the label text will be changed",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "The input control's value, submitted as a name/value pair with form data",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-tab",
+      "description": "The tab is a user interface element that allows users to navigate between different sections of a page.\nIt should be used inside `<bq-tab-group>` component.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-tab tab-id=\"1\" controls=\"panel-1\">Tab 1</bq-tab>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqClick** - Handler to be called when the tab state changes\n- **bqFocus** - Handler to be called when the tab gets focus\n- **bqBlur** - Handler to be called when the tab loses focus\n- **bqKeyDown** - Handler to be called when the tab key is pressed\n- **bqClick** - Handler to be called when the tab state changes\n- **bqFocus** - Handler to be called when the tab gets focus\n- **bqBlur** - Handler to be called when the tab loses focus\n- **bqKeyDown** - Handler to be called when the tab key is pressed\n\n### **Methods:**\n - **vClick()** - Simulate a click event on the native `<button>` HTML element used under the hood.\nUse this method instead of the global `element.click()`.\n- **vFocus()** - Sets focus on the native `<button>` HTML element used under the hood.\nUse this method instead of the global `element.focus()`.\n- **vBlur()** - Remove focus from the native `<button>` HTML element used under the hood.\nUse this method instead of the global `element.blur()`.\n\n### **CSS Properties:**\n - **--bq-tab--font-size** - Font size _(default: undefined)_\n- **--bq-tab--font-weight** - Font weight _(default: undefined)_\n- **--bq-tab--icon-size-large** - Icon size for large tab _(default: undefined)_\n- **--bq-tab--icon-size-medium** - Icon size for medium tab _(default: undefined)_\n- **--bq-tab--icon-size-small** - Icon size for small tab _(default: undefined)_\n- **--bq-tab--label-icon-gap** - Gap between label and icon _(default: undefined)_\n- **--bq-tab--line-height** - Line height _(default: undefined)_\n- **--bq-tab--padding-horizontal-large** - Horizontal padding for large tab _(default: undefined)_\n- **--bq-tab--padding-horizontal-medium** - Horizontal padding for medium tab _(default: undefined)_\n- **--bq-tab--padding-horizontal-small** - Horizontal padding for small tab _(default: undefined)_\n- **--bq-tab--padding-vertical-large** - Vertical padding for large tab _(default: undefined)_\n- **--bq-tab--padding-vertical-medium** - Vertical padding for medium tab _(default: undefined)_\n- **--bq-tab--padding-vertical-small** - Vertical padding for small tab _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The HTML button used under the hood.\n- **content** - The HTML `<div>` element that holds the content.\n- **icon** - The HTML `<div>` element that holds the icon content.\n- **text** - The HTML `<div>` element that holds the text content.\n- **underline** - The HTML `<div>` element that display active state.",
+      "attributes": [
+        {
+          "name": "active",
+          "description": "If `true` tab is active",
+          "values": []
+        },
+        {
+          "name": "controls",
+          "description": "The tab panel id that the tab controls",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true` tab is disabled",
+          "values": []
+        },
+        {
+          "name": "orientation",
+          "description": "The direction that tab should be render",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "The placement that tab should be render",
+          "values": []
+        },
+        { "name": "size", "description": "The size of the tab", "values": [] },
+        { "name": "tab-id", "description": "The id of the tab", "values": [] }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-tab-group",
+      "description": "The tab group is a user interface element that allows users wrap a set of tab items.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-tab-group value=\"5\">\n<bq-tab tab-id=\"1\">Tab</bq-tab>\n<bq-tab tab-id=\"2\" active>Tab</bq-tab>\n<bq-tab tab-id=\"3\">Long Tab name</bq-tab>\n<bq-tab tab-id=\"4\" disabled>Tab</bq-tab>\n</bq-tab-group>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqChange** - Handler to be called when the tab value changes\n- **bqChange** - Handler to be called when the tab value changes\n\n### **Slots:**\n - _default_ - The bq-tab items\n\n### **CSS Parts:**\n - **base** - The HTML div wrapper inside the shadow DOM.\n- **tabs** - The HTML div used to hold the tab buttons.",
+      "attributes": [
+        {
+          "name": "debounce-time",
+          "description": "A number representing the delay value applied to bqChange event handler",
+          "values": []
+        },
+        {
+          "name": "disable-divider",
+          "description": "If true, the underline divider below the tabs won't be shown",
+          "values": []
+        },
+        {
+          "name": "orientation",
+          "description": "The direction that tab should be render",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "The placement that tab should be render",
+          "values": []
+        },
+        { "name": "size", "description": "The size of the tab", "values": [] },
+        {
+          "name": "value",
+          "description": "A string representing the id of the selected tab.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-tag",
+      "description": "The Tag Component is a UI element used to label and categorize content within an application.\nTags are commonly used to label items with keywords or categories, making it easier to find and organize content.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-tag color=\"success\" size=\"medium\" variant=\"filled\">Success</bq-tag>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqClose** - Callback handler to be called when the tag is close/hidden\n- **bqOpen** - Callback handler to be called when the tag is not open/shown\n- **bqBlur** - Handler to be called when tag loses focus\n- **bqClick** - Handler to be called when tag is clicked\n- **bqFocus** - Handler to be called when tag is focused\n- **bqClose** - Callback handler to be called when the tag is close/hidden\n- **bqOpen** - Callback handler to be called when the tag is not open/shown\n- **bqBlur** - Handler to be called when tag loses focus\n- **bqClick** - Handler to be called when tag is clicked\n- **bqFocus** - Handler to be called when tag is focused\n\n### **Methods:**\n - **hide(): _Promise<void>_** - Method to be called to remove the tag component\n- **show(): _Promise<void>_** - Method to be called to show the tag component\n\n### **Slots:**\n - **prefix** - The prefix slot to add an icon or any other content before the text\n- _default_ - The text content of the tag\n\n### **CSS Properties:**\n - **--bq-tag--background-color** - Tag background color _(default: undefined)_\n- **--bq-tag--border-color** - Tag border color _(default: undefined)_\n- **--bq-tag--border-radius** - Tag border radius _(default: undefined)_\n- **--bq-tag--border-style** - Tag border style _(default: undefined)_\n- **--bq-tag--border-width** - Tag border width _(default: undefined)_\n- **--bq-tag--small-border-radius** - Tag small border radius _(default: undefined)_\n- **--bq-tag--small-gap** - Tag small gap between content _(default: undefined)_\n- **--bq-tag--small-padding-x** - Tag small padding horizontal _(default: undefined)_\n- **--bq-tag--small-padding-y** - Tag small padding vertical _(default: undefined)_\n- **--bq-tag--medium-gap** - Tag medium gap between content _(default: undefined)_\n- **--bq-tag--medium-padding-x** - Tag medium padding horizontal _(default: undefined)_\n- **--bq-tag--medium-padding-y** - Tag medium padding vertical _(default: undefined)_\n\n### **CSS Parts:**\n - **wrapper** - The wrapper container `<div>` of the element inside the shadow DOM.\n- **prefix** - The `<span>` tag element that acts as prefix container (when icon exists in front of tag).\n- **text** - The `<div>` element containing the text of the tag component.\n- **btn-close** - The close button element to remove the tag component.",
+      "attributes": [
+        {
+          "name": "border",
+          "description": "The corner radius of the Tag (will override size's predefined border)",
+          "values": []
+        },
+        {
+          "name": "clickable",
+          "description": "If `true`, the Tag can be clickable",
+          "values": []
+        },
+        {
+          "name": "color",
+          "description": "The color style of the Tag",
+          "values": [
+            { "name": "error" },
+            { "name": "gray" },
+            { "name": "info" },
+            { "name": "success" },
+            { "name": "warning" }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the Tag will be disabled (only if clickable = `true`, no interaction allowed)",
+          "values": []
+        },
+        {
+          "name": "hidden",
+          "description": "If `true`, the Tag component will hidden (only if removable = `true`)",
+          "values": []
+        },
+        {
+          "name": "removable",
+          "description": "If `true`, the Tag component can be removed",
+          "values": []
+        },
+        {
+          "name": "selected",
+          "description": "If `true`, the Tag is selected (only if clickable = `true`)",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the Tag component",
+          "values": [
+            { "name": "xsmall" },
+            { "name": "small" },
+            { "name": "medium" }
+          ]
+        },
+        {
+          "name": "variant",
+          "description": "The variant of Tag to apply on top of the variant",
+          "values": [{ "name": "outline" }, { "name": "filled" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-text",
+      "description": "El componente `bq-text` muestra texto con estilos controlados (tamaño, color, fondo).\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-text size=\"medium\" color=\"text--primary\">Hola mundo</bq-text>\n```\n\n</figure>\n---\n\n\n### **Slots:**\n - _default_ - The default slot is used to add content to the text. The content can be a number or a text.\n\n### **CSS Properties:**\n - **--bq-text--background-color** - The text background color _(default: undefined)_\n- **--bq-text--box-shadow** - The text box shadow _(default: undefined)_\n- **--bq-text--border-color** - The text border color _(default: undefined)_\n- **--bq-text--border-radius** - The text border radius _(default: undefined)_\n- **--bq-text--border-style** - The text border style _(default: undefined)_\n- **--bq-text--border-width** - The text border width _(default: undefined)_\n- **--bq-text--size-small** - The text small size _(default: undefined)_\n- **--bq-text--size-medium** - The text medium size _(default: undefined)_\n- **--bq-text--size-large** - The text large size _(default: undefined)_\n- **--bq-text--text-color** - The text text color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper that holds the count.\n- **number** - The component's internal wrapper that holds the slot.",
+      "attributes": [
+        {
+          "name": "background-color",
+          "description": "text background color. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "text-color",
+          "description": "text number color. The value should be a valid value of the palette color.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the text. Relevant if text has no content.",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-textarea",
+      "description": "The Textarea component is a multi-line text input control that is often used in a form to collect user inputs like comments or reviews.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-textarea maxlength=\"0\" name=\"textarea\" placeholder=\"Placeholder...\" rows=\"5\">\n<label slot=\"label\">Label</label>\n<span class=\"flex items-center gap-xs\" slot=\"helper-text\">\n<bq-icon name=\"star\"></bq-icon>\nHelper text\n</span>\n</bq-textarea>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqBlur** - Handler to be called when the textarea loses focus.\n- **bqChange** - Handler to be called when the textarea value has changed and the textarea loses focus.\n- **bqClear** - Handler to be called when the textarea value has been cleared.\n- **bqFocus** - Handler to be called when the textarea has received focus.\n- **bqInput** - Handler to be called when the textarea value changes.\n- **bqBlur** - Callback handler emitted when the textarea loses focus\n- **bqChange** - Callback handler emitted when the textarea value has changed and the textarea loses focus.\nThis handler is called whenever the user finishes typing or pasting text into the textarea field and then clicks outside of the textarea field.\n- **bqClear** - Callback handler emitted when the textarea value has been cleared\n- **bqFocus** - Callback handler emitted when the textarea has received focus\n- **bqInput** - Callback handler emitted when the textarea value changes.\nThis handler is called whenever the user types or pastes text into the textarea field.\n\n### **Slots:**\n - **label** - The textarea label.\n- **helper-text** - The helper text.\n\n### **CSS Properties:**\n - **--bq-textarea--background-color** - Textarea background color _(default: undefined)_\n- **--bq-textarea--border-color** - Textarea border color _(default: undefined)_\n- **--bq-textarea--border-color-focus** - Textarea border color on focus _(default: undefined)_\n- **--bq-textarea--border-radius** - Textarea border radius _(default: undefined)_\n- **--bq-textarea--border-width** - Textarea border width _(default: undefined)_\n- **--bq-textarea--border-style** - Textarea border style _(default: undefined)_\n- **--bq-textarea--helper-margin-top** - Textarea helper text margin top _(default: undefined)_\n- **--bq-textarea--helper-text-color** - Textarea helper text color _(default: undefined)_\n- **--bq-textarea--helper-text-size** - Textarea helper text size _(default: undefined)_\n- **--bq-textarea--label-margin-bottom** - Textarea label margin bottom _(default: undefined)_\n- **--bq-textarea--label-text-color** - Textarea label text color _(default: undefined)_\n- **--bq-textarea--label-text-size** - Textarea label text size _(default: undefined)_\n- **--bq-textarea--paddingY** - Textarea padding top and bottom _(default: undefined)_\n- **--bq-textarea--padding-start** - Textarea padding start _(default: undefined)_\n- **--bq-textarea--padding-end** - Textarea padding end _(default: undefined)_\n- **--bq-textarea--text-color** - Textarea text color _(default: undefined)_\n- **--bq-textarea--text-size** - Textarea text size _(default: undefined)_\n- **--bq-textarea--text-placeholder-color** - Textarea placeholder text color _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **input** - The textarea element.\n- **label** - The textarea label.\n- **helper-info** - The helper info container.\n- **helper-text** - The helper text.\n- **helper-counter** - The helper counter.",
+      "attributes": [
+        {
+          "name": "autocapitalize",
+          "description": "Controls whether or not the textarea field should be capitalized and how.",
+          "values": []
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies whether or not the textarea field should have autocomplete enabled.",
+          "values": []
+        },
+        {
+          "name": "autocorrect",
+          "description": "Controls whether or not the textarea field should have autocorrect enabled.",
+          "values": []
+        },
+        {
+          "name": "autofocus",
+          "description": "If `true`, the textarea will be focused on component render.",
+          "values": []
+        },
+        {
+          "name": "auto-grow",
+          "description": "If `true`, the textarea will automatically grow and shrink to fit its contents.",
+          "values": []
+        },
+        {
+          "name": "debounce-time",
+          "description": "The amount of time, in milliseconds, to wait before emitting the `bqInput` event after the textarea value changes.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the user cannot interact with the textarea.",
+          "values": []
+        },
+        {
+          "name": "disable-resize",
+          "description": "If `true`, it will block the user's ability to resize the textarea.",
+          "values": []
+        },
+        {
+          "name": "form",
+          "description": "The ID of the form that the textarea field belongs to.",
+          "values": []
+        },
+        {
+          "name": "form-validation-message",
+          "description": "The native form validation message.",
+          "values": []
+        },
+        {
+          "name": "maxlength",
+          "description": "The maximum number of characters that can be entered into the textarea (`0`: no limit).",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "The name of the textarea element.",
+          "values": []
+        },
+        {
+          "name": "placeholder",
+          "description": "The placeholder text to show when there is no value.",
+          "values": []
+        },
+        {
+          "name": "readonly",
+          "description": "If `true`, the textarea field cannot be modified.",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "Indicates whether or not the textarea field is required to be filled out before submitting the form.",
+          "values": []
+        },
+        {
+          "name": "rows",
+          "description": "The number of visible text lines for the control. It must be a positive integer.",
+          "values": []
+        },
+        {
+          "name": "spellcheck",
+          "description": "If `true`, the textarea content may be checked for spelling errors.",
+          "values": []
+        },
+        {
+          "name": "validation-status",
+          "description": "The validation status of the textarea.",
+          "values": [
+            { "name": "error" },
+            { "name": "none" },
+            { "name": "success" },
+            { "name": "warning" }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The value of the textarea. It can be used to reset the textarea to a previous value.",
+          "values": []
+        },
+        {
+          "name": "wrap",
+          "description": "Specifies how the text in a text area is to be wrapped when submitted in a form.",
+          "values": [{ "name": "soft" }, { "name": "hard" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-toast",
+      "description": "Toasts are time-based components used to display short messages.\nCommonly used for errors, confirmations, or progress updates.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-toast type=\"info\">\nThis is a message\n</bq-toast>\n```\n\n</figure>\n---\n\n\n### **Events:**\n - **bqHide** - Callback handler to be called when the notification is hidden\n- **bqShow** - Callback handler to be called when the notification is shown\n- **bqHide** - Callback handler to be called when the notification is hidden\n- **bqShow** - Callback handler to be called when the notification is shown\n\n### **Methods:**\n - **show(): _Promise<void>_** - Method to be called to show the toast component\n- **hide(): _Promise<void>_** - Method to be called to hide the toast component\n- **toast()** - This method can be used to display toasts in a fixed-position element that allows for stacking multiple toasts vertically\n\n### **Slots:**\n - _default_ - The content to be displayed in the toast component.\n- **icon** - The icon to be displayed in the toast component.\n\n### **CSS Properties:**\n - **--bq-toast--background** - Toast background color _(default: undefined)_\n- **--bq-toast--box-shadow** - Toast box shadow _(default: undefined)_\n- **--bq-toast--padding-y** - Toast vertical padding _(default: undefined)_\n- **--bq-toast--padding-x** - Toast horizontal padding _(default: undefined)_\n- **--bq-toast--gap** - Toast distance between icon and text _(default: undefined)_\n- **--bq-toast--border-radius** - Toast border radius _(default: undefined)_\n- **--bq-toast--border-color** - Toast border color _(default: undefined)_\n- **--bq-toast--border-style** - Toast border style _(default: undefined)_\n- **--bq-toast--border-width** - Toast border width _(default: undefined)_\n- **--bq-toast--icon-color-info** - Toast icon color when type is 'info' _(default: undefined)_\n- **--bq-toast--icon-color-success** - Toast icon color when type is 'success' _(default: undefined)_\n- **--bq-toast--icon-color-alert** - Toast icon color when type is 'alert' _(default: undefined)_\n- **--bq-toast--icon-color-error** - Toast icon color when type is 'error' _(default: undefined)_\n- **--bq-toast--icon-color-loading** - Toast icon color when type is 'loading' _(default: undefined)_\n- **--bq-toast--icon-color-custom** - Toast icon color when type is 'custom' _(default: undefined)_\n\n### **CSS Parts:**\n - **wrapper** - The component's internal wrapper inside the shadow DOM.\n- **icon-info** - The `<div>` container that holds the icon component.\n- **base** - The `<div>` container of the internal bq-icon component.\n- **svg** - The `<svg>` element of the internal bq-icon component.",
+      "attributes": [
+        {
+          "name": "border",
+          "description": "The corder radius of the toast component",
+          "values": [
+            { "name": "s" },
+            { "name": "none" },
+            { "name": "xs2" },
+            { "name": "xs" },
+            { "name": "m" },
+            { "name": "l" },
+            { "name": "full" }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "Type of toast",
+          "values": [
+            { "name": "success" },
+            { "name": "error" },
+            { "name": "loading" },
+            { "name": "alert" },
+            { "name": "info" }
+          ]
+        },
+        {
+          "name": "placement",
+          "description": "Placement of toast",
+          "values": [
+            { "name": "top-left" },
+            { "name": "top-center" },
+            { "name": "top-right" },
+            { "name": "bottom-left" },
+            { "name": "bottom-center" },
+            { "name": "bottom-right" }
+          ]
+        },
+        {
+          "name": "hide-icon",
+          "description": "If true will hide toast icon",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "If true, the toast will be shown",
+          "values": []
+        },
+        {
+          "name": "time",
+          "description": "The length of time, in milliseconds, after which the toast will close itself",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bq-tooltip",
+      "description": "The Tooltip component is a small pop-up box that appears when a user hovers over or clicks on an element, providing additional information or context.\n\n## Examples\n\n<figure class=\"example\"><figcaption>How to use it</figcaption>\n\n```html\n<bq-tooltip visible>\nYuhu! I'm a tooltip 🙃\n<bq-button slot=\"trigger\">Hover me!</bq-button>\n</bq-tooltip>\n```\n\n</figure>\n---\n\n\n### **Methods:**\n - **show()** - Shows the tooltip\n- **hide()** - Hides the tooltip\n\n### **Slots:**\n - **trigger** - The element which displays tooltip on hover\n- _default_ - The tooltip content\n\n### **CSS Properties:**\n - **--bq-tooltip--background-color** - Tooltip background color _(default: undefined)_\n- **--bq-tooltip--box-shadow** - Tooltip box shadow _(default: undefined)_\n- **--bq-tooltip--font-size** - Tooltip font size _(default: undefined)_\n- **--bq-tooltip--line-height** - Tooltip line height _(default: undefined)_\n- **--bq-tooltip--text-color** - Tooltip text color _(default: undefined)_\n- **--bq-tooltip--paddingX** - Tooltip horizontal padding _(default: undefined)_\n- **--bq-tooltip--paddingY** - Tooltip vertical padding _(default: undefined)_\n- **--bq-tooltip--border-color** - Tooltip border color _(default: undefined)_\n- **--bq-tooltip--border-radius** - Tooltip border radius _(default: undefined)_\n- **--bq-tooltip--border-style** - Tooltip border style _(default: undefined)_\n- **--bq-tooltip--border-width** - Tooltip border width _(default: undefined)_\n- **--bq-tooltip--z-index:** - Tooltip z-index _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component wrapper container inside the shadow DOM\n- **trigger** - The `<div>` container that holds the element which displays tooltip on hover\n- **panel** - The `<div>` container that holds the tooltip content",
+      "attributes": [
+        {
+          "name": "always-visible",
+          "description": "If true, the tooltip will always be visible",
+          "values": []
+        },
+        {
+          "name": "distance",
+          "description": "Distance between trigger element and tooltip",
+          "values": []
+        },
+        {
+          "name": "hide-arrow",
+          "description": "If true, the arrow on the tooltip content won't be shown",
+          "values": []
+        },
+        {
+          "name": "placement",
+          "description": "Defines the position of the tooltip",
+          "values": [
+            { "name": "top" },
+            { "name": "right" },
+            { "name": "bottom" },
+            { "name": "left" }
+          ]
+        },
+        {
+          "name": "same-width",
+          "description": "Whether the tooltip should have the same width as the trigger element (applicable only for content shorter than the trigger element)",
+          "values": []
+        },
+        {
+          "name": "display-on",
+          "description": "Set the action when the tooltip should be displayed, on hover (default) or click",
+          "values": [{ "name": "click" }, { "name": "hover" }]
+        },
+        {
+          "name": "visible",
+          "description": "Indicates whether or not the tooltip is visible when the component is first rendered, and when interacting with the trigger",
+          "values": []
+        }
+      ],
+      "references": []
+    }
+  ]
+}

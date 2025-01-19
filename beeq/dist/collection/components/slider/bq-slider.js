@@ -1,0 +1,681 @@
+/*!
+ * Built by Endavans
+ * © https://beeq.design - Apache 2 License.
+ */
+import { h } from "@stencil/core";
+import { clamp, debounce, isNil, isString } from "../../shared/utils";
+/**
+ * Sliders provide a visual representation of adjustable content, enabling users to change values by dragging a handle along a horizontal track.
+ *
+ * @example How to use it
+ * ```html
+ * <bq-slider max="100" value="30"></bq-slider>
+ * ```
+ *
+ * @documentation https://www.beeq.design/3d466e231/p/509cbc-slider/b/09d7b1
+ * @status stable
+ *
+ * @dependency bq-tooltip
+ *
+ * @attr {number} debounce-time - The amount of time, in milliseconds, to wait to trigger the bqChange event after each value change.
+ * @attr {boolean} disabled - If `true` the slider is disabled.
+ * @attr {boolean} enable-tooltip - If `true`, a tooltip will be shown displaying the progress value.
+ * @attr {boolean} enable-value-indicator - If `true` it will show the value label on the side of the slider track area.
+ * @attr {number} gap - A number representing the amount to remain between the minimum and maximum values (only for range type).
+ * @attr {number} max - A number representing the max value of the slider.
+ * @attr {number} min - A number representing the min value of the slider.
+ * @attr {number} step - A number represents the step of the slider. ⚠️ Please notice that the value (or list of values if the slider type is range) will be rounded to the nearest multiple of step.
+ * @attr {boolean} tooltip-always-visible - If `true`, a tooltip will always display the progress value. It relies on enableTooltip and if enableTooltip is false, tooltipAlwaysVisible cannot be true.
+ * @attr {"range" | "single"} type - It defines the type of slider to display.
+ * @attr {"[number, number]" | "number" | "string"} value - The value of the slider. If the slider type is single, the value is a number.
+ * If the slider type is range, the value is an array of two numbers (the first number represents the min value and the second number represents the max value).
+ *
+ * @event bqBlur - Handler to be called when the slider loses focus.
+ * @event bqChange - Handler to be called when changing the value on range inputs.
+ * @event bqFocus - Handler to be called when the slider gets focused.
+ *
+ * @part base - The component's base wrapper.
+ * @part container - The container of the slider.
+ * @part track-area - The track area of the slider.
+ * @part progress-area - The progress area of the slider.
+ * @part input-min - The input element for the value when the slider type is `single` or the minimum value when the slider type is `range`.
+ * @part input-max - The input element for the maximum value.
+ * @part label-start - The label for the value when the slider type is `single` or the minimum value when the slider type is `range`.
+ * @part label-end - The label for maximum value when the slider type is `range`.
+ *
+ * @cssprop --bq-slider--size - The height of the slider track/progress area
+ * @cssprop --bq-slider--border-radius - Slider border radius
+ * @cssprop --bq-slider--thumb-size - Slider hover thumb size
+ * @cssprop --bq-slider--progress-color - Slider progress background color
+ * @cssprop --bq-slider--trackarea-color - Slider track background color
+ */
+export class BqSlider {
+    // Own Properties
+    // ====================
+    inputMinElem;
+    inputMaxElem;
+    minTooltipElem;
+    maxTooltipElem;
+    progressElem;
+    trackElem;
+    debounceBqChange;
+    // Reference to host HTML element
+    // ===================================
+    internals;
+    el;
+    // State() variables
+    // Inlined decorator, alphabetical order
+    // =======================================
+    /**
+     * The `minValue` state is the only value when the slider type is `single`
+     * and the minimum value when the slider type is `range`.
+     */
+    minValue;
+    /** The `maxValue` state is only used when the slider type is `range`. */
+    maxValue;
+    /** It hold the left position of the Thumb for the value or the minimum value (if the slider type is `range`) */
+    minThumbPosition;
+    /** It hold the left position of the Thumb for the maximum value (if the slider type is `range`) */
+    maxThumbPosition;
+    // Public Property API
+    // ========================
+    /** The amount of time, in milliseconds, to wait to trigger the `bqChange` event after each value change. */
+    debounceTime = 0;
+    /** If `true` the slider is disabled. */
+    disabled = false;
+    /** If `true` it will show the value label on a side of the slider track area */
+    enableValueIndicator = false;
+    /** A number representing the amount to remain between the minimum and maximum values (only for range type). */
+    gap = 0;
+    /** A number representing the max value of the slider. */
+    max = 100;
+    /** A number representing the min value of the slider. */
+    min = 0;
+    /** Name of the form control. Submitted with the form as part of a name/value pair */
+    name;
+    /**
+     * A number representing the step of the slider.
+     * ⚠️ Please notice that the value (or list of values if the slider type is `range`) will be rounded to the nearest multiple of `step`.
+     */
+    step = 1;
+    /** It defines the type of slider to display  */
+    type = 'single';
+    /**
+     * The value of the slider.
+     * - If the slider type is `single`, the value is a number.
+     * - If the slider type is `range`, the value is an array of two numbers (the first number represents the `min` value and the second number represents the `max` value).
+     */
+    value;
+    /** If `true`, a tooltip will be shown displaying the progress value */
+    enableTooltip = false;
+    /**
+     * If `true`, a tooltip will always display the progress value.
+     * It relies on enableTooltip and if enableTooltip is false, tooltipAlwaysVisible cannot be true.
+     */
+    tooltipAlwaysVisible = false;
+    // Prop lifecycle events
+    // =======================
+    handleValuePropChange(newValue) {
+        this.setState(newValue);
+        this.emitBqChange();
+    }
+    handleStepPropChange() {
+        this.minValue = Math.round(this.minValue / this.step) * this.step;
+        this.maxValue = Math.round(this.maxValue / this.step) * this.step;
+    }
+    handleGapChange(newValue) {
+        if (!this.isRangeType)
+            return;
+        // Use the this.value prop value when the component is initialized
+        // Otherwise, use the current this.min and this.max state values
+        const value = !isNil(this.min) && !isNil(this.max) ? [this.min, this.max] : this.stringToObject(this.value);
+        // If the gap is less than the min or greater than the max, set it to 0
+        this.gap = newValue < value[0] || newValue > value[1] ? 0 : newValue;
+    }
+    // Events section
+    // Requires JSDocs for public API documentation
+    // ==============================================
+    /** Handler to be called when change the value on range inputs */
+    bqChange;
+    /** Handler to be called when the slider loses focus */
+    bqBlur;
+    /** Handler to be called when the slider gets focused */
+    bqFocus;
+    // Component lifecycle events
+    // Ordered by their natural call order
+    // =====================================
+    componentWillLoad() {
+        this.init();
+    }
+    componentDidLoad() {
+        this.runUpdates();
+    }
+    componentDidUpdate() {
+        this.runUpdates();
+    }
+    formAssociatedCallback() {
+        this.internals?.setFormValue(`${this.value}`);
+    }
+    // Listeners
+    // ==============
+    // Public methods API
+    // These methods are exposed on the host element.
+    // Always use two lines.
+    // Public Methods must be async.
+    // Requires JSDocs for public API documentation.
+    // ===============================================
+    // Local methods
+    // Internal business logic.
+    // These methods cannot be called from the host element.
+    // =======================================================
+    init = () => {
+        this.handleGapChange(this.gap);
+        this.setState(this.value);
+        this.handleStepPropChange();
+    };
+    runUpdates = () => {
+        this.updateProgressTrack();
+        this.syncInputsValue();
+        this.setThumbPosition();
+    };
+    setState = (newValue) => {
+        const isRangeType = this.isRangeType;
+        const value = this.stringToObject(newValue);
+        this.minValue = isRangeType ? clamp(value[0], this.min, this.max - this.gap) : value;
+        this.maxValue = isRangeType ? clamp(value[1], this.minValue + this.gap, this.max) : this.minValue;
+    };
+    setThumbPosition = () => {
+        if (!this.enableTooltip)
+            return;
+        // Destructure the returned object from this.thumbPosition() and assign the properties to this.minThumbPosition and this.maxThumbPosition
+        ({ minThumbPosition: this.minThumbPosition, maxThumbPosition: this.maxThumbPosition } = this.thumbPosition());
+    };
+    syncInputsValue = () => {
+        this.inputMinElem?.setAttribute('value', this.minValue.toString());
+        this.inputMaxElem?.setAttribute('value', this.maxValue.toString());
+    };
+    stringToObject = (value) => (isString(value) ? JSON.parse(value) : value);
+    handleInputChange = (type, event) => {
+        const target = event.target;
+        const value = parseFloat(target.value);
+        if (type === 'min') {
+            this.minValue = this.isRangeType ? Math.min(value, this.maxValue - this.gap) : value;
+        }
+        else if (type === 'max') {
+            this.maxValue = this.isRangeType ? Math.max(value, this.minValue + this.gap) : value;
+        }
+        // Update the input value to reflect the clamped value
+        const reflectedValue = (type === 'min' ? this.minValue : this.maxValue).toString();
+        target.value = reflectedValue;
+        target.setAttribute('value', reflectedValue);
+        // Sync the prop value.
+        // This will trigger the `@Watch('value')` method and emit the `bqChange` event.
+        const { internals, isRangeType, maxValue, minValue } = this;
+        this.value = isRangeType ? [minValue, maxValue] : minValue;
+        internals?.setFormValue(isRangeType ? JSON.stringify(this.value) : this.value.toString());
+    };
+    calculatePercent = (value) => {
+        const totalRange = Number(this.max) - Number(this.min);
+        return (value / totalRange) * 100;
+    };
+    updateProgressTrack = () => {
+        if (!this.progressElem)
+            return;
+        // For range type, left starts from the `min` value and width is the difference between `max` and `min`.
+        // For non-range type, left starts from 0 and width is the `min` value.
+        const left = this.isRangeType ? this.calculatePercent(this.minValue) : 0;
+        const width = this.isRangeType
+            ? this.calculatePercent(Number(this.maxValue) - Number(this.minValue))
+            : this.calculatePercent(this.minValue);
+        this.progressElem.style.insetInlineStart = `${left}%`;
+        this.progressElem.style.inlineSize = `${width}%`;
+    };
+    calculateThumbPosition = (value) => {
+        if (!this.progressElem)
+            return;
+        // Get the width of the track area and the size of the input range thumb
+        const trackAreaWidth = this.trackElem.getBoundingClientRect().width;
+        // We need to also add 4px to the thumb size,
+        // this is because the thumb is 2px border (`border-m`)
+        const inputThumbSize = parseInt(getComputedStyle(this.el).getPropertyValue('--bq-slider--thumb-size'), 10) + 4;
+        const totalWidth = trackAreaWidth - inputThumbSize;
+        return ((value - this.min) / (this.max - this.min)) * totalWidth + inputThumbSize / 2;
+    };
+    thumbPosition = () => {
+        const minThumbPosition = this.calculateThumbPosition(this.minValue);
+        const maxThumbPosition = this.isRangeType ? this.calculateThumbPosition(this.maxValue) : undefined;
+        return { minThumbPosition, maxThumbPosition };
+    };
+    emitBqChange = () => {
+        this.debounceBqChange?.cancel();
+        const value = this.isRangeType ? [this.minValue, this.maxValue] : this.minValue;
+        this.debounceBqChange = debounce(() => this.bqChange.emit({ value, el: this.el }), this.debounceTime);
+        this.debounceBqChange();
+    };
+    handleBlur = () => {
+        this.bqBlur.emit(this.el);
+    };
+    handleFocus = () => {
+        this.bqFocus.emit(this.el);
+    };
+    handleMouseDown = (event) => {
+        this.handleTooltipVisibility(event, 'remove');
+    };
+    handleMouseUp = (event) => {
+        this.handleTooltipVisibility(event, 'add');
+    };
+    handleTooltipVisibility = (event, action) => {
+        if (!this.enableTooltip || this.tooltipAlwaysVisible)
+            return;
+        const target = event.target;
+        const tooltipElem = target === this.inputMinElem ? this.minTooltipElem : this.maxTooltipElem;
+        tooltipElem.classList[action]('hidden');
+    };
+    get decimalCount() {
+        // Return the length of the decimal part of the step value.
+        return (this.step % 1).toFixed(10).split('.')[1].replace(/0+$/, '').length;
+    }
+    get isRangeType() {
+        return this.type === 'range';
+    }
+    get isTooltipAlwaysVisible() {
+        return this.tooltipAlwaysVisible && this.enableTooltip;
+    }
+    renderLabel = (value, position, css) => {
+        return (h("span", { class: {
+                [`${css} box-content block text-s font-medium leading-regular text-primary is-fit min-is-8 [font-variant:tabular-nums]`]: true,
+                hidden: position === 'start' ? !this.enableValueIndicator : !this.enableValueIndicator || !this.isRangeType,
+            }, part: `label-${position}` }, value.toFixed(this.decimalCount)));
+    };
+    renderInput = (type, value, refCallback) => {
+        // Determine the zIndex value based on the type and the current min and max values.
+        const zIndexValue = (type) => {
+            const zIndex = {
+                min: this.minValue === this.min && this.maxValue === this.minValue,
+                max: this.maxValue === this.max && this.minValue === this.maxValue,
+            };
+            // If the value of both thumbs is the same as the min or max value, set the zIndex to -1
+            return zIndex[type] ? '-1' : '0';
+        };
+        return (h("input", { type: "range", class: {
+                'absolute start-0 -translate-y-1/2 cursor-pointer appearance-none bg-transparent outline-none is-full inset-bs-[50%] disabled:cursor-not-allowed': true,
+                'pointer-events-none': this.isRangeType,
+            }, style: this.isRangeType ? { zIndex: zIndexValue(type) } : undefined, disabled: this.disabled, min: this.min, max: this.max, name: this.name, step: this.step, ref: refCallback, onInput: (ev) => this.handleInputChange(type, ev), onBlur: this.handleBlur, onFocus: this.handleFocus, onMouseDown: this.handleMouseDown, onMouseUp: this.handleMouseUp, value: value, part: `input-${type}` }));
+    };
+    renderTooltip = (value, thumbPosition, refCallback) => (h("bq-tooltip", { class: {
+            'absolute [&::part(panel)]:absolute': true,
+            hidden: !this.isTooltipAlwaysVisible,
+        }, exportparts: "base,trigger,panel", alwaysVisible: true, distance: this.enableValueIndicator ? 6 : 16, style: { insetInlineStart: `${thumbPosition}px`, fontVariant: 'tabular-nums' }, ref: refCallback }, h("div", { class: "absolute bs-1 is-1", slot: "trigger" }), value.toFixed(this.decimalCount)));
+    // render() function
+    // Always the last one in the class.
+    // ===================================
+    render() {
+        return (h("div", { key: '612b392ec0c3e4f2e6f2ea05d08206a55f71d2c9', "aria-disabled": this.disabled ? 'true' : 'false', class: { 'flex is-full': true, 'cursor-not-allowed opacity-60': this.disabled }, part: "base" }, this.renderLabel(this.minValue, 'start', 'me-xs text-end'), h("div", { key: '32ce9531675176c799f1f4b7624f78abcc9b7a68', class: "relative is-full", part: "container" }, h("span", { key: 'a8b2f0acfba7d5d43f699f7963ce7938de3a9744', class: "absolute start-0 -translate-y-1/2 rounded-xs bg-[--bq-slider--trackarea-color] bs-1 is-full inset-bs-[50%]", ref: (elem) => (this.trackElem = elem), part: "track-area" }), h("span", { key: '95913f9cce99d2b807c68878a8c0d83ec59dbf76', class: "absolute -translate-y-1/2 rounded-xs bg-[--bq-slider--progress-color] bs-1 is-[50%] inset-bs-[50%]", ref: (elem) => (this.progressElem = elem), part: "progress-area" }), this.enableTooltip &&
+            this.renderTooltip(this.minValue, this.minThumbPosition, (elem) => (this.minTooltipElem = elem)), this.renderInput('min', this.minValue, (input) => (this.inputMinElem = input)), this.enableTooltip &&
+            this.isRangeType &&
+            this.renderTooltip(this.maxValue, this.maxThumbPosition, (elem) => (this.maxTooltipElem = elem)), this.isRangeType && this.renderInput('max', this.maxValue, (input) => (this.inputMaxElem = input))), this.renderLabel(this.maxValue, 'end', 'ms-xs text-start')));
+    }
+    static get is() { return "bq-slider"; }
+    static get encapsulation() { return "shadow"; }
+    static get delegatesFocus() { return true; }
+    static get formAssociated() { return true; }
+    static get originalStyleUrls() {
+        return {
+            "$": ["./scss/bq-slider.scss"]
+        };
+    }
+    static get styleUrls() {
+        return {
+            "$": ["scss/bq-slider.css"]
+        };
+    }
+    static get properties() {
+        return {
+            "debounceTime": {
+                "type": "number",
+                "mutable": false,
+                "complexType": {
+                    "original": "number",
+                    "resolved": "number",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "The amount of time, in milliseconds, to wait to trigger the `bqChange` event after each value change."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "debounce-time",
+                "reflect": true,
+                "defaultValue": "0"
+            },
+            "disabled": {
+                "type": "boolean",
+                "mutable": false,
+                "complexType": {
+                    "original": "boolean",
+                    "resolved": "boolean",
+                    "references": {}
+                },
+                "required": false,
+                "optional": true,
+                "docs": {
+                    "tags": [],
+                    "text": "If `true` the slider is disabled."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "disabled",
+                "reflect": true,
+                "defaultValue": "false"
+            },
+            "enableValueIndicator": {
+                "type": "boolean",
+                "mutable": false,
+                "complexType": {
+                    "original": "boolean",
+                    "resolved": "boolean",
+                    "references": {}
+                },
+                "required": false,
+                "optional": true,
+                "docs": {
+                    "tags": [],
+                    "text": "If `true` it will show the value label on a side of the slider track area"
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "enable-value-indicator",
+                "reflect": true,
+                "defaultValue": "false"
+            },
+            "gap": {
+                "type": "number",
+                "mutable": true,
+                "complexType": {
+                    "original": "number",
+                    "resolved": "number",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "A number representing the amount to remain between the minimum and maximum values (only for range type)."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "gap",
+                "reflect": true,
+                "defaultValue": "0"
+            },
+            "max": {
+                "type": "number",
+                "mutable": false,
+                "complexType": {
+                    "original": "number",
+                    "resolved": "number",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "A number representing the max value of the slider."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "max",
+                "reflect": true,
+                "defaultValue": "100"
+            },
+            "min": {
+                "type": "number",
+                "mutable": false,
+                "complexType": {
+                    "original": "number",
+                    "resolved": "number",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "A number representing the min value of the slider."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "min",
+                "reflect": true,
+                "defaultValue": "0"
+            },
+            "name": {
+                "type": "string",
+                "mutable": false,
+                "complexType": {
+                    "original": "string",
+                    "resolved": "string",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "Name of the form control. Submitted with the form as part of a name/value pair"
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "name",
+                "reflect": true
+            },
+            "step": {
+                "type": "number",
+                "mutable": false,
+                "complexType": {
+                    "original": "number",
+                    "resolved": "number",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "A number representing the step of the slider.\n\u26A0\uFE0F Please notice that the value (or list of values if the slider type is `range`) will be rounded to the nearest multiple of `step`."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "step",
+                "reflect": true,
+                "defaultValue": "1"
+            },
+            "type": {
+                "type": "string",
+                "mutable": false,
+                "complexType": {
+                    "original": "TSliderType",
+                    "resolved": "\"range\" | \"single\"",
+                    "references": {
+                        "TSliderType": {
+                            "location": "import",
+                            "path": "./bq-slider.types",
+                            "id": "../../packages/beeq/src/components/slider/bq-slider.types.ts::TSliderType"
+                        }
+                    }
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "It defines the type of slider to display"
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "type",
+                "reflect": true,
+                "defaultValue": "'single'"
+            },
+            "value": {
+                "type": "any",
+                "mutable": true,
+                "complexType": {
+                    "original": "TSliderValue",
+                    "resolved": "number | number[] | string",
+                    "references": {
+                        "TSliderValue": {
+                            "location": "import",
+                            "path": "./bq-slider.types",
+                            "id": "../../packages/beeq/src/components/slider/bq-slider.types.ts::TSliderValue"
+                        }
+                    }
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "The value of the slider.\n- If the slider type is `single`, the value is a number.\n- If the slider type is `range`, the value is an array of two numbers (the first number represents the `min` value and the second number represents the `max` value)."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "value",
+                "reflect": true
+            },
+            "enableTooltip": {
+                "type": "boolean",
+                "mutable": false,
+                "complexType": {
+                    "original": "boolean",
+                    "resolved": "boolean",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "If `true`, a tooltip will be shown displaying the progress value"
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "enable-tooltip",
+                "reflect": true,
+                "defaultValue": "false"
+            },
+            "tooltipAlwaysVisible": {
+                "type": "boolean",
+                "mutable": false,
+                "complexType": {
+                    "original": "boolean",
+                    "resolved": "boolean",
+                    "references": {}
+                },
+                "required": false,
+                "optional": false,
+                "docs": {
+                    "tags": [],
+                    "text": "If `true`, a tooltip will always display the progress value.\nIt relies on enableTooltip and if enableTooltip is false, tooltipAlwaysVisible cannot be true."
+                },
+                "getter": false,
+                "setter": false,
+                "attribute": "tooltip-always-visible",
+                "reflect": true,
+                "defaultValue": "false"
+            }
+        };
+    }
+    static get states() {
+        return {
+            "minValue": {},
+            "maxValue": {},
+            "minThumbPosition": {},
+            "maxThumbPosition": {}
+        };
+    }
+    static get events() {
+        return [{
+                "method": "bqChange",
+                "name": "bqChange",
+                "bubbles": true,
+                "cancelable": true,
+                "composed": true,
+                "docs": {
+                    "tags": [],
+                    "text": "Handler to be called when change the value on range inputs"
+                },
+                "complexType": {
+                    "original": "{ value: Exclude<TSliderValue, string>; el: HTMLBqSliderElement }",
+                    "resolved": "{ value: number | number[]; el: HTMLBqSliderElement; }",
+                    "references": {
+                        "Exclude": {
+                            "location": "global",
+                            "id": "global::Exclude"
+                        },
+                        "TSliderValue": {
+                            "location": "import",
+                            "path": "./bq-slider.types",
+                            "id": "../../packages/beeq/src/components/slider/bq-slider.types.ts::TSliderValue"
+                        },
+                        "HTMLBqSliderElement": {
+                            "location": "global",
+                            "id": "global::HTMLBqSliderElement"
+                        }
+                    }
+                }
+            }, {
+                "method": "bqBlur",
+                "name": "bqBlur",
+                "bubbles": true,
+                "cancelable": true,
+                "composed": true,
+                "docs": {
+                    "tags": [],
+                    "text": "Handler to be called when the slider loses focus"
+                },
+                "complexType": {
+                    "original": "HTMLBqSliderElement",
+                    "resolved": "HTMLBqSliderElement",
+                    "references": {
+                        "HTMLBqSliderElement": {
+                            "location": "global",
+                            "id": "global::HTMLBqSliderElement"
+                        }
+                    }
+                }
+            }, {
+                "method": "bqFocus",
+                "name": "bqFocus",
+                "bubbles": true,
+                "cancelable": true,
+                "composed": true,
+                "docs": {
+                    "tags": [],
+                    "text": "Handler to be called when the slider gets focused"
+                },
+                "complexType": {
+                    "original": "HTMLBqSliderElement",
+                    "resolved": "HTMLBqSliderElement",
+                    "references": {
+                        "HTMLBqSliderElement": {
+                            "location": "global",
+                            "id": "global::HTMLBqSliderElement"
+                        }
+                    }
+                }
+            }];
+    }
+    static get elementRef() { return "el"; }
+    static get watchers() {
+        return [{
+                "propName": "value",
+                "methodName": "handleValuePropChange"
+            }, {
+                "propName": "step",
+                "methodName": "handleStepPropChange"
+            }, {
+                "propName": "gap",
+                "methodName": "handleGapChange"
+            }];
+    }
+    static get attachInternalsMemberName() { return "internals"; }
+}
+//# sourceMappingURL=bq-slider.js.map

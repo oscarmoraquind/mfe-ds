@@ -1,0 +1,1354 @@
+{
+  "modules": [
+    {
+      "id": "./packages/beeq/iframe.html",
+      "name": "./packages/beeq/iframe.html",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/iframe.html"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/sb-preview/runtime.js",
+      "name": "./packages/beeq/sb-preview/runtime.js",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/iframe.html"
+        }
+      ]
+    },
+    {
+      "id": "/virtual:/@storybook/builder-vite/vite-app.js",
+      "name": "/virtual:/@storybook/builder-vite/vite-app.js",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/iframe.html"
+        }
+      ]
+    },
+    {
+      "id": "/virtual:/@storybook/builder-vite/setup-addons.js",
+      "name": "/virtual:/@storybook/builder-vite/setup-addons.js",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/vite-app.js"
+        }
+      ]
+    },
+    {
+      "id": "/virtual:/@storybook/builder-vite/storybook-stories.js",
+      "name": "/virtual:/@storybook/builder-vite/storybook-stories.js",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/vite-app.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/.storybook/preview.ts",
+      "name": "./packages/beeq/.storybook/preview.ts",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/vite-app.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/changelog.mdx",
+      "name": "./packages/beeq/src/_storybook/changelog.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/colors.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/colors.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/elements.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/elements.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/icons.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/icons.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/spacing.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/spacing.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/states.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/states.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/typography.mdx",
+      "name": "./packages/beeq/src/_storybook/foundation/typography.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/welcome.mdx",
+      "name": "./packages/beeq/src/_storybook/welcome.mdx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/accordion-group/_storybook/bq-accordion-group.stories.tsx",
+      "name": "./packages/beeq/src/components/accordion-group/_storybook/bq-accordion-group.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.stories.tsx",
+      "name": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/alert/_storybook/bq-alert.stories.tsx",
+      "name": "./packages/beeq/src/components/alert/_storybook/bq-alert.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/avatar/_storybook/bq-avatar.stories.tsx",
+      "name": "./packages/beeq/src/components/avatar/_storybook/bq-avatar.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/badge/_storybook/bq-badge.stories.tsx",
+      "name": "./packages/beeq/src/components/badge/_storybook/bq-badge.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/breadcrumb/_storybook/bq-breadcrumb.stories.tsx",
+      "name": "./packages/beeq/src/components/breadcrumb/_storybook/bq-breadcrumb.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/button/_storybook/bq-button.stories.tsx",
+      "name": "./packages/beeq/src/components/button/_storybook/bq-button.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/card/_storybook/bq-card.stories.tsx",
+      "name": "./packages/beeq/src/components/card/_storybook/bq-card.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/checkbox/_storybook/bq-checkbox.stories.tsx",
+      "name": "./packages/beeq/src/components/checkbox/_storybook/bq-checkbox.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/col/_storybook/bq-col.stories.tsx",
+      "name": "./packages/beeq/src/components/col/_storybook/bq-col.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.stories.tsx",
+      "name": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.stories.tsx",
+      "name": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/divider/_storybook/bq-divider.stories.tsx",
+      "name": "./packages/beeq/src/components/divider/_storybook/bq-divider.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.stories.tsx",
+      "name": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/dropdown/_storybook/bq-dropdown.stories.tsx",
+      "name": "./packages/beeq/src/components/dropdown/_storybook/bq-dropdown.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.stories.tsx",
+      "name": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/grid/_storybook/bq-grid.stories.tsx",
+      "name": "./packages/beeq/src/components/grid/_storybook/bq-grid.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/icon/_storybook/bq-icon.stories.tsx",
+      "name": "./packages/beeq/src/components/icon/_storybook/bq-icon.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/input/_storybook/bq-input.stories.tsx",
+      "name": "./packages/beeq/src/components/input/_storybook/bq-input.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/input/_storybook/bq-search.input.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/input/_storybook/bq-search.input.stories.tsx",
+      "name": "./packages/beeq/src/components/input/_storybook/bq-search.input.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/logo/_storybook/bq-logo.stories.tsx",
+      "name": "./packages/beeq/src/components/logo/_storybook/bq-logo.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/notification/_storybook/bq-notification.stories.tsx",
+      "name": "./packages/beeq/src/components/notification/_storybook/bq-notification.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/option/_storybook/bq-option.stories.tsx",
+      "name": "./packages/beeq/src/components/option/_storybook/bq-option.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/page-title/_storybook/bq-page-title.stories.tsx",
+      "name": "./packages/beeq/src/components/page-title/_storybook/bq-page-title.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/progress/_storybook/bq-progress.stories.tsx",
+      "name": "./packages/beeq/src/components/progress/_storybook/bq-progress.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.stories.tsx",
+      "name": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/row/_storybook/bq-row.stories.tsx",
+      "name": "./packages/beeq/src/components/row/_storybook/bq-row.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/select/_storybook/bq-select.stories.tsx",
+      "name": "./packages/beeq/src/components/select/_storybook/bq-select.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/side-menu-item/_storybook/bq-side-menu-item.stories.tsx",
+      "name": "./packages/beeq/src/components/side-menu-item/_storybook/bq-side-menu-item.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.stories.tsx",
+      "name": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/slider/_storybook/bq-slider.stories.tsx",
+      "name": "./packages/beeq/src/components/slider/_storybook/bq-slider.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.stories.tsx",
+      "name": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/status/_storybook/bq-status.stories.tsx",
+      "name": "./packages/beeq/src/components/status/_storybook/bq-status.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/steps/_storybook/bq-steps.stories.tsx",
+      "name": "./packages/beeq/src/components/steps/_storybook/bq-steps.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/switch/_storybook/bq-switch.stories.tsx",
+      "name": "./packages/beeq/src/components/switch/_storybook/bq-switch.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.stories.tsx",
+      "name": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tab/_storybook/bq-tab.stories.tsx",
+      "name": "./packages/beeq/src/components/tab/_storybook/bq-tab.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tag/_storybook/bq-tag.stories.tsx",
+      "name": "./packages/beeq/src/components/tag/_storybook/bq-tag.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/text/_storybook/bq-text.stories.tsx",
+      "name": "./packages/beeq/src/components/text/_storybook/bq-text.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.stories.tsx",
+      "name": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/toast/_storybook/bq-toast.stories.tsx",
+      "name": "./packages/beeq/src/components/toast/_storybook/bq-toast.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.stories.tsx",
+      "name": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.stories.tsx",
+      "reasons": [
+        {
+          "moduleName": "/virtual:/@storybook/builder-vite/storybook-stories.js"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/index.ts",
+      "name": "./packages/beeq/src/shared/utils/index.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/_storybook/foundation/helper/index.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/notification/_storybook/bq-notification.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/toast/_storybook/bq-toast.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/isDefined.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/isEmpty.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/badge/_storybook/bq-badge.mdx",
+      "name": "./packages/beeq/src/components/badge/_storybook/bq-badge.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/badge/_storybook/bq-badge.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/badge/bq-badge.types.ts",
+      "name": "./packages/beeq/src/components/badge/bq-badge.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/badge/_storybook/bq-badge.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/avatar/_storybook/bq-avatar.mdx",
+      "name": "./packages/beeq/src/components/avatar/_storybook/bq-avatar.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/avatar/_storybook/bq-avatar.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/col/_storybook/bq-col.mdx",
+      "name": "./packages/beeq/src/components/col/_storybook/bq-col.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/col/_storybook/bq-col.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/button/_storybook/bq-button.mdx",
+      "name": "./packages/beeq/src/components/button/_storybook/bq-button.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/button/_storybook/bq-button.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/button/bq-button.types.ts",
+      "name": "./packages/beeq/src/components/button/bq-button.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/button/_storybook/bq-button.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.mdx",
+      "name": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/empty-state/bq-empty-state.types.ts",
+      "name": "./packages/beeq/src/components/empty-state/bq-empty-state.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/empty-state/_storybook/bq-empty-state.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/dropdown/_storybook/bq-dropdown.mdx",
+      "name": "./packages/beeq/src/components/dropdown/_storybook/bq-dropdown.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/dropdown/_storybook/bq-dropdown.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/notification/_storybook/bq-notification.mdx",
+      "name": "./packages/beeq/src/components/notification/_storybook/bq-notification.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/notification/_storybook/bq-notification.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/notification/bq-notification.types.ts",
+      "name": "./packages/beeq/src/components/notification/bq-notification.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/notification/_storybook/bq-notification.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/page-title/_storybook/bq-page-title.mdx",
+      "name": "./packages/beeq/src/components/page-title/_storybook/bq-page-title.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/page-title/_storybook/bq-page-title.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/progress/_storybook/bq-progress.mdx",
+      "name": "./packages/beeq/src/components/progress/_storybook/bq-progress.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/progress/_storybook/bq-progress.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/progress/bq-progress.types.ts",
+      "name": "./packages/beeq/src/components/progress/bq-progress.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/progress/_storybook/bq-progress.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/row/_storybook/bq-row.mdx",
+      "name": "./packages/beeq/src/components/row/_storybook/bq-row.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/row/_storybook/bq-row.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.mdx",
+      "name": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/radio-group/bq-radio-group.types.ts",
+      "name": "./packages/beeq/src/components/radio-group/bq-radio-group.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/radio-group/_storybook/bq-radio-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/side-menu-item/_storybook/bq-side-menu-item.mdx",
+      "name": "./packages/beeq/src/components/side-menu-item/_storybook/bq-side-menu-item.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/side-menu-item/_storybook/bq-side-menu-item.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.mdx",
+      "name": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/side-menu/bq-side-menu.types.ts",
+      "name": "./packages/beeq/src/components/side-menu/bq-side-menu.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/side-menu/_storybook/bq-side-menu.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.mdx",
+      "name": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/spinner/bq-spinner.types.ts",
+      "name": "./packages/beeq/src/components/spinner/bq-spinner.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/spinner/_storybook/bq-spinner.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/status/_storybook/bq-status.mdx",
+      "name": "./packages/beeq/src/components/status/_storybook/bq-status.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/status/_storybook/bq-status.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/status/bq-status.types.ts",
+      "name": "./packages/beeq/src/components/status/bq-status.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/status/_storybook/bq-status.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tab/_storybook/bq-tab.mdx",
+      "name": "./packages/beeq/src/components/tab/_storybook/bq-tab.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tab/_storybook/bq-tab.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tab/bq-tab.types.ts",
+      "name": "./packages/beeq/src/components/tab/bq-tab.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tab/_storybook/bq-tab.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/text/_storybook/bq-text.mdx",
+      "name": "./packages/beeq/src/components/text/_storybook/bq-text.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/text/_storybook/bq-text.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/text/bq-text.types.ts",
+      "name": "./packages/beeq/src/components/text/bq-text.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/text/_storybook/bq-text.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/toast/_storybook/bq-toast.mdx",
+      "name": "./packages/beeq/src/components/toast/_storybook/bq-toast.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/toast/_storybook/bq-toast.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/toast/bq-toast.types.ts",
+      "name": "./packages/beeq/src/components/toast/bq-toast.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/toast/_storybook/bq-toast.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.mdx",
+      "name": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tooltip/bq-tooltip.types.tsx",
+      "name": "./packages/beeq/src/components/tooltip/bq-tooltip.types.tsx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tooltip/_storybook/bq-tooltip.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/assetsPath.ts",
+      "name": "./packages/beeq/src/shared/utils/assetsPath.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/clamp.ts",
+      "name": "./packages/beeq/src/shared/utils/clamp.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/cssVariables.ts",
+      "name": "./packages/beeq/src/shared/utils/cssVariables.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/debounce.ts",
+      "name": "./packages/beeq/src/shared/utils/debounce.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/event.ts",
+      "name": "./packages/beeq/src/shared/utils/event.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/getNextElement.ts",
+      "name": "./packages/beeq/src/shared/utils/getNextElement.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/getRandom.ts",
+      "name": "./packages/beeq/src/shared/utils/getRandom.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isClient.ts",
+      "name": "./packages/beeq/src/shared/utils/isClient.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/cssVariables.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/assetsPath.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isDefined.ts",
+      "name": "./packages/beeq/src/shared/utils/isDefined.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isEmpty.ts",
+      "name": "./packages/beeq/src/shared/utils/isEmpty.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isHTMLElement.ts",
+      "name": "./packages/beeq/src/shared/utils/isHTMLElement.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isNil.ts",
+      "name": "./packages/beeq/src/shared/utils/isNil.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/debounce.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/isString.ts",
+      "name": "./packages/beeq/src/shared/utils/isString.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/props.ts",
+      "name": "./packages/beeq/src/shared/utils/props.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/setRafTimeout.ts",
+      "name": "./packages/beeq/src/shared/utils/setRafTimeout.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        },
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/debounce.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/slot.ts",
+      "name": "./packages/beeq/src/shared/utils/slot.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/shared/utils/transition.ts",
+      "name": "./packages/beeq/src/shared/utils/transition.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/shared/utils/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/.storybook/assets/css/stories.css",
+      "name": "./packages/beeq/.storybook/assets/css/stories.css",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/.storybook/preview.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/.storybook/custom-elements.json",
+      "name": "./packages/beeq/.storybook/custom-elements.json",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/.storybook/preview.ts"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/foundation/helper/index.ts",
+      "name": "./packages/beeq/src/_storybook/foundation/helper/index.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/_storybook/foundation/colors.mdx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/_storybook/CHANGELOG.md",
+      "name": "./packages/beeq/src/_storybook/CHANGELOG.md",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/_storybook/changelog.mdx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.mdx",
+      "name": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/accordion-group/_storybook/bq-accordion-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/accordion/bq-accordion.types.ts",
+      "name": "./packages/beeq/src/components/accordion/bq-accordion.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/accordion/_storybook/bq-accordion.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/accordion-group/_storybook/bq-accordion-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/card/_storybook/bq-card.mdx",
+      "name": "./packages/beeq/src/components/card/_storybook/bq-card.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/card/_storybook/bq-card.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/card/bq-card.types.ts",
+      "name": "./packages/beeq/src/components/card/bq-card.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/card/_storybook/bq-card.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/alert/_storybook/bq-alert.mdx",
+      "name": "./packages/beeq/src/components/alert/_storybook/bq-alert.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/alert/_storybook/bq-alert.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/alert/bq-alert.types.ts",
+      "name": "./packages/beeq/src/components/alert/bq-alert.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/alert/_storybook/bq-alert.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/breadcrumb/_storybook/bq-breadcrumb.mdx",
+      "name": "./packages/beeq/src/components/breadcrumb/_storybook/bq-breadcrumb.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/breadcrumb/_storybook/bq-breadcrumb.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/checkbox/_storybook/bq-checkbox.mdx",
+      "name": "./packages/beeq/src/components/checkbox/_storybook/bq-checkbox.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/checkbox/_storybook/bq-checkbox.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.mdx",
+      "name": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/input/bq-input.types.ts",
+      "name": "./packages/beeq/src/components/input/bq-input.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/input/_storybook/bq-input.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/select/_storybook/bq-select.stories.tsx"
+        },
+        {
+          "moduleName": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/date-picker/bq-date-picker.types.ts",
+      "name": "./packages/beeq/src/components/date-picker/bq-date-picker.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/date-picker/_storybook/bq-date-picker.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.mdx",
+      "name": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/drawer/bq-drawer.types.ts",
+      "name": "./packages/beeq/src/components/drawer/bq-drawer.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/drawer/_storybook/bq-drawer.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.mdx",
+      "name": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/dialog/bq-dialog.types.ts",
+      "name": "./packages/beeq/src/components/dialog/bq-dialog.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/dialog/_storybook/bq-dialog.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/input/_storybook/bq-search.mdx",
+      "name": "./packages/beeq/src/components/input/_storybook/bq-search.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/input/_storybook/bq-search.input.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/input/_storybook/bq-input.mdx",
+      "name": "./packages/beeq/src/components/input/_storybook/bq-input.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/input/_storybook/bq-input.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/logo/_storybook/bq-logo.mdx",
+      "name": "./packages/beeq/src/components/logo/_storybook/bq-logo.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/logo/_storybook/bq-logo.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/logo/bq-logo.types.ts",
+      "name": "./packages/beeq/src/components/logo/bq-logo.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/logo/_storybook/bq-logo.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/option/_storybook/bq-option.mdx",
+      "name": "./packages/beeq/src/components/option/_storybook/bq-option.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/option/_storybook/bq-option.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/select/_storybook/bq-select.mdx",
+      "name": "./packages/beeq/src/components/select/_storybook/bq-select.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/select/_storybook/bq-select.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/slider/_storybook/bq-slider.mdx",
+      "name": "./packages/beeq/src/components/slider/_storybook/bq-slider.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/slider/_storybook/bq-slider.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/steps/_storybook/bq-steps.mdx",
+      "name": "./packages/beeq/src/components/steps/_storybook/bq-steps.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/steps/_storybook/bq-steps.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/steps/bq-steps.types.ts",
+      "name": "./packages/beeq/src/components/steps/bq-steps.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/steps/_storybook/bq-steps.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/switch/_storybook/bq-switch.mdx",
+      "name": "./packages/beeq/src/components/switch/_storybook/bq-switch.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/switch/_storybook/bq-switch.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/switch/bq-switch.types.ts",
+      "name": "./packages/beeq/src/components/switch/bq-switch.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/switch/_storybook/bq-switch.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tag/_storybook/bq-tag.mdx",
+      "name": "./packages/beeq/src/components/tag/_storybook/bq-tag.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tag/_storybook/bq-tag.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tag/bq-tag.types.ts",
+      "name": "./packages/beeq/src/components/tag/bq-tag.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tag/_storybook/bq-tag.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.mdx",
+      "name": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/textarea/bq-textarea.types.ts",
+      "name": "./packages/beeq/src/components/textarea/bq-textarea.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/textarea/_storybook/bq-textarea.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/divider/_storybook/bq-divider.mdx",
+      "name": "./packages/beeq/src/components/divider/_storybook/bq-divider.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/divider/_storybook/bq-divider.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/divider/bq-divider.types.ts",
+      "name": "./packages/beeq/src/components/divider/bq-divider.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/divider/_storybook/bq-divider.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.mdx",
+      "name": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/tab-group/_storybook/bq-tab-group.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/icon/_storybook/bq-icon.mdx",
+      "name": "./packages/beeq/src/components/icon/_storybook/bq-icon.mdx",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/icon/_storybook/bq-icon.stories.tsx"
+        }
+      ]
+    },
+    {
+      "id": "./packages/beeq/src/components/icon/bq-icon.types.ts",
+      "name": "./packages/beeq/src/components/icon/bq-icon.types.ts",
+      "reasons": [
+        {
+          "moduleName": "./packages/beeq/src/components/icon/_storybook/bq-icon.stories.tsx"
+        }
+      ]
+    }
+  ]
+}

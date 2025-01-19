@@ -1,0 +1,22 @@
+{
+  "name": "@beeq/vue",
+  "version": "1.8.1",
+  "license": "Apache-2.0",
+  "description": "Vue specific wrapper for BEEQ Design System components",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "@beeq/core": "^1.8.1",
+    "@stencil/vue-output-target": "^0.9.0",
+    "tslib": "^2.6.3"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Endava/BEEQ"
+  },
+  "module": "./src/index.js",
+  "type": "module"
+}

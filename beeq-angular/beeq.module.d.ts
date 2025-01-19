@@ -1,0 +1,15 @@
+import { ModuleWithProviders } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "./directives/components";
+import * as i2 from "./directives/boolean-value-accessor";
+import * as i3 from "./directives/number-value-accessor";
+import * as i4 from "./directives/radio-value-accessor";
+import * as i5 from "./directives/select-value-accessor";
+import * as i6 from "./directives/text-value-accessor";
+import * as i7 from "@angular/common";
+export declare class BeeQModule {
+    static forRoot(): ModuleWithProviders<BeeQModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BeeQModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<BeeQModule, [typeof i1.BqAccordion, typeof i1.BqAccordionGroup, typeof i1.BqAlert, typeof i1.BqAvatar, typeof i1.BqBadge, typeof i1.BqBreadcrumb, typeof i1.BqBreadcrumbItem, typeof i1.BqButton, typeof i1.BqCard, typeof i1.BqCheckbox, typeof i1.BqCol, typeof i1.BqDatePicker, typeof i1.BqDialog, typeof i1.BqDivider, typeof i1.BqDrawer, typeof i1.BqDropdown, typeof i1.BqEmptyState, typeof i1.BqGrid, typeof i1.BqIcon, typeof i1.BqInput, typeof i1.BqLogo, typeof i1.BqNotification, typeof i1.BqOption, typeof i1.BqOptionGroup, typeof i1.BqOptionList, typeof i1.BqPageTitle, typeof i1.BqPanel, typeof i1.BqProgress, typeof i1.BqRadio, typeof i1.BqRadioGroup, typeof i1.BqRow, typeof i1.BqSelect, typeof i1.BqSideMenu, typeof i1.BqSideMenuItem, typeof i1.BqSlider, typeof i1.BqSpinner, typeof i1.BqStatus, typeof i1.BqStepItem, typeof i1.BqSteps, typeof i1.BqSwitch, typeof i1.BqTab, typeof i1.BqTabGroup, typeof i1.BqTag, typeof i1.BqText, typeof i1.BqTextarea, typeof i1.BqToast, typeof i1.BqTooltip, typeof i2.BooleanValueAccessor, typeof i3.NumericValueAccessor, typeof i4.RadioValueAccessor, typeof i5.SelectValueAccessor, typeof i6.TextValueAccessor], [typeof i7.CommonModule], [typeof i1.BqAccordion, typeof i1.BqAccordionGroup, typeof i1.BqAlert, typeof i1.BqAvatar, typeof i1.BqBadge, typeof i1.BqBreadcrumb, typeof i1.BqBreadcrumbItem, typeof i1.BqButton, typeof i1.BqCard, typeof i1.BqCheckbox, typeof i1.BqCol, typeof i1.BqDatePicker, typeof i1.BqDialog, typeof i1.BqDivider, typeof i1.BqDrawer, typeof i1.BqDropdown, typeof i1.BqEmptyState, typeof i1.BqGrid, typeof i1.BqIcon, typeof i1.BqInput, typeof i1.BqLogo, typeof i1.BqNotification, typeof i1.BqOption, typeof i1.BqOptionGroup, typeof i1.BqOptionList, typeof i1.BqPageTitle, typeof i1.BqPanel, typeof i1.BqProgress, typeof i1.BqRadio, typeof i1.BqRadioGroup, typeof i1.BqRow, typeof i1.BqSelect, typeof i1.BqSideMenu, typeof i1.BqSideMenuItem, typeof i1.BqSlider, typeof i1.BqSpinner, typeof i1.BqStatus, typeof i1.BqStepItem, typeof i1.BqSteps, typeof i1.BqSwitch, typeof i1.BqTab, typeof i1.BqTabGroup, typeof i1.BqTag, typeof i1.BqText, typeof i1.BqTextarea, typeof i1.BqToast, typeof i1.BqTooltip, typeof i2.BooleanValueAccessor, typeof i3.NumericValueAccessor, typeof i4.RadioValueAccessor, typeof i5.SelectValueAccessor, typeof i6.TextValueAccessor]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<BeeQModule>;
+}
